@@ -4,7 +4,7 @@
 <!------------------------ User Designer View -------------------->
 <div class="container">
     <div class="row row-margin-zero middlerow1-db col-lg-12">
-        <form class="search-box-style" role="search" action="<?php echo base_url(); ?>vendorListing" method="POST">
+        <form class="search-box-style" role="search" action="<?php echo site_url('vendorListing'); ?>" method="POST">
             <div class="col-lg-3 col-md-4 col-sm-5 col-md-offset-2 col-style text-center">
                 <label class="filter-btn">Filter</label>
                 <select class="select-style" name="filter">
@@ -50,11 +50,11 @@
                         <div class="col-md-1 col-md-offset-1 col-sm-1">
                             <p class="col-p"><?php echo $SrNo; ?></p>
                         </div>
-                        <a href="/vendorInfo/<?php echo $userId ?>">
+                        <a href="<?php site_url('vendorInfo')?>/<?php echo $userId ?>">
                             <input type="hidden" name="vendorId" value=<?php echo $userId ?> >
 			    <?php if($designer['logo'] != '') { ?>
                             <div class="col-md-8 col-sm-2 col-padding-zero designername" style="padding-top:1px !important;">
-                                    <img src="<?php echo $designer['logo']; ?>" width=88 height=88 >
+                                    <img src="<?php echo base_url($designer['logo']); ?>" width=88 height=88 >
                             </div>
 			    <?php } else {?>
 			    <div class="col-md-8 col-sm-2 col-padding-zero designername" style="margin-top:0px;">
@@ -77,11 +77,11 @@
                         <div class="col-md-2 col-sm-2 vendorlisting-products">
                             <!--<div class="thumbnail">-->
                                 <?php if ($designer[$i]->images != ''){ ?>
-                                <a href="<?php  echo base_url();?>ProductDetails/<?php echo $userId ?>/<?php echo $designer[$i]->id;?>">
-                                    <img src="<?php echo $designer[$i]->images; ?>" alt="product" class="userimage-size pimage" style=" height: 120px;border: 1px solid ">
+                                <a href="<?php  echo site_url('ProductDetails');?>/<?php echo $userId ?>/<?php echo $designer[$i]->id;?>">
+                                    <img src="<?php echo base_url($designer[$i]->images); ?>" alt="product" class="userimage-size pimage" style=" height: 120px;border: 1px solid ">
                                 </a>
                                 <?php }else{ ?>
-                                    <img src="/assets/images/default_hanger.png" alt="product" class="userimage-size pimage" style=" height: 120px;border: 1px solid ">
+                                    <img src="<?php echo base_url();?>/assets/images/default_hanger.png" alt="product" class="userimage-size pimage" style=" height: 120px;border: 1px solid ">
                                 <?php } ?>
                             <!--</div>-->
                         </div>
@@ -92,7 +92,7 @@
                     ?>
                     <div class="col-md-2 col-sm-2 col-padding-zero col-border" style="margin-top:0px;">
                         <?php if($designer['total_products'] >= 0){ ?>
-				<a href="/vendorInfo/<?php echo $userId ?>" class="viewmore-a"><div class="viewmore-btn">+<?php echo $designer['total_products']?></div></a>
+				<a href="<?php echo site_url('vendorInfo')?>/<?php echo $userId ?>" class="viewmore-a"><div class="viewmore-btn">+<?php echo $designer['total_products']?></div></a>
                         <?php }else{ ?>
                             <button type="submit" class="viewmore-btn" >+<?php echo $designer['total_products']?></button>
                         <?php } ?>
@@ -115,14 +115,14 @@
 </div>
 <div class="row row-margin-zero row-style row-margin-top default-bg-color">
     <div class="col-lg-6 col-sm-6 col-padding-zero landing-img-effect">
-        <img src="<?php echo ($designer1 != '' )? $designer1 : 'assets/images/fashion_found_2.jpg'; ?>" class="db-userimg" >
+        <img src="<?php echo ($designer1 != '' )? base_url($designer1) : base_url().'assets/images/fashion_found_2.jpg'; ?>" class="db-userimg" >
         <p class="overlay-title">Designer</p>
 	<p class="tag-txt">About Designer</p>
 	<div class="overlay"></div>
 	<div class="button"><a href="<?php echo $designer_url1; ?>">Explore</a></div>
     </div>
     <div class="col-lg-6 col-sm-6 col-padding-zero landing-img-effect">
-        <img src="<?php echo ($designer2 != '' )? $designer2 : 'assets/images/fashion_found_3.jpg'; ?>" class="db-userimg" >
+        <img src="<?php echo ($designer2 != '' )? base_url($designer2) : base_url().'assets/images/fashion_found_3.jpg'; ?>" class="db-userimg" >
 	<p class="overlay-title">Designer</p>
 	<p class="tag-txt">About Designer</p>
 	<div class="overlay"></div>
@@ -136,14 +136,14 @@
 </div>
 <div class="row row-margin-zero row-style row-margin-top default-bg-color">
     <div class="col-lg-6 col-sm-6 col-padding-zero landing-img-effect">
-        <img src="<?php echo ($boutique1 != '' )? $boutique1 : 'assets/images/fashion_found_4.jpg'; ?>" class="db-userimg" >
+        <img src="<?php echo ($boutique1 != '' )? base_url($boutique1) : base_url().'assets/images/fashion_found_4.jpg'; ?>" class="db-userimg" >
 	<p class="overlay-title">Boutique</p>
         <p class="tag-txt">About Boutique</p>
         <div class="overlay"></div>
         <div class="button"><a href="<?php echo $boutique_url1; ?>">Explore</a></div>
     </div>
     <div class="col-lg-6 col-sm-6 col-padding-zero landing-img-effect">
-        <img src="<?php echo ($boutique2 != '' )? $boutique2 : 'assets/images/fashion_found_5.jpg'; ?>" class="db-userimg" >
+        <img src="<?php echo ($boutique2 != '' )? base_url($boutique2) : base_url().'assets/images/fashion_found_5.jpg'; ?>" class="db-userimg" >
         <p class="overlay-title">Boutique</p>
         <p class="tag-txt">About Boutique</p>
         <div class="overlay"></div>

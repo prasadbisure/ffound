@@ -99,7 +99,7 @@ class Site extends BaseController
         $config['last_tag_open'] = "<li>";
         $config['last_tagl_close'] = "</li>";
         $config['uri_segment'] = 3;
-        $config['base_url'] = "/vendorslisting/$type";
+        $config['base_url'] = site_url('vendorslisting')."/$type";
         $config['total_rows'] = $vendorListCount[0]->count;;
         $config['per_page'] = 5;
         $config["num_links"] = round( $config["total_rows"] / $config["per_page"] );

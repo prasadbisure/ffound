@@ -42,23 +42,23 @@
 			<div id="gnavi-list" class="nav-list">
 				<ul>
 						<li><a href="<?php echo site_url(); ?>"><span>HOME</span></a></li>
-						<li><a href="<?php echo site_url(); ?>vendorslisting/designer"><span>DESIGNER</span></a></li>
-                        <li><a href="<?php echo site_url(); ?>vendorslisting/boutique"><span>BOUTIQUE</span></a></li>
+						<li><a href="<?php echo site_url('vendorslisting/designer'); ?>"><span>DESIGNER</span></a></li>
+                        <li><a href="<?php echo site_url('vendorslisting/boutique'); ?>"><span>BOUTIQUE</span></a></li>
                         <li><a href="http://www.fashionfound.in/commingsoon"><span>MAKEUP & HAIR</span></a></li>
-						<li><a href="<?php echo site_url(); ?>aboutus"><span>ABOUT FF</span></a></li>
+						<li><a href="<?php echo site_url('aboutus'); ?>"><span>ABOUT FF</span></a></li>
                         <li class="main-nav">
         				    <?php if($loggedIn){ ?>
-        				    <a href="<?php echo site_url(); ?>site/vendoradmin">
+        				    <a href="<?php echo site_url('site/vendoradmin'); ?>">
         				        <span>PROFILE</span>
         			        </a>
         			        <?php } else {?>
-        			            <a href="<?php echo site_url(); ?>login-register">
+        			            <a href="<?php echo site_url('login-register'); ?>">
             				        <span>SIGN UP & LOG IN</span>
             			        </a>
         			        <?php } ?>
         		        </li>
-                        <li><a href="<?php echo site_url(); ?>contactus"><span>CONTACT US</span></a></li>
-						<li><a href="<?php echo site_url();?>packages"><span>BUSINESS WITH FF</span></a></li>
+                        <li><a href="<?php echo site_url('contactus'); ?>"><span>CONTACT US</span></a></li>
+						<li><a href="<?php echo site_url('packages');?>"><span>BUSINESS WITH FF</span></a></li>
 				</ul>
 			</div>
 		</div>	
@@ -71,10 +71,10 @@
 			<hr class="header-hr">
 			<div class="header-toggle-opt">
             <a href="<?php echo site_url('vendorslisting/designer'); ?>"><button type="button" class="btn">DESIGNERS</button></a>
-            <a href="<?php echo site_url(); ?>vendorslisting/boutique"><button type="button" class="btn col-md-offset-1">BOUTIQUES</button></a>
+            <a href="<?php echo site_url('vendorslisting/boutique'); ?>"><button type="button" class="btn col-md-offset-1">BOUTIQUES</button></a>
 				</div>
 				<div class="col-lg-6 col-lg-offset-3">
-					<form class="search-box" role="search" method="post" action="<?php echo site_url(); ?>vendorListing">
+					<form class="search-box" role="search" method="post" action="<?php echo site_url('vendorListing'); ?>">
 					     <div class="input-group add-on">
 							<input type="text" class="form-control" name="srch-term" id="srch-term" >
 								<div class="input-group-btn">
