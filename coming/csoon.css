@@ -1,0 +1,56 @@
+@font-face {
+    font-family: Novecentowide;
+    src: url(Novecentowide-Light.otf);
+}
+
+
+
+body, html{
+	height: 100%;
+	font-family: "Novecentowide";
+}
+
+body{
+	background-image: url("FFComingSoon.jpg");
+    height: auto;  
+width:100%   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg{	
+	
+	text-align: center;
+}
+
+img{
+	width: 8%;
+	margin-top: 206px;
+}
+h1{
+	color: white;
+	font-size: 56px;
+	margin-top: 30.6px;
+	letter-spacing : 3px;
+	font-weight : 200;
+}
+span{
+	margin-left: 45px;
+}
+
+hr{
+    margin-top: -32px;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+h3{
+	color: white;	
+	font-size: 20px
+	margin-left: 31%;;
+}
+.img img{
+    margin-left: 26px;
+    width: 3%;
+    margin-top: 32px
+}
