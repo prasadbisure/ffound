@@ -8,7 +8,7 @@
         </div>
         <div class="col-lg-7 col-md-6 col-padding-zero back-style">
             <?php echo $page_content; ?>
-            <a class="button-style" href="<?php echo site_url('aboutus');?>">To Know More...Test</a>
+            <a class="button-style" href="<?php echo site_url('aboutus');?>">To Know More</a>
         </div>
     </div>
     <ul class="grid effect-6" id="grid">

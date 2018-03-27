@@ -29,7 +29,7 @@
       </div>
       <div class="row row-margin-zero">
         <div class="col-md-12 col-xs-12">
-            <div class="icons-info text-right">
+            <div class="icons-info text-right social-buttons">
             	<a href="https://www.facebook.com/fashionfound" class="icons-style f-icon"></a>
 		<a href="https://plus.google.com/u/0/117807729864330672592" class="icons-style g-icon"></a>
 		<a href="https://www.instagram.com/fashion_found/" class="icons-style i-icon"></a>
