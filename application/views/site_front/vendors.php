@@ -50,7 +50,7 @@
                         <div class="col-md-1 col-md-offset-1 col-sm-1">
                             <p class="col-p"><?php echo $SrNo; ?></p>
                         </div>
-                        <a href="<?php site_url('vendorInfo')?>/<?php echo $userId ?>">
+                        <a href="<?php echo site_url('vendorInfo')?>/<?php echo $userId ?>">
                             <input type="hidden" name="vendorId" value=<?php echo $userId ?> >
 			    <?php if($designer['logo'] != '') { ?>
                             <div class="col-md-8 col-sm-2 col-padding-zero designername" style="padding-top:1px !important;">
