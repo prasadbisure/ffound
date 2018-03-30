@@ -70,10 +70,16 @@ body {
 
 /*---------------header css------------*/
 header{
-  background-image: url("../images/FF_Coming_Soon.jpg");  
+  /*background-image: url("../images/FF_Coming_Soon.jpg");  
   background-repeat: no-repeat;
       background-size: 100% 100%;
   height : 100%;
+    background-attachment: fixed;*/
+      background: url("../images/FF_Coming_Soon.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 /*=====================Toggle css===================*/
 #gnavi {
@@ -684,8 +690,9 @@ header{
 
 .header-toggle-opt .btn:hover{
       background-color: #0000006e;
-    color: #d4b000;
-    border: 1px solid #d4b000;
+    color: #fff;
+    border: 0px solid #d4b000;
+    border-bottom: 2px solid #d4b000;
     transition: all 300ms;
 }
 .search-box{
@@ -787,11 +794,15 @@ footer{
     color: #d4b000;
     border: 1px solid #d4b000;
     font-family: Raleway-Regular;
+        padding: 5px 25px;
+    transition: all 300ms;
 }
 .submit-btn-style:hover{
   background-color:#d4b000;
-  color:#333;
+  color:#000;
   border: 1px solid #d4b000;
+    font-weight: 600;
+    transition: all 300ms;
 }
 
 .label-style{
@@ -877,6 +888,7 @@ width: 100%;
   border : 1px solid black;
     background-color : transparent;
     color : black;
+     transition: all 300ms;
 }
 
 .button-style a{
@@ -894,10 +906,16 @@ a:focus{
 }
 
 .button-style:hover{
-    border : 1px solid black;
+   /* border : 1px solid black;
     background-color : black;
     color : #d4b000;
-    text-decoration : none;
+    text-decoration : none;*/
+    border: 1px solid black;
+    background-color: black;
+    color: #d4b000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 300ms;
 }
 .header-label-style{
   background-color:#242424;
@@ -1685,8 +1703,8 @@ xsigin/signup popup
 
 .landing-img-effect .button a {
     position : relative;
-    left : -50px;
-    padding: 3px 15px;
+        left: -53px;
+    padding: 5px 20px;
     text-align: center;
     color: black;
     border: solid 1px black;
@@ -1694,6 +1712,7 @@ xsigin/signup popup
     font-size: 14px;
     font-family: 'Novecentowide-Light';
     font-weight: 700;
+     transition: all 300ms;
 }
 
 .landing-img-effect:hover .button {
@@ -1701,10 +1720,17 @@ xsigin/signup popup
 } 
 
 .button a:hover{
-    background : black;
+   /* background : black;
     border : solid 1px #d4b000;
     color : #d4b000;
     text-decoration: none;
+        border-radius: 5px;
+    transition: all 300ms;*/
+        background: #000000c7;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 300ms;
 }
 
 
@@ -1824,4 +1850,107 @@ xsigin/signup popup
 .p-icon:hover{
    background: #d4b000 url("../images/social/Pinterest_1.png") no-repeat;
 }
+
+
+/*.........custome changes ...............*/
+.button13 {
+	color: rgba(255,255,255,1);
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	position: relative;
+}
+.button13 a{
+	color: rgba(51,51,51,1);
+	text-decoration: none;
+	display: block;
+}
+.button13::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	border: 1px solid rgba(255,255,255,0);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.button13:hover::before{
+	opacity: 0;
+	-webkit-transform: scale(1,1);
+	transform: scale(1,1);
+}
+.button13::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	background-color: rgba(255,255,255,0.2);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	-webkit-transform: scale(0.5,0.5);
+	transform: scale(0.5,0.5);
+}
+.button13:hover::after{
+	opacity: 1 ;
+	-webkit-transform: scale(1,1);
+	transform: scale(1,1);
+}
+
+    
+#search {
+padding: 0px 24px 0px 25px;
+}
+#search:focus {
+outline: none;
+}
+
+
+#search input[type="text"] {
+       background: url(../images/search-white.png) no-repeat 13px 12px #00000029;
+    border: 1px solid #b1b1b1;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+        color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    padding: 12px 15px 12px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); 
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    }
+
+#search input[type="text"]:focus {
+    background: url(../images/search-dark.png) no-repeat 13px 12px #fcfcfc;
+    color: #6a6f75;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    outline: none;
+    }
+
+/*.........custome changes ...............*/
 

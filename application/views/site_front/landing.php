@@ -1,8 +1,13 @@
 	<script>
         $('header').css('height', window.innerHeight);
-		
+		 $(function() {
+                $('.scroll-down').click (function() {
+                  $('html, body').animate({scrollTop: $('#about_fashion').offset().top }, 'slow');
+                  return false;
+                });
+              });
 	</script>
-   <div class="row row-margin-zero">
+   <div class="row row-margin-zero" id="about_fashion">
         <div class="col-lg-5 col-md-6 col-padding-zero middle-content">
             <img src="assets/images/fashion_found_1.jpg">
         </div>
