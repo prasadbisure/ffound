@@ -865,18 +865,20 @@ width: 100%;
 .back-style h1{
     font-size: 30px;
     margin-top: 35px;
-    margin-left : 26px;
+    margin-left : 40px;
     /*text-align : center;*/
     font-family: 'Novecentowide-Light';
     color: #090909;
+        font-weight: 600;
+    text-shadow: 1px 1px 3px #dedede;
 }
 .back-style p{
-    text-align: left;
-    margin-left: 30px;
+    text-align: justify;
+    margin: 30px 40px;
     font-size: 17px;
     color: #090909;
     font-family: Raleway-Regular;
-    padding-right: 160px;
+    padding-right: 0px;
 }
 .button-style{
   
