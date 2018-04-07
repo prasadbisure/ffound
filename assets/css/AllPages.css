@@ -321,7 +321,7 @@ height: 200px;
 .userimage-size{
     display: block;
     width: 80%;
-    height : 150px;
+   height : 250px;
     cursor : pointer;
 }
 .lableof-d{
@@ -2987,8 +2987,8 @@ div.dataTables_wrapper div.dataTables_length label {
 }
 
 .vendorlist-margins{
-    margin-left : 12%;
-    margin-right : 12%;
+    /*margin-left : 12%;
+    margin-right : 12%;*/
     margin-top: 3%;
     text-align: -webkit-center;
 }

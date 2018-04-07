@@ -1,48 +1,6 @@
 <script>
     $('header').css('height', '300px');
 </script>
-<style>
-* {
-    box-sizing: border-box;
-}
-
-
-.row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap; 
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
-
-.column {
-    -ms-flex: 25%; 
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-}
-
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-}
-
-@media screen and (max-width: 800px) {
-    .column {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width: 50%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .column {
-        -ms-flex: 100%;
-        flex: 100%;
-        max-width: 100%;
-    }
-}
-</style>
 <!------------------------ User Designer View -------------------->
 <div class="container">
     <div class="row row-margin-zero middlerow1-db col-lg-12">
@@ -77,44 +35,79 @@
 
 <!----------------------- Products Images  ------------------> 
 
-<div class="container vendor-listing-main ">
-    <div class="row"> 
-  <div class="column">
-    <img src="../../../assets/images/dress/wedding.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/rocks.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/falls2.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/paris.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/nature.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/mist.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/paris.jpg" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="../../../assets/images/dress/underwater.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/ocean.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/wedding.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/mountainskies.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/rocks.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/underwater.jpg" style="width:100%">
-  </div>  
-  <div class="column">
-    <img src="../../../assets/images/dress/wedding.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/rocks.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/falls2.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/paris.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/nature.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/mist.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/paris.jpg" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="../../../assets/images/dress/underwater.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/ocean.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/wedding.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/mountainskies.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/rocks.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/underwater.jpg" style="width:100%">
-  </div>
-</div>
+<div class="container vendor-listing-main">
+    <?php //echo $pagination; die; ?>
+    <?php
 
+        if(!empty($designerList))
+        {   $SrNo= !empty($pageno) ? $pageno : 1;
+            $j = 0;
+
+            foreach($designerList as $userId => $designer){ // var_dump($designer['name']); die;  ?>
+                
+                <div class="row row-margin-zero middlerow2-db vendorlist-margins">
+                    <div class="col-md-4 top-buffer" >
+                        <div class="col-md-1 col-md-offset-1 col-sm-1">
+                            <p class="col-p"><?php echo $SrNo; ?></p>
+                        </div>
+                        <a href="<?php echo site_url('vendorInfo')?>/<?php echo $userId ?>">
+                            <input type="hidden" name="vendorId" value=<?php echo $userId ?> >
+			    <?php if($designer['logo'] != '') { ?>
+                            <div class="col-md-8 col-sm-2 col-padding-zero designername" style="padding-top:1px !important;">
+                                    <img src="<?php echo base_url($designer['logo']); ?>" width=88 height=88 >
+                            </div>
+			    <?php } else {?>
+			    <div class="col-md-8 col-sm-2 col-padding-zero designername" style="margin-top:0px;">
+			    	<?php if($designer['brandName'] != ''){ ?>
+                                <span class="username">
+                                    <?php echo $designer['brandName'] ?>
+                                </span>
+                                <?php } else {?>
+                                <span class="username">
+                                    <?php echo $designer['name'] ?>
+                                </span>
+				<?php } ?>
+			    </div>
+			    <?php } ?>
+                        </a>
+                    </div>
+                    <?php 
+
+                    for($i= 0;$i<= 2;$i++){ //echo '<pre>'; var_dump($designer); die;?>
+                        <div class="col-md-2 col-sm-2 vendorlisting-products">
+                            <!--<div class="thumbnail">-->
+                                <?php if ($designer[$i]->images != ''){ ?>
+                                <a href="<?php  echo site_url('ProductDetails');?>/<?php echo $userId ?>/<?php echo $designer[$i]->id;?>">
+                                    <img src="<?php echo base_url($designer[$i]->images); ?>" alt="product" class="userimage-size pimage" style=" height: 120px;border: 1px solid ">
+                                </a>
+                                <?php }else{ ?>
+                                    <img src="<?php echo base_url();?>/assets/images/default_hanger.png" alt="product" class="userimage-size pimage" style=" height: 120px;border: 1px solid ">
+                                <?php } ?>
+                            <!--</div>-->
+                        </div>
+                    
+                    <?php } 
+
+                    
+                    ?>
+                        <div class="col-md-2 col-sm-2 col-padding-zero col-border" style="margin-top:0px;">
+                        <?php if($designer['total_products'] >= 0){ ?>
+				<a href="<?php echo site_url('vendorInfo')?>/<?php echo $userId ?>" class="viewmore-a"><div class="viewmore-btn">+<?php echo $designer['total_products']?></div></a>
+                        <?php }else{ ?>
+                            <button type="submit" class="viewmore-btn" >+<?php echo $designer['total_products']?></button>
+                        <?php } ?>
+                    </div>                  
+                </div>
+        <?php  $i = $i+3; $SrNo++;} ?>
+            
+            <div class="col-md-12 text-center pagination-top-margin">
+                <?php echo $pagination; ?>
+            </div>
+        <?php } else{?>
+             <div class='col-lg-12 text-center no-result-div'>
+                 <span class="no-result">NO  <?php echo ($type == 'designer') ? 'DESIGNER' : 'BOUTIQUE'; ?> FOUND.</span>
+             </div>
+        <?php } ?>
 </div>
 
 <div class="row row-margin-zero lableof-d">

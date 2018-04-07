@@ -702,15 +702,25 @@ header{
   /*margin-top: 35px;*/
 }
 #srch-term{
-      border: 1px solid #989898;
-    background: none;
+      border: 1px solid #cccccc;
+        background: #00000059;
     color: white;
     z-index: 0;
     border-radius: 0px;
     font-family: Raleway-Regular;
     font-size: 20px;
     box-shadow : none;
+        font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    padding: 12px 15px 12px 15px;
+        height: 40px;
 }
+#srch-term:focus{ border-bottom: 2px solid #d4b000;
+ border-top: 0px solid #d4b000;
+ border-left: 0px solid #d4b000;
+ border-right: 0px solid #d4b000;}
+.form-control{border: 0;}
 .custom-zindex{
     z-index:0 !important;
 }
@@ -721,7 +731,7 @@ header{
 }
 .input-group-btn .btn{
     background: #d4b000;
-    border: 1px solid #afadad;
+   /* border: 1px solid #afadad;*/
 }
 .custom-theme-border{
   border: 1px solid #d4b000;
@@ -1913,48 +1923,12 @@ xsigin/signup popup
 }
 
     
-#search {
-padding: 0px 24px 0px 25px;
+
+button.btn.btn-default.custom-theme-border.zero-radius.custom-zindex {
+    padding: 9px 12px;
 }
-#search:focus {
-outline: none;
-}
-
-
-#search input[type="text"] {
-       background: url(../images/search-white.png) no-repeat 97% 12px #00000029;
-    border: 1px solid #b1b1b1;
-    font: bold 12px Arial,Helvetica,Sans-serif;
-        color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
-    width: 100%;
-    padding: 12px 15px 12px 35px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); 
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0px 3px rgba(0, 0, 0, 0.2) inset;
-    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0px 3px rgba(0, 0, 0, 0.2) inset;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0px 3px rgba(0, 0, 0, 0.2) inset;
-    -webkit-transition: all 0.7s ease 0s;
-    -moz-transition: all 0.7s ease 0s;
-    -o-transition: all 0.7s ease 0s;
-    transition: all 0.7s ease 0s;
-    }
-
-#search input[type="text"]:focus {
-    background: url(../images/search-dark.png) no-repeat 97% 12px ;
-    color: #c7c7c7;
-    font-size: 16px;
-    font-weight: 500;
-    width: 100%;
-    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0px 0 rgba(0, 0, 0, 0.9) inset;
-    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0px 0 rgba(0, 0, 0, 0.9) inset;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0px 0 rgba(0, 0, 0, 0.9) inset;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-    outline: none;
-    }
+.grid-item { width: 200px; }
+.grid-item--width2 { width: 400px; }
 
 /*.........custome changes ...............*/
 

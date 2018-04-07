@@ -1,0 +1,87 @@
+ <?php //echo $pagination; die; ?>
+    <?php
+
+        if(!empty($designerList))
+        {   $SrNo= !empty($pageno) ? $pageno : 1;
+            $j = 0;
+
+            foreach($designerList as $userId => $designer){ // var_dump($designer['name']); die;  ?>
+                
+                <div class="row row-margin-zero middlerow2-db vendorlist-margins">
+                    <div class="col-md-4 top-buffer" >
+                       <!-- <div class="col-md-1 col-md-offset-1 col-sm-1">
+                            <p class="col-p"><?php// echo $SrNo; ?></p>
+                        </div>-->
+                        <a href="<?php echo site_url('vendorInfo')?>/<?php echo $userId ?>">
+                            <input type="hidden" name="vendorId" value=<?php echo $userId ?> >
+			    <?php if($designer['logo'] != '') { ?>
+                            <div class="col-md-8 col-sm-2 col-padding-zero designername" style="padding-top:1px !important;">
+                                    <img src="<?php echo base_url($designer['logo']); ?>" width=88 height=88 >
+                            </div>
+			    <?php } else {?>
+			    <div class="col-md-8 col-sm-2 col-padding-zero designername" style="margin-top:0px;">
+			    	<?php if($designer['brandName'] != ''){ ?>
+                                <span class="username">
+                                    <?php echo $designer['brandName'] ?>
+                                </span>
+                                <?php } else {?>
+                                <span class="username">
+                                    <?php echo $designer['name'] ?>
+                                </span>
+				<?php } ?>
+			    </div>
+			    <?php } ?>
+                        </a>
+                    </div>
+                    <?php 
+
+                    for($i= 0;$i<= 2;$i++){ //echo '<pre>'; var_dump($designer); die;?>
+                        <div class="col-md-2 col-sm-2 vendorlisting-products">
+                            <!--<div class="thumbnail">-->
+                                <?php if ($designer[$i]->images != ''){ ?>
+                                <a href="<?php  echo site_url('ProductDetails');?>/<?php echo $userId ?>/<?php echo $designer[$i]->id;?>">
+                                    <img src="<?php echo base_url($designer[$i]->images); ?>" alt="product" class="userimage-size pimage" style=" height: 120px;border: 1px solid ">
+                                </a>
+                                <?php }else{ ?>
+                                    <img src="<?php echo base_url();?>/assets/images/default_hanger.png" alt="product" class="userimage-size pimage" style=" height: 120px;border: 1px solid ">
+                                <?php } ?>
+                            <!--</div>-->
+                        </div>
+                    
+                    <?php } 
+
+                    
+                    ?>
+                        <div class="col-md-2 col-sm-2 col-padding-zero col-border" style="margin-top:0px;">
+                        <?php if($designer['total_products'] >= 0){ ?>
+				<a href="<?php echo site_url('vendorInfo')?>/<?php echo $userId ?>" class="viewmore-a"><div class="viewmore-btn">+<?php echo $designer['total_products']?></div></a>
+                        <?php }else{ ?>
+                            <button type="submit" class="viewmore-btn" >+<?php echo $designer['total_products']?></button>
+                        <?php } ?>
+                    </div>                  
+                </div>
+        <?php  $i = $i+3; $SrNo++;} ?>
+            
+            <div class="col-md-12 text-center pagination-top-margin">
+                <?php echo $pagination; ?>
+            </div>
+        <?php } else{?>
+             <div class='col-lg-12 text-center no-result-div'>
+                 <span class="no-result">NO  <?php echo ($type == 'designer') ? 'DESIGNER' : 'BOUTIQUE'; ?> FOUND.</span>
+             </div>
+        <?php } ?>
+        
+        
+        /*******************masonry Layout*******************/
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<!-- or -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+<style>.grid-item { float: left;
+  width: 80px;
+  height: 60px;
+  border: 2px solid hsla(0, 0%, 0%, 0.5); }
+.grid-item--width2 { width: 160px; }
+.grid-item--height2 { height: 140px; }
+</style>
+
+/**************************************/
