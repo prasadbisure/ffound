@@ -85,3 +85,53 @@
 </style>
 
 /**************************************/
+
+
+/*--------------------------vendorinfo.php Page----------------------------*/
+
+<div class="container vendorinforow">
+    <?php 
+    // var_dump($vendor); die;
+        if(!empty($vendor))
+        {
+
+            foreach ($vendor as $val)
+            {
+                if($val->pstatus != 1){
+               ?>
+               
+                
+                <div class='col-md-3 col-sm-6 text-center webkit-center infoDetails'>
+                    <!--<div class='thumbnail'>-->
+                    <div class="nd-wrap nd-style-1">
+                           <a href="<?php  echo base_url();?>ProductDetails/<?php echo $val->userId ?>/<?php echo $val->id;?>">
+                            <img  src="<?php echo ($val->images != '') ? base_url().$val->images : '/assets/images/default_hanger.png' ?>" alt="" class="img-reponsive product-details">
+                        </a>
+                        <div class="nd-content">
+                            <div class="nd-content_inner">
+                                <div class="nd-content_inner1">
+                                    <span class="nd-icon" >
+                                        <button class="button prd-book-img" data-vendor="<?php echo $val->userId;?>" data-product="<?php echo $val->id;?>" data-user="<?php echo $custId;?>">Book</button>
+                                    </span>
+                                </div>					
+                            </div>				
+                        </div>
+                        <!--<div class="overlay"></div>-->
+                        <!--<div class="button book-btn">-->
+                        <!--    <a href="#"> BUTTON </a>-->
+                        <!--</div>-->
+                        <div class='info'>
+                            <div class='datails'>
+                                <p class='info-text-style'><?php echo $val->product_name; ?></p>
+                                <p class='price-style'>INR. <?php echo $val->price; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--</div>-->
+                </div>
+                
+                <?php  }}
+            }
+    ?>
+</div>
+/*------------------------------------------------------*/

@@ -16,9 +16,9 @@
 }
 
 .column {
-    -ms-flex: 25%; 
-    flex: 25%;
-    max-width: 25%;
+    -ms-flex: 33.3%; 
+    flex: 33.3%;
+    max-width: 33.3%;
     padding: 0 4px;
 }
 
@@ -41,6 +41,107 @@
         flex: 100%;
         max-width: 100%;
     }
+}
+    .view {
+   /* width: 300px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    border: 10px solid #fff;*/
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+   /*box-shadow: 1px 1px 2px #e6e6e6;*/
+    cursor: default;
+    /*background: #fff url(../images/bgimg.jpg) no-repeat center center*/
+}
+.view .mask, .view .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.view img {
+    display: block;
+    position: relative
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.view a.info:hover {
+    box-shadow: 0 0 5px #000
+}
+   .view-eighth .mask { 
+	background-color: rgba(0, 0, 0, 0.4);
+	top: -200px;
+	opacity: 0;
+	transition: all 0.3s ease-out 0.5s;
+}
+.view-eighth h2{
+    transform: translateY(-200px);
+	transition: all 0.2s ease-in-out 0.1s;
+}
+.view-eighth p { 
+    color: #fff;
+    transform: translateY(-200px);
+	transition: all 0.2s ease-in-out 0.2s;
+}
+.view-eighth a.info { 
+    transform: translateY(-200px);
+	transition:  all 0.2s ease-in-out 0.3s;
+} 
+    .view-eighth:hover .mask { 
+	opacity: 1; 
+	top: 0px; 
+	transition-delay: 0s; 
+    animation: bounceY 0.9s linear;
+}																						
+.view-eighth:hover h2 { 
+    transform: translateY(0px);
+	transition-delay: 0.4s;
+}
+.view-eighth:hover p { 
+	transform: translateY(0px);
+	transition-delay: 0.2s;
+}
+.view-eighth:hover a.info { 
+    transform: translateY(0px);
+	transition-delay: 0s;
+}
+    @keyframes bounceY {
+    0% { transform: translateY(-205px);}
+    40% { transform: translateY(-100px);}
+    65% { transform: translateY(-52px);}
+    82% { transform: translateY(-25px);}
+    92% { transform: translateY(-12px);}
+    55%, 75%, 87%, 97%, 100% { transform: translateY(0px);}
 }
 </style>
 <!------------------------ User Designer View -------------------->
@@ -80,40 +181,177 @@
 <div class="container vendor-listing-main ">
     <div class="row"> 
   <div class="column">
-    <img src="../../../assets/images/dress/wedding.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/rocks.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/falls2.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/paris.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/nature.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/mist.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/paris.jpg" style="width:100%">
+      <div class="view view-eighth "> 
+               <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
+                   <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
+           <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+          <div class="view view-eighth"> 
+    <img src="../../../assets/images/dress/d3.jpg" style="width:100%">
+               <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+              <div class="view view-eighth"> 
+    <img src="../../../assets/images/dress/d4.jpg" style="width:100%">
+                   <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                  <div class="view view-eighth"> 
+    <img src="../../../assets/images/dress/d5.jpg" style="width:100%">
+                       <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                      <div class="view view-eighth"> 
+    <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
+                           <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                          <div class="view view-eighth"> 
+    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
+                               <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                             
+   
   </div>
   <div class="column">
-    <img src="../../../assets/images/dress/underwater.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/ocean.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/wedding.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/mountainskies.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/rocks.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/underwater.jpg" style="width:100%">
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d6.jpg" style="width:100%">
+          <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+          <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d5.jpg" style="width:100%">
+              <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+              <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d4.jpg" style="width:100%">
+                  <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                  <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d3.jpg" style="width:100%">
+                      <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
+                          <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                          <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
+                              <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
   </div>  
   <div class="column">
-    <img src="../../../assets/images/dress/wedding.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/rocks.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/falls2.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/paris.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/nature.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/mist.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/paris.jpg" style="width:100%">
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
+       <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
+         <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d3.jpg" style="width:100%">
+     <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d6.jpg" style="width:100%">
+            <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
+ <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
+ <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d3.jpg" style="width:100%">
+ <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
   </div>
-  <div class="column">
-    <img src="../../../assets/images/dress/underwater.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/ocean.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/wedding.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/mountainskies.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/rocks.jpg" style="width:100%">
-    <img src="../../../assets/images/dress/underwater.jpg" style="width:100%">
-  </div>
+ 
 </div>
+    
+    
 
 </div>
 
