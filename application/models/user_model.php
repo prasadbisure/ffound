@@ -135,7 +135,7 @@ class User_model extends CI_Model
      */
     function getUserInfo($userId)
     {
-        $this->db->select('userId, name, email, mobile, roleId');
+        $this->db->select('userId, name, email, mobile, roleId, profile_pic, profile_pic_status');
         $this->db->from('tbl_users');
         $this->db->where('isDeleted', 0);
 		$this->db->where('roleId !=', 1);
@@ -157,6 +157,14 @@ class User_model extends CI_Model
         $this->db->where('userId', $userId);
         $this->db->update('tbl_users', $userInfo);
         
+        return TRUE;
+    }
+
+    function editprofilepic($userInfo, $userId)
+    {
+        $this->db->where('userId', $userId);
+        $this->db->update('tbl_users', $userInfo);
+
         return TRUE;
     }
     

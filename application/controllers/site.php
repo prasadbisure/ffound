@@ -142,10 +142,16 @@ class Site extends BaseController
             $pageNo++;
         }
         $this->data['pageno'] = $pageNo;
+
+        echo"<pre>";
+        print_r($vendorList);
+        exit;
+
         $this->loadOtherviews("site_front/vendors", $this->data, NULL , NULL);
      }
-     
-     public function aboutus(){
+
+
+    public function aboutus(){
         $this->data['pageTitle'] = 'FashionFound : About Us';
         $this->data['heading']='';
         $this->data['heading1']='ABOUT US';
@@ -157,6 +163,95 @@ class Site extends BaseController
         
         $this->loadOtherViews("site_front/aboutus", $this->data, NULL , NULL);
       }
+
+    public function getDesigners($pageNo){
+        $type = "designer";
+
+        if(strcmp($type,"designer") !== 0 && strcmp($type,"boutique") !== 0){
+            redirect('/');
+        }
+
+        /*if(empty($pageNo)){
+            $pageNo = 1;
+        }*/
+
+        $vendorListCount = $this->vendor_model->vendorListCount($type);
+
+        $pageInfo = $this->site_model->getPageInfo(1);
+        $this->data['designer1']    = $pageInfo[0]->designer_img1;
+        $this->data['designer2']    = $pageInfo[0]->designer_img2;
+        $this->data['boutique1']    = $pageInfo[0]->boutique_img1;
+        $this->data['boutique2']    = $pageInfo[0]->boutique_img2;
+        $this->data['designer_url1']= $pageInfo[0]->designer_url;
+        $this->data['designer_url2']= $pageInfo[0]->designer_url2;
+        $this->data['boutique_url1']= $pageInfo[0]->boutique_url;
+        $this->data['boutique_url2']= $pageInfo[0]->boutique_url2;
+
+        $this->load->library('pagination');
+
+        // If use bootstrap or else remove.
+        $config['full_tag_open'] = "<ul class='pagination'>";
+        $config['full_tag_close'] ="</ul>";
+        $config['num_tag_open'] = '<li>';
+        $config['num_tag_close'] = '</li>';
+        $config['cur_tag_open'] = "<li class='disabled'><li class='active'><a href='#'>";
+        $config['cur_tag_close'] = "<span class='sr-only'></span></a></li>";
+        $config['next_tag_open'] = "<li>";
+        $config['next_tagl_close'] = "</li>";
+        $config['prev_tag_open'] = "<li>";
+        $config['prev_tagl_close'] = "</li>";
+        $config['first_tag_open'] = "<li>";
+        $config['first_tagl_close'] = "</li>";
+        $config['last_tag_open'] = "<li>";
+        $config['last_tagl_close'] = "</li>";
+        $config['uri_segment'] = 3;
+        $config['base_url'] = site_url('designers');//site_url('vendorslisting')."/$type";
+        $config['total_rows'] = $vendorListCount[0]->count;;
+        $config['per_page'] = 5;
+        $config["num_links"] = round( $config["total_rows"] / $config["per_page"] );
+
+        $this->pagination->initialize($config);
+
+        $vendorList = $this->vendor_model->vendorList($type, $config['per_page'], $pageNo);
+
+        $vendorArray = array();
+        foreach($vendorList as $vendor){
+
+            $productList = $this->vendor_model->productsByVendor($vendor->userId);
+
+            $totalProducts = count($productList);
+            $productArray = array();
+            for($i=0; $i<=2; $i++){
+
+                $productArray[] = $productList[$i];
+            }
+
+            $productArray['total_products'] = $totalProducts;
+            $productArray['name'] = $vendor->name;
+            $productArray['brandName'] = $vendor->brandName;
+            $productArray['logo']      = $vendor->logo;
+            $vendorArray[$vendor->userId] = $productArray;
+        }
+
+
+        $this->data['designerList'] = $vendorArray;
+
+
+        $this->data['pageTitle'] = ($type == 'designer') ? 'DESIGNERS' : 'BOUTIQUE';
+        $this->data['heading']='';
+        $this->data['heading1']= ($type == 'designer') ? 'DESIGNERS' : 'BOUTIQUE';
+        $this->data['heading2']='Here we are to style you up!';
+        $this->data['login1']='true';
+        $this->data['type'] = $type;
+        $this->data['pagination'] = $this->pagination->create_links();
+        if($pageNo != 1){
+            $pageNo++;
+        }
+        $this->data['pageno'] = $pageNo;
+        $this->loadOtherviews("site_front/vendors", $this->data, NULL , NULL);
+
+
+    }
       
     public function packages($isUpgrade = ''){
         
