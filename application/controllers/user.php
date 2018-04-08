@@ -215,10 +215,15 @@ class User extends BaseController
             
             $data['roles'] = $this->user_model->getUserRoles();
             $data['userInfo'] = $this->user_model->getUserInfo($userId);
-            
+//            echo "<pre>";
+//            print_r($data['userInfo']);
+//            exit;
             $this->global['pageTitle'] = 'FashionFound : Edit User';
             
             $this->loadViews("editOld", $this->global, $data, NULL);
+
+
+
         }
     }
     
@@ -228,7 +233,7 @@ class User extends BaseController
      */
     function editUser()
     {
-        $this->isLoggedIn();   
+        $this->isLoggedIn();
         if($this->isAdmin() == TRUE)
         {
             $this->loadThis();
@@ -257,18 +262,20 @@ class User extends BaseController
                 $password = $this->input->post('password');
                 $roleId = $this->input->post('role');
                 $mobile = $this->input->post('mobile');
+                $profile_pic_status = $this->input->post('profile_pic_status');
+
                 
                 $userInfo = array();
                 
                 if(empty($password))
                 {
                     $userInfo = array('email'=>$email, 'roleId'=>$roleId, 'name'=>$name,
-                                    'mobile'=>$mobile, 'updatedBy'=>$this->vendorId, 'updatedDtm'=>date('Y-m-d H:i:s'));
+                                    'mobile'=>$mobile, 'profile_pic_status'=>$profile_pic_status, 'updatedBy'=>$this->vendorId, 'updatedDtm'=>date('Y-m-d H:i:s'));
                 }
                 else
                 {
                     $userInfo = array('email'=>$email, 'password'=>getHashedPassword($password), 'roleId'=>$roleId,
-                        'name'=>ucwords($name), 'mobile'=>$mobile, 'updatedBy'=>$this->vendorId, 
+                        'name'=>ucwords($name), 'mobile'=>$mobile, 'profile_pic_status'=>$profile_pic_status, 'updatedBy'=>$this->vendorId,
                         'updatedDtm'=>date('Y-m-d H:i:s'));
                 }
                 
@@ -286,6 +293,45 @@ class User extends BaseController
                 redirect('userListing');
             }
         }
+    }
+
+    function uploadUserProfilepic(){
+//        echo "<pre>";
+//        print_r($_FILES);
+//       exit;
+
+        $config['upload_path']          = './upload/profile_pics';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg';
+        $this->load->library('upload', $config);
+
+        if (!is_dir('./upload/profile_pics')) {
+            mkdir('./upload/profile_pics', 0777, TRUE);
+
+        }
+
+        if ($this->upload->do_upload('profile_pic')){
+            $data = array('upload_data' => $this->upload->data());
+            $path = 'upload/profile_pics/'.$data['upload_data']['file_name'];
+            $userInfo = array('profile_pic'=>$path);
+
+            $result = $this->user_model->editprofilepic($userInfo, $_POST['profile_userId']);
+
+            if($result==true){
+                echo base_url().$path;  
+            }
+
+            //echo "<pre>";
+            //print_r($data);
+
+        }else{
+            $error = array('error' => $this->upload->display_errors());
+            echo "<pre>";
+            print_r($error);
+
+        }
+
+
+
     }
 
 

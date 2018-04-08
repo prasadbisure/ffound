@@ -95,7 +95,11 @@ $route['product/(:num)'] = "product/productListing/$1";
 
 
 $route['vendorslisting/(:any)']="site/getVendorListing/$1";
-// $route['vendorslisting/(:any)/(:num)']="site/getVendorListing/$1/$2"; 
+
+// $route['vendorslisting/(:any)/(:num)']="site/getVendorListing/$1/$2";
+$route['designers']="site/getDesigners";
+
+
 $route['aboutus']="site/aboutus";
 $route['packages']="site/packages";
 $route['packages/(:any)']="site/packages/$1"; //For upgradation

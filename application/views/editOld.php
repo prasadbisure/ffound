@@ -15,6 +15,9 @@ if(!empty($userInfo))
         $email = $uf->email;
         $mobile = $uf->mobile;
         $roleId = $uf->roleId;
+        $profile_pic= $uf->profile_pic;
+        $profile_pic_status= $uf->profile_pic_status;
+
     }
 }
 
@@ -104,12 +107,28 @@ if(!empty($userInfo))
                                     </div>
                                 </div>    
                             </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="password">Profile Pic Status</label>
+                                        Enabled: <input type="radio" name="profile_pic_status" value="Enabled" <?php echo ($profile_pic_status=='Enabled')?"checked":"" ?> >
+                                        Disabled: <input type="radio" name="profile_pic_status" value="Disabled" <?php echo ($profile_pic_status!='Enabled')?"checked":"" ?>>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div><!-- /.box-body -->
     
                         <div class="box-footer">
                             <input type="submit" class="btn btn-primary" value="Submit" />
                             <input type="reset" class="btn btn-default" value="Reset" />
                         </div>
+                    </form>
+
+                    <form method="post" id="form_uplocad_profile_pic" name="form_uplocad_profile_pic" enctype="multipart/form-data" action="<?php echo site_url('user/uploadUserProfilepic')?>" >
+                        <img src="<?php echo base_url().$profile_pic; ?>" id="profile_img" class="img-thumbnail" width="20%" height="100%">
+                        <input type="file" name="profile_pic" id="profile_pic">
+                        <input type="hidden" value="<?php echo $userId; ?>" name="profile_userId" />
                     </form>
                 </div>
             </div>

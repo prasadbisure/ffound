@@ -396,11 +396,12 @@
     
 
 </div>
-
-<div class="row row-margin-zero lableof-d">
+<?php if($this->uri->segment(1)!="designers") {?>
+<!--for Designer content-->
+    <div class="row row-margin-zero lableof-d">
     <h1 class="lablecontent-db">DESIGNERS</h1>
 </div>
-<div class="row row-margin-zero row-style row-margin-top default-bg-color">
+    <div class="row row-margin-zero row-style row-margin-top default-bg-color">
     <div class="col-lg-6 col-sm-6 col-padding-zero landing-img-effect">
         <img src="<?php echo ($designer1 != '' )? base_url($designer1) : base_url().'assets/images/fashion_found_2.jpg'; ?>" class="db-userimg" >
         <p class="overlay-title">Designer</p>
@@ -416,8 +417,8 @@
 	<div class="button"><a href="<?php echo $designer_url2; ?>">Explore</a></div>
     </div>
 </div>
-
-
+<?php } elseif($this->uri->segment(1)!="Boutique") {?>
+<!--for Boutique content-->
 <div class="row row-margin-zero lableof-b">
     <h1 class="lablecontent-db">BOUTIQUES</h1>
 </div>
@@ -437,6 +438,6 @@
         <div class="button"><a href="<?php echo $boutique_url2; ?>">Explore</a></div>
     </div>
 </div>    
-
+<?php }?>
 
 <!----------------------------User Designer  view Finished-------------------->        

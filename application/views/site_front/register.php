@@ -27,7 +27,7 @@ if(val){
         <div id="login">   
           <h1>Welcome Back!</h1>
           
-          <form action="<?php echo base_url() ?>loginMe" method="post">
+              <form action="<?php echo site_url('loginMe'); ?>" method="post">
           
             <input type="hidden" name="tempvendor" value=<?php echo $vendorId; ?>>
             <input type="hidden" name="tempproduct" value=<?php echo $productId; ?>>
