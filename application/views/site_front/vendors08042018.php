@@ -8,22 +8,22 @@
 
 
 .row {
-    /*display: -ms-flexbox;
+    display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap; 
-    flex-wrap: wrap;*/
+    flex-wrap: wrap;
     padding: 0 4px;
 }
 
 .column {
-    -ms-flex: 100%; 
-    flex: 100%;
-    max-width: 100%;
+    -ms-flex: 33.3%; 
+    flex: 33.3%;
+    max-width: 33.3%;
     padding: 0 4px;
 }
 
 .column img {
-    margin-top: 0px;
+    margin-top: 8px;
     vertical-align: middle;
 }
 
@@ -51,9 +51,6 @@
     overflow: hidden;
     position: relative;
     text-align: center;
-         width: 20%;
-    height: 242px;
-    float: left;
    /*box-shadow: 1px 1px 2px #e6e6e6;*/
     cursor: default;
     /*background: #fff url(../images/bgimg.jpg) no-repeat center center*/
@@ -81,12 +78,12 @@
     margin: 20px 0 0 0
 }
 .view p {
-   /* font-family: Georgia, serif;*/
-    font-weight: 600;
-    font-size: 18px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
     position: relative;
     color: #fff;
-    padding: 130px 20px 20px;
+    padding: 10px 20px 20px;
     text-align: center
 }
 .view a.info {
@@ -102,7 +99,7 @@
     box-shadow: 0 0 5px #000
 }
    .view-eighth .mask { 
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.4);
 	top: -200px;
 	opacity: 0;
 	transition: all 0.3s ease-out 0.5s;
@@ -185,104 +182,65 @@
     <div class="row"> 
   <div class="column">
       <div class="view view-eighth "> 
-               <img src="../../../assets/images/dress/d1.jpg" >
+               <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
                    <div class="mask">  
-              
+             <h2>Title</h2>  
              <p>Your Text</p>  
-               
+                 <a href="#" class="info">Read More</a>  
              </div>  
     </div>
       <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d2.jpg" >
+    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
            <div class="mask">  
-         
+             <h2>Title</h2>  
              <p>Your Text</p>  
-                   
+                 <a href="#" class="info">Read More</a>  
              </div>  
     </div>
           <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d3.jpg" >
+    <img src="../../../assets/images/dress/d3.jpg" style="width:100%">
                <div class="mask">  
-            
+             <h2>Title</h2>  
              <p>Your Text</p>  
-                 
+                 <a href="#" class="info">Read More</a>  
              </div>  
     </div>
               <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d4.jpg" >
+    <img src="../../../assets/images/dress/d4.jpg" style="width:100%">
                    <div class="mask">  
-        
+             <h2>Title</h2>  
              <p>Your Text</p>  
-                  
+                 <a href="#" class="info">Read More</a>  
              </div>  
     </div>
                   <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d3.jpg">
+    <img src="../../../assets/images/dress/d5.jpg" style="width:100%">
                        <div class="mask">  
-            
+             <h2>Title</h2>  
              <p>Your Text</p>  
-                   
+                 <a href="#" class="info">Read More</a>  
              </div>  
     </div>
                       <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d1.jpg" >
+    <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
                            <div class="mask">  
-              
+             <h2>Title</h2>  
              <p>Your Text</p>  
-                   
+                 <a href="#" class="info">Read More</a>  
              </div>  
     </div>
                           <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d2.jpg" >
+    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
                                <div class="mask">  
-             
+             <h2>Title</h2>  
              <p>Your Text</p>  
-               
+                 <a href="#" class="info">Read More</a>  
              </div>  
     </div>
-     <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d3.jpg" >
-               <div class="mask">  
-              
-             <p>Your Text</p>  
-                  
-             </div>  
-    </div> 
-       <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d3.jpg">
-                       <div class="mask">  
-              
-             <p>Your Text</p>  
-                 
-             </div>  
-    </div>
-                      <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d1.jpg" >
-                           <div class="mask">  
-               
-             <p>Your Text</p>  
-                 
-             </div>  
-    </div>
-     <!-- <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d4.jpg" >
-                   <div class="mask">  
-        
-             <p>Your Text</p>  
-                  
-             </div>  
-    </div>
-                  <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d3.jpg">
-                       <div class="mask">  
-            
-             <p>Your Text</p>  
-                   
-             </div>  
-    </div>-->
+                             
    
   </div>
- <!-- <div class="column">
+  <div class="column">
       <div class="view view-eighth "> 
     <img src="../../../assets/images/dress/d6.jpg" style="width:100%">
           <div class="mask">  
@@ -389,7 +347,7 @@
                  <a href="#" class="info">Read More</a>  
              </div>  
     </div>
-  </div>-->
+  </div>
  
 </div>
     
