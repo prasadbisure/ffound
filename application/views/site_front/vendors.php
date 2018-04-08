@@ -1,6 +1,149 @@
 <script>
     $('header').css('height', '300px');
 </script>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    -ms-flex: 33.3%; 
+    flex: 33.3%;
+    max-width: 33.3%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+    .view {
+   /* width: 300px;
+    height: 200px;
+    margin: 10px;
+    float: left;
+    border: 10px solid #fff;*/
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+   /*box-shadow: 1px 1px 2px #e6e6e6;*/
+    cursor: default;
+    /*background: #fff url(../images/bgimg.jpg) no-repeat center center*/
+}
+.view .mask, .view .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+.view img {
+    display: block;
+    position: relative
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 20px;
+    text-align: center
+}
+.view a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000
+}
+.view a.info:hover {
+    box-shadow: 0 0 5px #000
+}
+   .view-eighth .mask { 
+	background-color: rgba(0, 0, 0, 0.4);
+	top: -200px;
+	opacity: 0;
+	transition: all 0.3s ease-out 0.5s;
+}
+.view-eighth h2{
+    transform: translateY(-200px);
+	transition: all 0.2s ease-in-out 0.1s;
+}
+.view-eighth p { 
+    color: #fff;
+    transform: translateY(-200px);
+	transition: all 0.2s ease-in-out 0.2s;
+}
+.view-eighth a.info { 
+    transform: translateY(-200px);
+	transition:  all 0.2s ease-in-out 0.3s;
+} 
+    .view-eighth:hover .mask { 
+	opacity: 1; 
+	top: 0px; 
+	transition-delay: 0s; 
+    animation: bounceY 0.9s linear;
+}																						
+.view-eighth:hover h2 { 
+    transform: translateY(0px);
+	transition-delay: 0.4s;
+}
+.view-eighth:hover p { 
+	transform: translateY(0px);
+	transition-delay: 0.2s;
+}
+.view-eighth:hover a.info { 
+    transform: translateY(0px);
+	transition-delay: 0s;
+}
+    @keyframes bounceY {
+    0% { transform: translateY(-205px);}
+    40% { transform: translateY(-100px);}
+    65% { transform: translateY(-52px);}
+    82% { transform: translateY(-25px);}
+    92% { transform: translateY(-12px);}
+    55%, 75%, 87%, 97%, 100% { transform: translateY(0px);}
+}
+</style>
 <!------------------------ User Designer View -------------------->
 <div class="container">
     <div class="row row-margin-zero middlerow1-db col-lg-12">
@@ -35,79 +178,181 @@
 
 <!----------------------- Products Images  ------------------> 
 
-<div class="container vendor-listing-main">
-    <?php //echo $pagination; die; ?>
-    <?php
+<div class="container vendor-listing-main ">
+    <div class="row"> 
+  <div class="column">
+      <div class="view view-eighth "> 
+               <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
+                   <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
+           <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+          <div class="view view-eighth"> 
+    <img src="../../../assets/images/dress/d3.jpg" style="width:100%">
+               <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+              <div class="view view-eighth"> 
+    <img src="../../../assets/images/dress/d4.jpg" style="width:100%">
+                   <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                  <div class="view view-eighth"> 
+    <img src="../../../assets/images/dress/d5.jpg" style="width:100%">
+                       <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                      <div class="view view-eighth"> 
+    <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
+                           <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                          <div class="view view-eighth"> 
+    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
+                               <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                             
+   
+  </div>
+  <div class="column">
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d6.jpg" style="width:100%">
+          <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+          <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d5.jpg" style="width:100%">
+              <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+              <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d4.jpg" style="width:100%">
+                  <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                  <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d3.jpg" style="width:100%">
+                      <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
+                          <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+                          <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
+                              <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+  </div>  
+  <div class="column">
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
+       <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
+         <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d3.jpg" style="width:100%">
+     <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d6.jpg" style="width:100%">
+            <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
+ <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
+ <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+      <div class="view view-eighth "> 
+    <img src="../../../assets/images/dress/d3.jpg" style="width:100%">
+ <div class="mask">  
+             <h2>Title</h2>  
+             <p>Your Text</p>  
+                 <a href="#" class="info">Read More</a>  
+             </div>  
+    </div>
+  </div>
+ 
+</div>
+    
+    
 
-        if(!empty($designerList))
-        {   $SrNo= !empty($pageno) ? $pageno : 1;
-            $j = 0;
-
-            foreach($designerList as $userId => $designer){ // var_dump($designer['name']); die;  ?>
-                
-                <div class="row row-margin-zero middlerow2-db vendorlist-margins">
-                    <div class="col-md-4 top-buffer" >
-                        <div class="col-md-1 col-md-offset-1 col-sm-1">
-                            <p class="col-p"><?php echo $SrNo; ?></p>
-                        </div>
-                        <a href="<?php echo site_url('vendorInfo')?>/<?php echo $userId ?>">
-                            <input type="hidden" name="vendorId" value=<?php echo $userId ?> >
-			    <?php if($designer['logo'] != '') { ?>
-                            <div class="col-md-8 col-sm-2 col-padding-zero designername" style="padding-top:1px !important;">
-                                    <img src="<?php echo base_url($designer['logo']); ?>" width=88 height=88 >
-                            </div>
-			    <?php } else {?>
-			    <div class="col-md-8 col-sm-2 col-padding-zero designername" style="margin-top:0px;">
-			    	<?php if($designer['brandName'] != ''){ ?>
-                                <span class="username">
-                                    <?php echo $designer['brandName'] ?>
-                                </span>
-                                <?php } else {?>
-                                <span class="username">
-                                    <?php echo $designer['name'] ?>
-                                </span>
-				<?php } ?>
-			    </div>
-			    <?php } ?>
-                        </a>
-                    </div>
-                    <?php 
-
-                    for($i= 0;$i<= 2;$i++){ //echo '<pre>'; var_dump($designer); die;?>
-                        <div class="col-md-2 col-sm-2 vendorlisting-products">
-                            <!--<div class="thumbnail">-->
-                                <?php if ($designer[$i]->images != ''){ ?>
-                                <a href="<?php  echo site_url('ProductDetails');?>/<?php echo $userId ?>/<?php echo $designer[$i]->id;?>">
-                                    <img src="<?php echo base_url($designer[$i]->images); ?>" alt="product" class="userimage-size pimage" style=" height: 120px;border: 1px solid ">
-                                </a>
-                                <?php }else{ ?>
-                                    <img src="<?php echo base_url();?>/assets/images/default_hanger.png" alt="product" class="userimage-size pimage" style=" height: 120px;border: 1px solid ">
-                                <?php } ?>
-                            <!--</div>-->
-                        </div>
-                    
-                    <?php } 
-
-                    
-                    ?>
-                    <div class="col-md-2 col-sm-2 col-padding-zero col-border" style="margin-top:0px;">
-                        <?php if($designer['total_products'] >= 0){ ?>
-				<a href="<?php echo site_url('vendorInfo')?>/<?php echo $userId ?>" class="viewmore-a"><div class="viewmore-btn">+<?php echo $designer['total_products']?></div></a>
-                        <?php }else{ ?>
-                            <button type="submit" class="viewmore-btn" >+<?php echo $designer['total_products']?></button>
-                        <?php } ?>
-                    </div>                  
-                </div>
-        <?php  $i = $i+3; $SrNo++;} ?>
-            
-            <div class="col-md-12 text-center pagination-top-margin">
-                <?php echo $pagination; ?>
-            </div>
-        <?php } else{?>
-             <div class='col-lg-12 text-center no-result-div'>
-                 <span class="no-result">NO  <?php echo ($type == 'designer') ? 'DESIGNER' : 'BOUTIQUE'; ?> FOUND.</span>
-             </div>
-        <?php } ?>
 </div>
 <?php if($this->uri->segment(1)!="designers") {?>
 <!--for Designer content-->

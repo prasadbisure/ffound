@@ -1,5 +1,55 @@
+<style>
+* {
+    box-sizing: border-box;
+}
 
-<div class="col-lg-6 col-lg-offset-3 vendor-search-bar">
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    -ms-flex: 33.3%; 
+    flex: 33.3%;
+    max-width: 33.3%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+    .view img:hover{
+            -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+        transition: all 500ms;
+    }
+
+</style>
+<div class="col-lg-12  vendor-search-bar">
 	<form class="search-box" role="search" method="post" action="/vendorListing">				
 	     <div class="input-group add-on" style=" width: 76%;">
 			<input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
@@ -10,49 +60,63 @@
 	</form>
 </div>
 <div class="container vendorinforow">
-    <?php 
-    // var_dump($vendor); die;
-        if(!empty($vendor))
-        {
-
-            foreach ($vendor as $val)
-            {
-                if($val->pstatus != 1){
-               ?>
-               
+     <div class="row"> 
+  <div class="column view">
+               <img src="../../assets/images/dress/paris.jpg" style="width:100%">
+           
+    <img src="../../assets/images/dress/wedding.jpg" style="width:100%">
+            
+         
+    <img src="../../assets/images/dress/rocks.jpg" style="width:100%">
                 
-                <div class='col-md-3 col-sm-6 text-center webkit-center infoDetails'>
-                    <!--<div class='thumbnail'>-->
-                    <div class="nd-wrap nd-style-1">
-                           <a href="<?php  echo base_url();?>ProductDetails/<?php echo $val->userId ?>/<?php echo $val->id;?>">
-                            <img  src="<?php echo ($val->images != '') ? base_url().$val->images : '/assets/images/default_hanger.png' ?>" alt="" class="img-reponsive product-details">
-                        </a>
-                        <div class="nd-content">
-                            <div class="nd-content_inner">
-                                <div class="nd-content_inner1">
-                                    <span class="nd-icon" >
-                                        <button class="button prd-book-img" data-vendor="<?php echo $val->userId;?>" data-product="<?php echo $val->id;?>" data-user="<?php echo $custId;?>">Book</button>
-                                    </span>
-                                </div>					
-                            </div>				
-                        </div>
-                        <!--<div class="overlay"></div>-->
-                        <!--<div class="button book-btn">-->
-                        <!--    <a href="#"> BUTTON </a>-->
-                        <!--</div>-->
-                        <div class='info'>
-                            <div class='datails'>
-                                <p class='info-text-style'><?php echo $val->product_name; ?></p>
-                                <p class='price-style'>INR. <?php echo $val->price; ?></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--</div>-->
-                </div>
-                
-                <?php  }}
-            }
-    ?>
+   
+    <img src="../../assets/images/dress/falls2.jpg" style="width:100%">
+            
+    <img src="../../assets/images/dress/paris.jpg" style="width:100%">
+                        
+            
+    <img src="../../assets/images/dress/nature.jpg" style="width:100%">
+           
+    <img src="../../assets/images/dress/mist.jpg" style="width:100%">
+        
+                             
+   
+  </div>
+  <div class="column view"> 
+    <img src="../../assets/images/dress/underwater.jpg" style="width:100%">
+          
+    <img src="../../assets/images/dress/ocean.jpg" style="width:100%">
+           
+    <img src="../../assets/images/dress/wedding.jpg" style="width:100%">
+          
+    <img src="../../assets/images/dress/mountainskies.jpg" style="width:100%">
+           
+    <img src="../../assets/images/dress/rocks.jpg" style="width:100%">
+                    
+    <img src="../../assets/images/dress/underwater.jpg" style="width:100%">
+          
+  </div>  
+  <div class="column view">
+   
+    <img src="../../assets/images/dress/wedding.jpg" style="width:100%">
+      
+    <img src="../../assets/images/dress/rocks.jpg" style="width:100%">
+       
+    <img src="../../assets/images/dress/falls2.jpg" style="width:100%">
+     
+    <img src="../../assets/images/dress/paris.jpg" style="width:100%">
+           
+    <img src="../../assets/images/dress/nature.jpg" style="width:100%">
+  
+    <img src="../../assets/images/dress/mist.jpg" style="width:100%">
+  
+              
+      
+    <img src="../../assets/images/dress/paris.jpg" style="width:100%">
+ 
+  </div>
+ 
+</div>
 </div>
 
 <div class="row row-margin-zero itemrow-middle-style">

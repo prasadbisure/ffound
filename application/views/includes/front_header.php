@@ -74,17 +74,14 @@
             <a href="<?php echo site_url('vendorslisting/boutique'); ?>"><button type="button" class="btn col-md-offset-1 button13">BOUTIQUES</button></a>
 				</div>
 				<div class="col-lg-6 col-lg-offset-3">
-					<!--<form class="search-box" role="search" method="post" action="<?php/* echo site_url('vendorListing'); */?>">
+					<form class="search-box" role="search" method="post" action="<?php echo site_url('vendorListing'); ?>">
 					     <div class="input-group add-on">
-							<input type="text" class="form-control" name="srch-term" id="srch-term" >
+							<input type="text" class="form-control" name="srch-term" id="srch-term" placeholder="Search...">
 								<div class="input-group-btn">
 									<button class="btn btn-default custom-theme-border zero-radius custom-zindex" type="submit"><i class="glyphicon glyphicon-search" style="color:white;"></i></button>
 								</div>
 						</div>						
-					</form>-->
-                    <form method="post" action="<?php echo site_url('vendorListing');?>" id="search">
-                      <input name="srch-term" id="srch-term" type="text" size="40" placeholder="Search..." />
-                    </form>
+					</form>
                 </div>
                  <!--<li class="main-nav"><a class="cd-signup" href="#0"><span>Sign up & Log in</span></a></li>  -->
 				<!--</div>-->
