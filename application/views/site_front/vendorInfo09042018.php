@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+
 .row {
     display: -ms-flexbox;
     display: flex;
@@ -53,7 +54,7 @@
     cursor: default;
     /*background: #fff url(../images/bgimg.jpg) no-repeat center center*/
 }
-.view .mask, .view .content, .view .book_mask {
+.view .mask, .view .content {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -67,18 +68,23 @@
 }
 .view h2 {
     text-transform: uppercase;
-    color: #f7ce04eb;
+    color: #e8d887;
     text-align: center;
     font-weight: 600;
         width: 100%;
     position: absolute;
     bottom: 0;
-    font-size: 18px;
-    padding: 16px 10px;
-    background: rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+    padding: 16px 12px;
+    background: rgba(0, 0, 0, 0.7);
     margin: 20px 0 0 0;
 }
-   
+    .view h2 span:first-child {
+   float: left;
+}
+    .view h2 span:last-child {
+   float: right;
+}
 .view p {
    /* font-family: Georgia, serif;*/
     font-weight: 600;
@@ -89,67 +95,36 @@
     text-align: center
 }
 .view a.info {
-    display: inline-block;
+        display: none;
+    position: absolute;
+    bottom: 45px;
+    /* left: 0; */
+    right: 0;
     text-decoration: none;
-    padding: 7px 14px;
-    background: #d4b00b;
-    color: #000;
-        font-weight: 800;
+    padding: 8px 20px;
+    background: #000000ad;
+    color: #fff;
+    /* font-size: 18px; */
+    font-weight: 900;
     text-transform: uppercase;
-    box-shadow: 0 0 1px #000
-}
-.view a.info:hover {
-    box-shadow: 0 0 5px #000
-}
-
-
-       .view-eighth .mask { 
-	background-color: rgba(0, 0, 0, 0.7);
-	top: -200px;
-	opacity: 0;
-	transition: all 0.3s ease-out 0.5s;
-}
-.view-eighth h2{
-    transform: translateY(0px);
-	transition: all 0.2s ease-in-out 0.1s;
+    box-shadow: 0 0 5px #d4b012;
+    border: 1px solid #d4b012;
+      box-shadow: inset 0 0 0 0 #d4b012;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
     
 }
-.view-eighth p { 
-    color: #fff;
-    transform: translateY(-200px);
-	transition: all 0.2s ease-in-out 0.2s;
-}
-.view-eighth a.info { 
-    transform: translateY(-200px);
-	transition:  all 0.2s ease-in-out 0.3s;
-} 
-    .view-eighth:hover .mask { 
-	opacity: 1; 
-	top: -50px; 
-	transition-delay: 0s; 
-    animation: bounceY 0.9s linear;
-}																						
-.view-eighth:hover h2 { 
-    transform: translateY(0px);
-	transition-delay: 0.4s;
-}
-.view-eighth:hover p { 
-	transform: translateY(0px);
-	transition-delay: 0.2s;
-}
-.view-eighth:hover a.info { 
-    transform: translateY(120px);
-	transition-delay: 0s;
-}
-    @keyframes bounceY {
-    0% { transform: translateY(-205px);}
-    40% { transform: translateY(-100px);}
-    65% { transform: translateY(-52px);}
-    82% { transform: translateY(-25px);}
-    92% { transform: translateY(-12px);}
-    55%, 75%, 87%, 97%, 100% { transform: translateY(0px);}
+.view a.info:hover {
+   /* box-shadow: 0 0 5px #000;
+        background: #076d0e;*/
+    box-shadow: inset 0 100px 0 0 #d4b012;
 }
 
+.view_anim:hover a.info { 
+   
+    display:inline-block;
+}
 </style>
 <div class="col-lg-12  vendor-search-bar">
 	<form class="search-box" role="search" method="post" action="/vendorListing">				
@@ -163,199 +138,157 @@
 </div>
 <div class="container vendorinforow">
      <div class="row"> 
-  <div class="column">
-      <div class="view view-eighth"> 
+  <div class="column view">
+      <div class="view view_anim"> 
      <img src="../../assets/images/dress/paris.jpg" style="width:100%">
-          <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
        <div class="mask">  
+           <h2><span>Lorem ipsum dolor sit amet</span><span>RS.5000</span></h2> 
            <a href="#" class="info">Book</a>
              </div> 
-          
              </div> 
-         <div class="view view-eighth">   
+         <div class="view view_anim">   
     <img src="../../assets/images/dress/wedding.jpg" style="width:100%">
-             <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
             <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2> 
+                <a href="#" class="info">Book</a>
              </div> 
              </div> 
-         <div class="view view-eighth"> 
+         <div class="view view_anim"> 
     <img src="../../assets/images/dress/rocks.jpg" style="width:100%">
-             <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
               <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2> 
+                  <a href="#" class="info">Book</a>
              </div> 
              </div>   
-   <div class="view view-eighth"> 
+   <div class="view view_anim"> 
     <img src="../../assets/images/dress/falls2.jpg" style="width:100%">
-       <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
        <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2> 
+           <a href="#" class="info">Book</a>
              </div> 
              </div> 
-          <div class="view view-eighth">   
+          <div class="view view_anim">   
     <img src="../../assets/images/dress/paris.jpg" style="width:100%">
-              <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
                         <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2>  
+                            <a href="#" class="info">Book</a>
              </div> 
              </div> 
-           <div class="view view-eighth">  
+           <div class="view view_anim">  
     <img src="../../assets/images/dress/nature.jpg" style="width:100%">
-               <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
                <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2> 
+                   <a href="#" class="info">Book</a>
              </div> 
              </div> 
-           <div class="view view-eighth"> 
+           <div class="view view_anim"> 
     <img src="../../assets/images/dress/mist.jpg" style="width:100%">
-               <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
         <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2> 
+            <a href="#" class="info">Book</a>
              </div> 
              </div> 
                              
    
   </div>
-  <div class="column view"> 
-      <div class="view view-eighth"> 
+  <div class="column view "> 
+      <div class="view view_anim"> 
     <img src="../../assets/images/dress/underwater.jpg" style="width:100%">
-          <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
           <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2> 
+              <a href="#" class="info">Book</a>
              </div> 
              </div> 
-      <div class="view view-eighth"> 
+      <div class="view view_anim"> 
     <img src="../../assets/images/dress/ocean.jpg" style="width:100%">
-          <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
            <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2> 
+               <a href="#" class="info">Book</a>
              </div> 
              </div> 
-      <div class="view view-eighth"> 
+      <div class="view view_anim"> 
     <img src="../../assets/images/dress/wedding.jpg" style="width:100%">
-          <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
           <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2>
+              <a href="#" class="info">Book</a>
              </div> 
              </div> 
-      <div class="view view-eighth"> 
+      <div class="view view_anim"> 
     <img src="../../assets/images/dress/mountainskies.jpg" style="width:100%">
-          <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
            <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2>  
+               <a href="#" class="info">Book</a>
              </div> 
              </div> 
-      <div class="view view-eighth"> 
+      <div class="view view_anim"> 
     <img src="../../assets/images/dress/rocks.jpg" style="width:100%">
-          <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
            <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2>
+               <a href="#" class="info">Book</a>
              </div> 
              </div>  
-      <div class="view view-eighth"> 
+      <div class="view view_anim"> 
     <img src="../../assets/images/dress/underwater.jpg" style="width:100%">
-          <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
+           <div class="mask">  
+           <h2><span>Title</span><span>RS.5000</span></h2>  
+               <a href="#" class="info">Book</a>
              </div> 
-          <div class="mask">  
-           <a href="#" class="info">Book</a>  
              </div> 
-             </div>  
   </div>  
   <div class="column view">
-   <div class="view view-eighth"> 
+   <div class="view view_anim"> 
     <img src="../../assets/images/dress/wedding.jpg" style="width:100%">
-       <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
         <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2> 
+            <a href="#" class="info">Book</a>
              </div> 
              </div>
-      <div class="view view-eighth"> 
+      <div class="view view_anim"> 
     <img src="../../assets/images/dress/rocks.jpg" style="width:100%">
-          <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
            <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2> 
+               <a href="#" class="info">Book</a>
              </div> 
              </div>
-       <div class="view view-eighth"> 
+       <div class="view view_anim"> 
     <img src="../../assets/images/dress/falls2.jpg" style="width:100%">
-           <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
             <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2> 
+                <a href="#" class="info">Book</a>
              </div> 
              </div>
-     <div class="view view-eighth"> 
+     <div class="view view_anim"> 
     <img src="../../assets/images/dress/paris.jpg" style="width:100%">
-         <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
           <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2> 
+              <a href="#" class="info">Book</a>
              </div> 
              </div>
-        <div class="view view-eighth">    
+        <div class="view view_anim">    
     <img src="../../assets/images/dress/nature.jpg" style="width:100%">
-            <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
              <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2> 
+                 <a href="#" class="info">Book</a>
              </div> 
              </div>
-  <div class="view view-eighth"> 
+  <div class="view view_anim"> 
     <img src="../../assets/images/dress/mist.jpg" style="width:100%">
-      <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
    <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2> 
+       <a href="#" class="info">Book</a>
              </div> 
              </div>
               
-      <div class="view view-eighth"> 
+      <div class="view view_anim"> 
     <img src="../../assets/images/dress/paris.jpg" style="width:100%">
-          <div class="book_mask">  
-           <h2><span>RS.5000</span></h2> 
-             </div> 
  <div class="mask">  
-           <a href="#" class="info">Book</a>  
+           <h2><span>Title</span><span>RS.5000</span></h2>
+     <a href="#" class="info">Book</a>
              </div> 
              </div>
   </div>
  
 </div>
-    
 </div>
 
 <div class="row row-margin-zero itemrow-middle-style">

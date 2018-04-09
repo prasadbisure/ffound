@@ -2,9 +2,7 @@
     $('header').css('height', '300px');
 </script>
 <style>
-* {
-    box-sizing: border-box;
-}
+
 
 
 .row {
@@ -392,21 +390,8 @@
   </div>-->
  
 </div>
-    <?php
-
-        if(!empty($designerList))
-        {   $SrNo= !empty($pageno) ? $pageno : 1;
-            $j = 0;?>
-            
-            
-            <div class="col-md-12 text-center pagination-top-margin">
-                <?php echo $pagination; ?>
-            </div>
-        <?php } else{?>
-             <div class='col-lg-12 text-center no-result-div'>
-                 <span class="no-result">NO  <?php echo ($type == 'designer') ? 'DESIGNER' : 'BOUTIQUE'; ?> FOUND.</span>
-             </div>
-        <?php } ?>
+    
+    
 
 </div>
 <?php if($this->uri->segment(1)!="designers") {?>
