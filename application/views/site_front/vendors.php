@@ -185,7 +185,7 @@
     <div class="row"> 
   <div class="column">
       <div class="view view-eighth "> 
-               <img src="../../../assets/images/dress/d1.jpg" >
+               <img src="<?php echo base_url(); ?>assets/images/dress/d1.jpg" >
                    <div class="mask">  
               
              <p>Your Text</p>  
@@ -193,7 +193,7 @@
              </div>  
     </div>
       <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d2.jpg" >
+    <img src="<?php echo base_url(); ?>assets/images/dress/d2.jpg" >
            <div class="mask">  
          
              <p>Your Text</p>  
@@ -201,7 +201,7 @@
              </div>  
     </div>
           <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d3.jpg" >
+    <img src="<?php echo base_url(); ?>assets/images/dress/d3.jpg" >
                <div class="mask">  
             
              <p>Your Text</p>  
@@ -209,7 +209,7 @@
              </div>  
     </div>
               <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d4.jpg" >
+    <img src="<?php echo base_url(); ?>assets/images/dress/d4.jpg" >
                    <div class="mask">  
         
              <p>Your Text</p>  
@@ -217,7 +217,7 @@
              </div>  
     </div>
                   <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d3.jpg">
+    <img src="<?php echo base_url(); ?>assets/images/dress/d3.jpg">
                        <div class="mask">  
             
              <p>Your Text</p>  
@@ -225,7 +225,7 @@
              </div>  
     </div>
                       <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d1.jpg" >
+    <img src="<?php echo base_url(); ?>assets/images/dress/d1.jpg" >
                            <div class="mask">  
               
              <p>Your Text</p>  
@@ -233,7 +233,7 @@
              </div>  
     </div>
                           <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d2.jpg" >
+    <img src="<?php echo base_url(); ?>assets/images/dress/d2.jpg" >
                                <div class="mask">  
              
              <p>Your Text</p>  
@@ -241,7 +241,7 @@
              </div>  
     </div>
      <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d3.jpg" >
+    <img src="<?php echo base_url(); ?>assets/images/dress/d3.jpg" >
                <div class="mask">  
               
              <p>Your Text</p>  
@@ -249,7 +249,7 @@
              </div>  
     </div> 
        <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d3.jpg">
+    <img src="<?php echo base_url(); ?>assets/images/dress/d3.jpg">
                        <div class="mask">  
               
              <p>Your Text</p>  
@@ -257,7 +257,7 @@
              </div>  
     </div>
                       <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d1.jpg" >
+    <img src="<?php echo base_url(); ?>assets/images/dress/d1.jpg" >
                            <div class="mask">  
                
              <p>Your Text</p>  

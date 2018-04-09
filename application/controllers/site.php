@@ -143,9 +143,9 @@ class Site extends BaseController
         }
         $this->data['pageno'] = $pageNo;
 
-        echo"<pre>";
-        print_r($vendorList);
-        exit;
+//        echo"<pre>";
+//        print_r($vendorList);
+//        exit;
 
         $this->loadOtherviews("site_front/vendors", $this->data, NULL , NULL);
      }
