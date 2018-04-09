@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cca96038-201b-444d-b30f-55ae7f52260d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/site_front/vendorInfo09042018.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/site_front/vendors09042018.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/site.php" afterPath="$PROJECT_DIR$/application/controllers/site.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/site_front/vendorInfo.php" afterPath="$PROJECT_DIR$/application/views/site_front/vendorInfo.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/site_front/vendors.php" afterPath="$PROJECT_DIR$/application/views/site_front/vendors.php" />
     </list>
     <ignored path="ffound.iws" />
@@ -78,15 +80,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="site.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="site.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="147" column="15" selection-start-line="145" selection-start-column="10" selection-end-line="147" selection-end-column="15" />
+            <state relative-caret-position="134">
+              <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
               <folding>
-                <element signature="e#2452#2560#0#PHP" expanded="false" />
-                <element signature="e#2578#2636#0#PHP" expanded="false" />
-                <element signature="e#4624#5280#0#PHP" expanded="false" />
                 <element signature="n#aboutus#0;n#Site#0;n#!!top" expanded="false" />
                 <element signature="e#6608#6714#0#PHP" expanded="false" />
                 <element signature="e#6724#6782#0#PHP" expanded="false" />
@@ -124,6 +123,9 @@
                 <element signature="n#pkcs5_pad#0;n#Site#0;n#!!top" expanded="false" />
                 <element signature="n#hextobin#0;n#Site#0;n#!!top" expanded="false" />
                 <element signature="n#termsAndConditions#0;n#Site#0;n#!!top" expanded="false" />
+                <marker date="1523282896682" expanded="false" signature="2521:2559" placeholder="..." />
+                <marker date="1523282896682" expanded="false" signature="2580:2634" placeholder="..." />
+                <marker date="1523282896682" expanded="false" signature="4656:5279" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -139,7 +141,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vendors.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vendors.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/site_front/vendors.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
@@ -184,8 +186,8 @@
         <option value="$PROJECT_DIR$/application/controllers/user.php" />
         <option value="$PROJECT_DIR$/application/models/user_model.php" />
         <option value="$PROJECT_DIR$/application/views/editOld.php" />
-        <option value="$PROJECT_DIR$/application/controllers/site.php" />
         <option value="$PROJECT_DIR$/application/views/site_front/vendors.php" />
+        <option value="$PROJECT_DIR$/application/controllers/site.php" />
       </list>
     </option>
   </component>
@@ -287,15 +289,15 @@
       <updated>1521864432871</updated>
       <workItem from="1521864434473" duration="13691000" />
       <workItem from="1521962408828" duration="23605000" />
-      <workItem from="1523243678711" duration="250000" />
+      <workItem from="1523243678711" duration="275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37546000" />
+    <option name="totallyTimeSpent" value="37571000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -383,9 +385,6 @@
         <state relative-caret-position="2125">
           <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="147" selection-end-column="13" />
           <folding>
-            <element signature="e#2452#2560#0#PHP" expanded="false" />
-            <element signature="e#2578#2636#0#PHP" expanded="false" />
-            <element signature="e#4624#5280#0#PHP" expanded="false" />
             <element signature="n#aboutus#0;n#Site#0;n#!!top" expanded="false" />
             <element signature="e#6608#6714#0#PHP" expanded="false" />
             <element signature="e#6724#6782#0#PHP" expanded="false" />
@@ -423,6 +422,9 @@
             <element signature="n#pkcs5_pad#0;n#Site#0;n#!!top" expanded="false" />
             <element signature="n#hextobin#0;n#Site#0;n#!!top" expanded="false" />
             <element signature="n#termsAndConditions#0;n#Site#0;n#!!top" expanded="false" />
+            <marker date="1523282896682" expanded="false" signature="2521:2559" placeholder="..." />
+            <marker date="1523282896682" expanded="false" signature="2580:2634" placeholder="..." />
+            <marker date="1523282896682" expanded="false" signature="4656:5279" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -464,9 +466,6 @@
         <state relative-caret-position="1717">
           <caret line="101" column="58" selection-start-line="101" selection-start-column="58" selection-end-line="101" selection-end-column="58" />
           <folding>
-            <element signature="e#2452#2560#0#PHP" expanded="false" />
-            <element signature="e#2578#2636#0#PHP" expanded="false" />
-            <element signature="e#4624#5280#0#PHP" expanded="false" />
             <element signature="n#aboutus#0;n#Site#0;n#!!top" expanded="false" />
             <element signature="e#6608#6714#0#PHP" expanded="false" />
             <element signature="e#6724#6782#0#PHP" expanded="false" />
@@ -504,6 +503,9 @@
             <element signature="n#pkcs5_pad#0;n#Site#0;n#!!top" expanded="false" />
             <element signature="n#hextobin#0;n#Site#0;n#!!top" expanded="false" />
             <element signature="n#termsAndConditions#0;n#Site#0;n#!!top" expanded="false" />
+            <marker date="1523282896682" expanded="false" signature="2521:2559" placeholder="..." />
+            <marker date="1523282896682" expanded="false" signature="2580:2634" placeholder="..." />
+            <marker date="1523282896682" expanded="false" signature="4656:5279" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -771,14 +773,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/site_front/vendors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="261" column="15" selection-start-line="261" selection-start-column="15" selection-end-line="261" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="147" column="15" selection-start-line="145" selection-start-column="10" selection-end-line="147" selection-end-column="15" />
+        <state relative-caret-position="134">
+          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
           <folding>
-            <element signature="e#2452#2560#0#PHP" expanded="false" />
-            <element signature="e#2578#2636#0#PHP" expanded="false" />
-            <element signature="e#4624#5280#0#PHP" expanded="false" />
             <element signature="n#aboutus#0;n#Site#0;n#!!top" expanded="false" />
             <element signature="e#6608#6714#0#PHP" expanded="false" />
             <element signature="e#6724#6782#0#PHP" expanded="false" />
@@ -816,15 +823,10 @@
             <element signature="n#pkcs5_pad#0;n#Site#0;n#!!top" expanded="false" />
             <element signature="n#hextobin#0;n#Site#0;n#!!top" expanded="false" />
             <element signature="n#termsAndConditions#0;n#Site#0;n#!!top" expanded="false" />
+            <marker date="1523282896682" expanded="false" signature="2521:2559" placeholder="..." />
+            <marker date="1523282896682" expanded="false" signature="2580:2634" placeholder="..." />
+            <marker date="1523282896682" expanded="false" signature="4656:5279" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/site_front/vendors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="261" column="15" selection-start-line="261" selection-start-column="15" selection-end-line="261" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>

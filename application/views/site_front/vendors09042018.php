@@ -2,9 +2,7 @@
     $('header').css('height', '300px');
 </script>
 <style>
-* {
-    box-sizing: border-box;
-}
+
 
 
 .row {
@@ -185,7 +183,7 @@
     <div class="row"> 
   <div class="column">
       <div class="view view-eighth "> 
-               <img src="<?php echo base_url(); ?>assets/images/dress/d1.jpg" >
+               <img src="../../../assets/images/dress/d1.jpg" >
                    <div class="mask">  
               
              <p>Your Text</p>  
@@ -193,7 +191,7 @@
              </div>  
     </div>
       <div class="view view-eighth "> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d2.jpg" >
+    <img src="../../../assets/images/dress/d2.jpg" >
            <div class="mask">  
          
              <p>Your Text</p>  
@@ -201,7 +199,7 @@
              </div>  
     </div>
           <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d3.jpg" >
+    <img src="../../../assets/images/dress/d3.jpg" >
                <div class="mask">  
             
              <p>Your Text</p>  
@@ -209,7 +207,7 @@
              </div>  
     </div>
               <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d4.jpg" >
+    <img src="../../../assets/images/dress/d4.jpg" >
                    <div class="mask">  
         
              <p>Your Text</p>  
@@ -217,7 +215,7 @@
              </div>  
     </div>
                   <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d3.jpg">
+    <img src="../../../assets/images/dress/d3.jpg">
                        <div class="mask">  
             
              <p>Your Text</p>  
@@ -225,7 +223,7 @@
              </div>  
     </div>
                       <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d1.jpg" >
+    <img src="../../../assets/images/dress/d1.jpg" >
                            <div class="mask">  
               
              <p>Your Text</p>  
@@ -233,7 +231,7 @@
              </div>  
     </div>
                           <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d2.jpg" >
+    <img src="../../../assets/images/dress/d2.jpg" >
                                <div class="mask">  
              
              <p>Your Text</p>  
@@ -241,7 +239,7 @@
              </div>  
     </div>
      <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d3.jpg" >
+    <img src="../../../assets/images/dress/d3.jpg" >
                <div class="mask">  
               
              <p>Your Text</p>  
@@ -249,7 +247,7 @@
              </div>  
     </div> 
        <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d3.jpg">
+    <img src="../../../assets/images/dress/d3.jpg">
                        <div class="mask">  
               
              <p>Your Text</p>  
@@ -257,7 +255,7 @@
              </div>  
     </div>
                       <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d1.jpg" >
+    <img src="../../../assets/images/dress/d1.jpg" >
                            <div class="mask">  
                
              <p>Your Text</p>  
@@ -392,21 +390,8 @@
   </div>-->
  
 </div>
-    <?php
-
-        if(!empty($designerList))
-        {   $SrNo= !empty($pageno) ? $pageno : 1;
-            $j = 0;?>
-            
-            
-            <div class="col-md-12 text-center pagination-top-margin">
-                <?php echo $pagination; ?>
-            </div>
-        <?php } else{?>
-             <div class='col-lg-12 text-center no-result-div'>
-                 <span class="no-result">NO  <?php echo ($type == 'designer') ? 'DESIGNER' : 'BOUTIQUE'; ?> FOUND.</span>
-             </div>
-        <?php } ?>
+    
+    
 
 </div>
 <?php if($this->uri->segment(1)!="designers") {?>
