@@ -69,15 +69,17 @@ body {
 }
 /*======================================Common Header =============================*/
 header{
-  background-image: url("../images/fashion_found_texture.png");  
+  background: url("../images/fashion_found_texture_new.png") center fixed;  
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -20px;
-  height: 350px;
+  
+
 }
 .starter-template{
   text-align: center;
   margin-top: 136px;
+        margin-bottom: 130px;
 }
 .ff-txt{
     margin-left:30px;
