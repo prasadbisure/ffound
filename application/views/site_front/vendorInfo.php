@@ -94,9 +94,11 @@
     padding: 7px 14px;
     background: #d4b00b;
     color: #000;
-        font-weight: 800;
+        font-weight: 700;
     text-transform: uppercase;
-    box-shadow: 0 0 1px #000
+    box-shadow: 0 0 1px #000;
+        font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
 .view a.info:hover {
     box-shadow: 0 0 5px #000
