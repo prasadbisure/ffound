@@ -67,7 +67,7 @@
 }
 .view h2 {
     text-transform: uppercase;
-    color: #f7ce04eb;
+    color: #d4b000;
     text-align: center;
     font-weight: 600;
         width: 100%;
@@ -138,7 +138,9 @@
 	transition-delay: 0.2s;
 }
 .view-eighth:hover a.info { 
-    transform: translateY(120px);
+     position: relative;
+  top: 50%;
+  transform: translateY(50%);
 	transition-delay: 0s;
 }
     @keyframes bounceY {
@@ -166,12 +168,14 @@
   <div class="column">
       <div class="view view-eighth"> 
      <img src="../../assets/images/dress/paris.jpg" style="width:100%">
-          <div class="book_mask">  
+           <div class="book_mask">  
            <h2><span>RS.5000</span></h2> 
              </div> 
-       <div class="mask">  
-           <a href="#" class="info">Book</a>
-             </div> 
+          <div class="mask">  
+           <a href="#" class="info"><b>Book</b></a>
+             </div>
+         
+        
           
              </div> 
          <div class="view view-eighth">   

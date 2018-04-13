@@ -65,10 +65,13 @@
     overflow: hidden;
     top: 0;
     left: 0
+        
 }
 .view img {
     display: block;
     position: relative
+         -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 .view h2 {
     text-transform: uppercase;
@@ -106,6 +109,7 @@
 	top: -200px;
 	opacity: 0;
 	transition: all 0.3s ease-out 0.5s;
+       
 }
 .view-eighth h2{
     transform: translateY(-200px);
@@ -125,6 +129,7 @@
 	top: 0px; 
 	transition-delay: 0s; 
     animation: bounceY 0.9s linear;
+        
 }																						
 .view-eighth:hover h2 { 
     transform: translateY(0px);
