@@ -301,7 +301,43 @@ class Site extends BaseController
         $this->data['heading1']='';
         $this->data['heading2']='We make sure to keep our store updated with the latest trends and keep our customers happy';
         $this->data['login1']='';
-        $this->loadProductViews("site_front/vendorInfo", $this->data, NULL , NULL);
+
+         $col_flag1 = true; $col_flag2 = $col_flag3 = false;
+         $col_data1 = $col_data2 = $col_data3 = [];
+         $array = $this->data['vendor'];
+         for($i=0;$i<count($array);$i++) {
+
+            if ($array[$i]->pstatus != 1){
+                if ($col_flag1) {
+                     $col_data1[] = $array[$i];
+                     $col_flag2 = true;
+                     $col_flag1 = false;
+                     $col_flag3 = false;
+                     continue;
+                 }
+                if ($col_flag2) {
+                 $col_data2[] = $array[$i];
+                 $col_flag3 = true;
+                 $col_flag1 = false;
+                 $col_flag2 = false;
+                 continue;
+             }
+                if ($col_flag3) {
+                 $col_data3[] = $array[$i];
+                 $col_flag1 = true;
+                 $col_flag2 = false;
+                 $col_flag3 = false;
+                 continue;
+             }
+            }
+         }
+
+         $this->data['col1_data']= $col_data1;
+         $this->data['col2_data']= $col_data2;
+         $this->data['col3_data']= $col_data3;
+
+
+         $this->loadProductViews("site_front/vendorInfo", $this->data, NULL , NULL);
      }
 
 
