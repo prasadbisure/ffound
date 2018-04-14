@@ -67,7 +67,7 @@
 }
 .view h2 {
     text-transform: uppercase;
-    color: #d4b000;
+    color: #f7ce04eb;
     text-align: center;
     font-weight: 600;
         width: 100%;
@@ -94,11 +94,9 @@
     padding: 7px 14px;
     background: #d4b00b;
     color: #000;
-        font-weight: 700;
+        font-weight: 800;
     text-transform: uppercase;
-    box-shadow: 0 0 1px #000;
-        font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    box-shadow: 0 0 1px #000
 }
 .view a.info:hover {
     box-shadow: 0 0 5px #000
@@ -140,9 +138,7 @@
 	transition-delay: 0.2s;
 }
 .view-eighth:hover a.info { 
-     position: relative;
-  top: 50%;
-  transform: translateY(50%);
+    transform: translateY(120px);
 	transition-delay: 0s;
 }
     @keyframes bounceY {
@@ -170,14 +166,12 @@
   <div class="column">
       <div class="view view-eighth"> 
      <img src="../../assets/images/dress/paris.jpg" style="width:100%">
-           <div class="book_mask">  
+          <div class="book_mask">  
            <h2><span>RS.5000</span></h2> 
              </div> 
-          <div class="mask">  
-           <a href="#" class="info"><b>Book</b></a>
-             </div>
-         
-        
+       <div class="mask">  
+           <a href="#" class="info">Book</a>
+             </div> 
           
              </div> 
          <div class="view view-eighth">   
