@@ -302,6 +302,9 @@ class User extends BaseController
 
         $config['upload_path']          = './upload/profile_pics';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
+        $config['max_size']             = 1000;
+        $config['max_width']            = 4024;
+        $config['max_height']           = 4024;
         $this->load->library('upload', $config);
 
         if (!is_dir('./upload/profile_pics')) {

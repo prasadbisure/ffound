@@ -101,7 +101,7 @@ class Site extends BaseController
         $config['uri_segment'] = 3;
         $config['base_url'] = site_url('vendorslisting')."/$type";
         $config['total_rows'] = $vendorListCount[0]->count;;
-        $config['per_page'] = 5;
+        $config['per_page'] = 10;
         $config["num_links"] = round( $config["total_rows"] / $config["per_page"] );
         
         $this->pagination->initialize($config);
@@ -124,6 +124,8 @@ class Site extends BaseController
             $productArray['name'] = $vendor->name;
             $productArray['brandName'] = $vendor->brandName;
             $productArray['logo']      = $vendor->logo;
+            $productArray['profile_pic']      = $vendor->profile_pic;
+            $productArray['profile_pic_status']      = $vendor->profile_pic_status;
             $vendorArray[$vendor->userId] = $productArray;
         }
         
@@ -144,7 +146,7 @@ class Site extends BaseController
         $this->data['pageno'] = $pageNo;
 
 //        echo"<pre>";
-//        print_r($vendorList);
+//        print_r($this->data['designerList']);
 //        exit;
 
         $this->loadOtherviews("site_front/vendors", $this->data, NULL , NULL);

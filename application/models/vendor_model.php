@@ -50,7 +50,7 @@ class vendor_model extends CI_Model
         if($type == 'boutique')
             $roleId = 3;    
         
-        $this->db->select('BaseTbl.userId, BaseTbl.name, BaseTbl.roleId, BaseTbl.brandName, BaseTbl.logo, BaseTbl.bio, BaseTbl.specialization');
+        $this->db->select('BaseTbl.userId, BaseTbl.name, BaseTbl.roleId, BaseTbl.brandName, BaseTbl.logo, BaseTbl.bio, BaseTbl.specialization, BaseTbl.profile_pic, BaseTbl.profile_pic_status');
         $this->db->from('tbl_users as BaseTbl');
         
         $this->db->where('BaseTbl.isDeleted', 0);

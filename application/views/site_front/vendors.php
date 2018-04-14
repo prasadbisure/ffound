@@ -146,6 +146,10 @@
     92% { transform: translateY(-12px);}
     55%, 75%, 87%, 97%, 100% { transform: translateY(0px);}
 }
+    .profile-background{
+        background-color: #333;
+        border: 1px solid #FFFFFF;
+    }
 </style>
 <!------------------------ User Designer View -------------------->
 <div class="container">
@@ -175,241 +179,46 @@
 
 <div class="row row-margin-zero">
     <div class="col-md-12 col-padding-zero">
-        <h1 class="topdesigner">TOP 05 <?php echo (!empty($type)) ?  ($type == 'designer') ? 'DESIGNERS' : 'BOUTIQUES' : ''; ?> IN PUNE</h1>
+        <h1 class="topdesigner">TOP 10 <?php echo (!empty($type)) ?  ($type == 'designer') ? 'DESIGNERS' : 'BOUTIQUES' : ''; ?> IN PUNE</h1>
     </div>
 </div>
 
 <!----------------------- Products Images  ------------------> 
 
 <div class="container vendor-listing-main ">
-    <div class="row"> 
-  <div class="column">
-      <div class="view view-eighth "> 
-               <img src="<?php echo base_url(); ?>assets/images/dress/d1.jpg" >
-                   <div class="mask">  
-              
-             <p>Your Text</p>  
-               
-             </div>  
-    </div>
-      <div class="view view-eighth "> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d2.jpg" >
-           <div class="mask">  
-         
-             <p>Your Text</p>  
-                   
-             </div>  
-    </div>
-          <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d3.jpg" >
-               <div class="mask">  
-            
-             <p>Your Text</p>  
-                 
-             </div>  
-    </div>
-              <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d4.jpg" >
-                   <div class="mask">  
-        
-             <p>Your Text</p>  
-                  
-             </div>  
-    </div>
-                  <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d3.jpg">
-                       <div class="mask">  
-            
-             <p>Your Text</p>  
-                   
-             </div>  
-    </div>
-                      <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d1.jpg" >
-                           <div class="mask">  
-              
-             <p>Your Text</p>  
-                   
-             </div>  
-    </div>
-                          <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d2.jpg" >
-                               <div class="mask">  
-             
-             <p>Your Text</p>  
-               
-             </div>  
-    </div>
-     <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d3.jpg" >
-               <div class="mask">  
-              
-             <p>Your Text</p>  
-                  
-             </div>  
-    </div> 
-       <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d3.jpg">
-                       <div class="mask">  
-              
-             <p>Your Text</p>  
-                 
-             </div>  
-    </div>
-                      <div class="view view-eighth"> 
-    <img src="<?php echo base_url(); ?>assets/images/dress/d1.jpg" >
-                           <div class="mask">  
-               
-             <p>Your Text</p>  
-                 
-             </div>  
-    </div>
-     <!-- <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d4.jpg" >
-                   <div class="mask">  
-        
-             <p>Your Text</p>  
-                  
-             </div>  
-    </div>
-                  <div class="view view-eighth"> 
-    <img src="../../../assets/images/dress/d3.jpg">
-                       <div class="mask">  
-            
-             <p>Your Text</p>  
-                   
-             </div>  
-    </div>-->
-   
-  </div>
- <!-- <div class="column">
-      <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d6.jpg" style="width:100%">
-          <div class="mask">  
-             <h2>Title</h2>  
-             <p>Your Text</p>  
-                 <a href="#" class="info">Read More</a>  
-             </div>  
-    </div>
-          <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d5.jpg" style="width:100%">
-              <div class="mask">  
-             <h2>Title</h2>  
-             <p>Your Text</p>  
-                 <a href="#" class="info">Read More</a>  
-             </div>  
-    </div>
-              <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d4.jpg" style="width:100%">
-                  <div class="mask">  
-             <h2>Title</h2>  
-             <p>Your Text</p>  
-                 <a href="#" class="info">Read More</a>  
-             </div>  
-    </div>
-                  <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d3.jpg" style="width:100%">
-                      <div class="mask">  
-             <h2>Title</h2>  
-             <p>Your Text</p>  
-                 <a href="#" class="info">Read More</a>  
-             </div>  
-    </div>
-                      <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
-                          <div class="mask">  
-             <h2>Title</h2>  
-             <p>Your Text</p>  
-                 <a href="#" class="info">Read More</a>  
-             </div>  
-    </div>
-                          <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
-                              <div class="mask">  
-             <h2>Title</h2>  
-             <p>Your Text</p>  
-                 <a href="#" class="info">Read More</a>  
-             </div>  
-    </div>
-  </div>  
-  <div class="column">
-      <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
-       <div class="mask">  
-             <h2>Title</h2>  
-             <p>Your Text</p>  
-                 <a href="#" class="info">Read More</a>  
-             </div>  
-    </div>
-      <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
-         <div class="mask">  
-             <h2>Title</h2>  
-             <p>Your Text</p>  
-                 <a href="#" class="info">Read More</a>  
-             </div>  
-    </div>
-      <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d3.jpg" style="width:100%">
-     <div class="mask">  
-             <h2>Title</h2>  
-             <p>Your Text</p>  
-                 <a href="#" class="info">Read More</a>  
-             </div>  
-    </div>
-      <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d6.jpg" style="width:100%">
-            <div class="mask">  
-             <h2>Title</h2>  
-             <p>Your Text</p>  
-                 <a href="#" class="info">Read More</a>  
-             </div>  
-    </div>
-      <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d1.jpg" style="width:100%">
- <div class="mask">  
-             <h2>Title</h2>  
-             <p>Your Text</p>  
-                 <a href="#" class="info">Read More</a>  
-             </div>  
-    </div>
-      <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d2.jpg" style="width:100%">
- <div class="mask">  
-             <h2>Title</h2>  
-             <p>Your Text</p>  
-                 <a href="#" class="info">Read More</a>  
-             </div>  
-    </div>
-      <div class="view view-eighth "> 
-    <img src="../../../assets/images/dress/d3.jpg" style="width:100%">
- <div class="mask">  
-             <h2>Title</h2>  
-             <p>Your Text</p>  
-                 <a href="#" class="info">Read More</a>  
-             </div>  
-    </div>
-  </div>-->
- 
-</div>
     <?php
-
-        if(!empty($designerList))
-        {   $SrNo= !empty($pageno) ? $pageno : 1;
-            $j = 0;?>
-            
-            
-            <div class="col-md-12 text-center pagination-top-margin">
-                <?php echo $pagination; ?>
+    if(!empty($designerList)) {
+        $SrNo = !empty($pageno) ? $pageno : 1;
+        $j = 0;
+        ?>
+        <div class="row">
+            <div class="column">
+                <?php foreach ($designerList as $key => $designer ) { ?>
+                    <div class="view view-eighth <?php echo ($designer['profile_pic_status']!="Enabled")?'profile-background':'0'; ?>">
+                        <?php if($designer['profile_pic_status']=="Enabled"){ ?>
+                            <img src="<?php echo base_url().$designer['profile_pic']; ?>">
+                        <?php } ?>
+                        <a href="<?php echo site_url();?>/vendorInfo/<?php echo $key; ?>">
+                            <div class="mask">
+                                <p><?php echo $designer['brandName']?></p>
+                            </div>
+                        </a>
+                    </div>
+                <?php } ?>
             </div>
-        <?php } else{?>
-             <div class='col-lg-12 text-center no-result-div'>
-                 <span class="no-result">NO  <?php echo ($type == 'designer') ? 'DESIGNER' : 'BOUTIQUE'; ?> FOUND.</span>
-             </div>
-        <?php } ?>
+        </div>
+        <div class="col-md-12 text-center pagination-top-margin">
+            <?php echo $pagination; ?>
+        </div>
+    <?php } else{ ?>
+        <div class='col-lg-12 text-center no-result-div'>
+            <span class="no-result">NO  <?php echo ($type == 'designer') ? 'DESIGNER' : 'BOUTIQUE'; ?> FOUND.</span>
+        </div>
+    <?php } ?>
+
 
 </div>
-<?php if($this->uri->segment(1)!="designers") {?>
+<?php if($this->uri->segment(2)!="designer") {?>
 <!--for Designer content-->
     <div class="row row-margin-zero lableof-d">
     <h1 class="lablecontent-db">DESIGNERS</h1>
@@ -430,7 +239,7 @@
 	<div class="button"><a href="<?php echo $designer_url2; ?>">Explore</a></div>
     </div>
 </div>
-<?php } elseif($this->uri->segment(1)!="Boutique") {?>
+<?php } elseif($this->uri->segment(2)!="Boutique") {?>
 <!--for Boutique content-->
 <div class="row row-margin-zero lableof-b">
     <h1 class="lablecontent-db">BOUTIQUES</h1>
