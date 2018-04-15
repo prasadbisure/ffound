@@ -12,7 +12,7 @@
     display: flex;
     -ms-flex-wrap: wrap; 
     flex-wrap: wrap;*/
-    padding: 0 4px;
+    padding: 0 0px;
 }
 
 .column {
@@ -41,7 +41,15 @@
         flex: 100%;
         max-width: 100%;
     }
+    .view{
+        width: 100%!important;
+        margin-bottom: 2%;
+    }
+    .view img {
+    height: auto;
+        }
 }
+    
     .view {
    /* width: 300px;
     height: 200px;
@@ -51,8 +59,8 @@
     overflow: hidden;
     position: relative;
     text-align: center;
-         width: 20%;
-    height: 242px;
+         width: 230px;
+    height: auto;
     float: left;
    /*box-shadow: 1px 1px 2px #e6e6e6;*/
     cursor: default;
@@ -69,9 +77,11 @@
 }
 .view img {
     display: block;
-    position: relative
+    position: relative;
          -webkit-transform: translateZ(0);
     transform: translateZ(0);
+    width: 100%;
+  /* height: auto;*/
 }
 .view h2 {
     text-transform: uppercase;
@@ -201,7 +211,7 @@
                 <?php foreach ($designerList as $key => $designer ) { ?>
                     <div class="view view-eighth <?php echo ($designer['profile_pic_status']!="Enabled")?'profile-background':'0'; ?>">
                         <?php if($designer['profile_pic_status']=="Enabled"){ ?>
-                            <img src="<?php echo base_url().$designer['profile_pic']; ?>">
+                            <img src="<?php echo base_url().$designer['profile_pic']; ?>" width="240" height="240">
                         <?php } ?>
                         <a href="<?php echo site_url();?>/vendorInfo/<?php echo $key; ?>">
                             <div class="mask">

@@ -38,6 +38,9 @@
         max-width: 100%;
     }
 }
+    
+
+        
     .view {
    /* width: 300px;
     height: 200px;

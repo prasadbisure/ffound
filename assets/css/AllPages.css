@@ -375,10 +375,10 @@ footer{
 }
 
 .icons-style{
-    display: inline-block;
+  display: inline-block;
     float: none;
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
     border: solid 2px transparent;
     margin-bottom : 28px;
     margin-top : 12px;

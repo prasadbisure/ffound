@@ -23,8 +23,8 @@
     width: 4%;
   }
   .input-group{
-      width:96%;
-      margin-left:10px;
+      width:100%;
+      margin-left:0px;
   }
   /*============ footer media query =====*/
   .form-horizontal{
@@ -43,7 +43,8 @@
   }
   .back-style p{
       text-align : justify;
-      padding-right : 30px;
+      padding-right : 0px ;
+      margin: 30px 30px;
   }
   
   .back-style h1 {
@@ -67,6 +68,8 @@
         width : 100%;
     }
     .arrow{display: none;}
+    
+
 }
 
 @media (min-width: 544px) {  
@@ -105,7 +108,7 @@
   }
 
     .back-style{
-      padding-bottom : 60px;
+      padding-bottom : 0px;
   }
 
 }
