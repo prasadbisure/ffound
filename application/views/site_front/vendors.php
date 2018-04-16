@@ -234,7 +234,7 @@
 
 
 </div>
-<?php if($this->uri->segment(2)!="designer") {?>
+<?php if($this->uri->segment(2)=="designer") {?>
 <!--for Designer content-->
     <div class="row row-margin-zero lableof-d">
     <h1 class="lablecontent-db">DESIGNERS</h1>
@@ -255,7 +255,7 @@
 	<div class="button"><a href="<?php echo $designer_url2; ?>">Explore</a></div>
     </div>
 </div>
-<?php } elseif($this->uri->segment(2)!="Boutique") {?>
+<?php } elseif($this->uri->segment(2)=="boutique") {?>
 <!--for Boutique content-->
 <div class="row row-margin-zero lableof-b">
     <h1 class="lablecontent-db">BOUTIQUES</h1>
