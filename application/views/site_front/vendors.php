@@ -164,6 +164,7 @@
     .profile-background{
         background-color: #333;
         border: 1px solid #FFFFFF;
+        height: 240px;
     }
 </style>
 <!------------------------ User Designer View -------------------->
