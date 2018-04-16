@@ -307,7 +307,7 @@ class Site extends BaseController
          $array = $this->data['vendor'];
          for($i=0;$i<count($array);$i++) {
 
-            if ($array[$i]->pstatus != 1){
+            if ($array[$i]->pstatus == 1){
                 if ($col_flag1) {
                      $col_data1[] = $array[$i];
                      $col_flag2 = true;
@@ -335,6 +335,10 @@ class Site extends BaseController
          $this->data['col1_data']= $col_data1;
          $this->data['col2_data']= $col_data2;
          $this->data['col3_data']= $col_data3;
+
+//         echo "<pre>";
+//         print_r($this->data['vendor']);
+//         exit;
 
 
          $this->loadProductViews("site_front/vendorInfo", $this->data, NULL , NULL);
