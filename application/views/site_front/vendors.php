@@ -49,6 +49,12 @@
     height: auto;
         }
 }
+    @media (min-width: 600px) and (max-width: 700px) {
+            .view{
+        width: 214px!important;
+    }
+  
+}
     
     .view {
    /* width: 300px;
