@@ -3435,7 +3435,7 @@ footer{
 }
 
 .landing-img-effect .button a {
-    position : relative;
+   /* position : relative;
     left : -50px;
     padding: 3px 15px;
     text-align: center;
@@ -3444,7 +3444,20 @@ footer{
     z-index: 1;
     font-size: 14px;
     font-family: 'Novecentowide-Light';
+    font-weight: 700;*/
+    
+    position: relative;
+    left: -53px;
+    padding: 8px 18px 11px 16px;
+    text-align: center;
+    color: #ffd920;
+    border: solid 1px black;
+    z-index: 1;
+    font-size: 14px;
+    font-family: 'Novecentowide-Light';
     font-weight: 700;
+    transition: all 300ms;
+    background: #000;
 }
 
 .landing-img-effect:hover .button {
@@ -3452,10 +3465,14 @@ footer{
 }
 
 .button a:hover{
-    background : black;
+   /* background : black;
     border : solid 1px #d4b000;
     color : #d4b000;
+    text-decoration: none;*/
+        background: #000000c7;
+    color: #fff;
     text-decoration: none;
+    transition: all 300ms;
 }
 
 .tag-txt {

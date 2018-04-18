@@ -31,7 +31,7 @@
     .column {
         -ms-flex: 50%;
         flex: 50%;
-        max-width: 50%;
+        /*max-width: 50%;*/
     }
 }
 
