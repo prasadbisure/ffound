@@ -31,6 +31,12 @@
     width: 938px;
 }
     }
+    @media (min-width: 1024px)
+    {
+.container {
+    width: 1170px;
+}
+    }
 @media screen and (max-width: 800px) {
     .column {
         -ms-flex: 50%;
