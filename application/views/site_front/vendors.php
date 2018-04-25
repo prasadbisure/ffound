@@ -26,13 +26,19 @@
     margin-top: 0px;
     vertical-align: middle;
 }
-
+    @media (min-width: 992px){
+.container {
+    width: 938px;
+}
+    }
 @media screen and (max-width: 800px) {
     .column {
         -ms-flex: 50%;
         flex: 50%;
         /*max-width: 50%;*/
+           
     }
+   
 }
 
 @media screen and (max-width: 600px) {
@@ -51,9 +57,35 @@
 }
     @media (min-width: 600px) and (max-width: 700px) {
             .view{
-        width: 214px!important;
+       /* width: 214px!important;*/
+                    width: 40%!important;
+    }
+        .container {
+    width: 620px;
+}
+  
+}
+      @media (min-width: 650px) and (max-width: 700px) {
+          .view{
+                   margin: 1% 5%; 
+          }
+          
+}
+      @media (min-width: 700px) and (max-width: 767px) {
+     .container {
+    width: 689px;
+          }
+            .view{
+       /* width: 214px!important;*/
+                    width: 227px!important;
     }
   
+    }
+    @media (min-width: 767px) and (max-width: 768px) {
+      .container {
+  /*  width: 698px;*/
+              width:720px;
+} 
 }
     
     .view {
