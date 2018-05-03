@@ -156,7 +156,20 @@
     92% { transform: translateY(-12px);}
     55%, 75%, 87%, 97%, 100% { transform: translateY(0px);}
 }
+.nav-btn a {
+  width: 60px;
+  height: 60px;
 
+}
+    #gnavi {
+    padding-right: 0px;
+    left: 90%;
+    }
+    @media (min-width: 768px){
+.container {
+    width: 720px;
+} 
+    }
 </style>
 <div class="col-lg-12  vendor-search-bar">
 	<form class="search-box" role="search" method="post" action="/vendorListing">				

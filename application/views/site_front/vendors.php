@@ -31,7 +31,7 @@
     width: 938px;
 }
     }
-    @media (min-width: 1024px)
+    @media (min-width: 1200px)
     {
 .container {
     width: 1170px;
@@ -85,6 +85,7 @@
        /* width: 214px!important;*/
                     width: 227px!important;
     }
+       
   
     }
     @media (min-width: 767px) and (max-width: 768px) {
@@ -92,6 +93,9 @@
   /*  width: 698px;*/
               width:720px;
 } 
+           .column {
+    padding: 0 14px;
+}
 }
     
     .view {
