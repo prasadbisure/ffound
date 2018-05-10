@@ -165,11 +165,11 @@
     padding-right: 0px;
     left: 90%;
     }
-    @media (min-width: 768px){
+    /*@media (min-width: 768px){
 .container {
     width: 720px;
 } 
-    }
+    }*/
 </style>
 <div class="col-lg-12  vendor-search-bar">
 	<form class="search-box" role="search" method="post" action="/vendorListing">				
