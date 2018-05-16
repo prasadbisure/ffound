@@ -5,7 +5,7 @@
     <div class="contact-section">
       <div class="container" id="content">
         <p class="fancy"><span>If you have any questions</p>
-        <h2>CONTACT US</h2>      
+        <h2>CONTACT US</h2>
         <h3>WE WILL BE HAPPY TO ANSWER YOU</h3>        
         <div class="rowrow-margin-zero">
           <div class="col-md-4"></div>

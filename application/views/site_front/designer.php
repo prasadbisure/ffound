@@ -28,7 +28,7 @@
             <div class='nd-wrap nd-style-1'>
                 
                 <div class='nd-content'>
-                    <img  id="my_image<?php echo $val->productId.$userId.$x;?>" src="<?php echo ($val->thumbnail != '') ? $val->thumbnail :  '/assets/images/default_hanger.png' ;?>" class='margin-st'>
+                    <img  id="my_image<?php echo $val->productId.$userId.$x;?>" src="<?php echo ($val->thumbnail != '') ? $val->thumbnail :  base_url().'/assets/images/default_hanger.png' ;?>" class='margin-st'>
                     <div class='nd-content_inner '>
                         <div class='nd-content_inner1'>
                             <span class='nd-icon'>
