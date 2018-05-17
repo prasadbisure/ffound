@@ -34,6 +34,9 @@
         flex: 50%;
         max-width: 50%;
     }
+    .view{
+            height: 310px!important;
+    }
 }
 
 @media screen and (max-width: 600px) {
