@@ -43,6 +43,9 @@ get_header(); ?>
                 flex: 50%;
                 max-width: 50%;
             }
+            .view{
+                height: 310px!important;
+            }
         }
 
         @media screen and (max-width: 600px) {
@@ -59,7 +62,7 @@ get_header(); ?>
             overflow: hidden;
             position: relative;
             text-align: center;
-
+            height: 350px;
             margin-top: 40px;
             /*box-shadow: 1px 1px 2px #e6e6e6;*/
             cursor: default;
@@ -102,7 +105,8 @@ get_header(); ?>
             color: #000000;
             font-size: 17px;
             line-height: 1.5em;
-            font-weight: 600;
+            font-weight: 500;
+            text-shadow: 1px 1px 1px #fff;
 
         }
 
@@ -145,7 +149,7 @@ get_header(); ?>
 
         }
         .view-eighth .mask h2{
-            transform: translateY(-200px);
+            transform: translateY(-135px);
             transition: all 0.2s ease-in-out 0.1s;
 
         }
@@ -173,7 +177,7 @@ get_header(); ?>
         }
 
         .view-eighth:hover .mask h2 {
-            transform: translateY(-200px);
+            transform: translateY(-135px);
             transition-delay: 0.4s;
         }
         .view-eighth:hover .book_mask h2 {
@@ -215,12 +219,11 @@ get_header(); ?>
             </div>
         </form>
     </div>
-
     <div class="container vendorinforow">
         <div class="row">
             <div class="column">
                 <div class="view view-eighth">
-                    <img src="../assets/images/dress/d1.jpg" style="width:100%">
+                    <img src="../assets/images/dress/d1.jpg" style="width:100%" >
                     <div class="book_mask">
                         <h2><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span> -Kritika Kapoor</span></h2>
                     </div>
@@ -258,10 +261,6 @@ get_header(); ?>
                         <h2><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span> -Kritika Kapoor</span></h2>
                     </div>
                 </div>
-
-
-
-
             </div>
 
 

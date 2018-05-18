@@ -44,7 +44,8 @@
 						<li><a href="<?php echo site_url(); ?>"><span>HOME</span></a></li>
 						<li><a href="<?php echo site_url('vendorslisting/designer'); ?>"><span>DESIGNER</span></a></li>
                         <li><a href="<?php echo site_url('vendorslisting/boutique'); ?>"><span>BOUTIQUE</span></a></li>
-                        <li><a href="http://www.fashionfound.in/commingsoon"><span>MAKEUP & HAIR</span></a></li>
+<!--                        <li><a href="http://www.fashionfound.in/commingsoon"><span>MAKEUP & HAIR</span></a></li>-->
+                        <li><a href="<?php echo site_url();?>blog"><span>BLOG</span></a></li>
 						<li><a href="<?php echo site_url('aboutus'); ?>"><span>ABOUT FF</span></a></li>
                         <li class="main-nav">
         				    <?php if($loggedIn){ ?>
