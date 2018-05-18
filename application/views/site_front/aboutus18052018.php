@@ -1,17 +1,8 @@
-<?php
-/**
- * The front page template file
- *
- * If the user has selected a static page for their homepage, this is what will
- * appear.
- * Learn more: https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
-get_header(); ?>
+<script>
+    $('header').css('height', '350px')
+</script>
+<?php //echo $page_content; ?>
+
 <style>
 * {
     box-sizing: border-box;
@@ -26,9 +17,9 @@ get_header(); ?>
 }
 
 .column {
-    -ms-flex: 100%; 
-    flex: 100%;
-    max-width: 100%;
+    -ms-flex: 50%; 
+    flex: 50%;
+    max-width: 50%;
     padding: 0 20px;
 }
 
@@ -39,21 +30,21 @@ get_header(); ?>
 
 @media screen and (max-width: 800px) {
     .column {
-        -ms-flex: 100%;
-        flex: 100%;
-        max-width: 100%;
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
     }
     .view{
             height: 310px!important;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .view {
-   
-    width: 100%!important;
-}
-    
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
 }
     
 
@@ -67,9 +58,6 @@ get_header(); ?>
    /*box-shadow: 1px 1px 2px #e6e6e6;*/
     cursor: default;
     /*background: #fff url(../images/bgimg.jpg) no-repeat center center*/
-            float: left;
-    width: 48%;
-    margin-left: 2%;
 }
 .view .mask, .view .content, .view .book_mask {
     width: 100%;
@@ -205,20 +193,10 @@ get_header(); ?>
     padding-right: 0px;
     left: 90%;
     }
-    .vendorinforow {
-    margin-bottom: 55px;
-}
     @media (min-width: 767px) and (max-width: 768px){
 .container {
     width: 721px;
 } 
-       
-    }
-     @media (min-width: 650px) and (max-width: 700px){
-
-        .view{
-            height: 296px!important;
-        }
     }
 </style>
 <div class="col-lg-12  vendor-search-bar">
@@ -253,8 +231,8 @@ get_header(); ?>
            <h2><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span> -Kritika Kapoor</span></h2> 
              </div> 
              </div> 
-<!--</div>
-  <div class="column ">-->
+</div>
+  <div class="column ">
       <div class="view view-eighth"> 
     <img src="../assets/images/dress/d3.jpg" style="width:100%">
           <div class="book_mask">  
@@ -280,24 +258,66 @@ get_header(); ?>
     
 </div>
 
+<div class="row row-margin-zero itemrow-middle-style">
+    <div class="container datails-style">
+        <div class="col-md-12">
+            <h4 class="item-h-style">Product specilization-</h4>
+        </div>
+        <div class="col-md-12">
+            <h4 class="item2-h-style"><b><?php echo $vendor[0]->specialization; ;?></b></h4>
+            <hr class="itemmiddle-hr">
+        </div>
+        <div class="col-md-12">
+            <p class="item3-h-style">Detailed Bio-</p>
+        </div>
+        <div class="col-md-12">
+            <p class="item-psg">
+              <?php echo $vendor[0]->bio; ;?>
+            </p>
+        </div>
+    </div>
+</div>
 
-
-
-
-<?php
-global $post;
-$args = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => '' );
-$the_query = new WP_Query( $args );
-if ( $the_query->have_posts() ) {
-    while ( $the_query->have_posts() ) {
-        $the_query->the_post();
-
-//        ?><!--<a style="color: #000;" href="--><?php //echo the_permalink();?><!--">--><?php //echo get_the_title();?><!--</a><br>--><?php
-    }
-
-    /* Restore original Post Data */
-    wp_reset_postdata();
-} else {
-}
-?>
-<?php get_footer();
+<div class="container datails-style product-listing-bottom-margin">
+    <div class="row row-margin-zero">
+        <form action id="review-rating" method="post">
+        <input type="hidden" name="vid" value=<?php echo $vendor[0]->userId; ?> >
+        <div class="col-md-12">
+          <h2><b>Rating &#38; Review</b></h2>
+        </div>
+        <div class="col-md-12">
+            <?php foreach($reviews as $review) { ?>
+                <div class="review-rating col-md-6 col-md-offset-3">
+                    <span class="review-username">
+                        <?php echo $review->name; ?> 
+                        <ul class="star-review">
+                            <?php for($k=1; $k <= $review->rating; $k++ ){ ?>
+                                <li class="secondary-active"><label for="rating_1">&#9733;</label></li>
+                            <?php } ?>
+                            
+                        </ul>
+                    </span>
+                    <p class="review-comment">
+                        <?php echo $review->review; ?>
+                    </p>
+                </div>
+            <?php } ?>
+        </div>
+        <div class="col-md-12">
+            <ul id="star">
+                <li><label for="rating_1">&#9733;</label><input type="radio" name="rating" id="rating_1" class="lable-style" value=1></li>
+                <li><label for="rating_2">&#9733;</label><input type="radio" name="rating" id="rating_2" class="lable-style" value=2></li>
+                <li><label for="rating_3">&#9733;</label><input type="radio" name="rating" id="rating_3" class="lable-style" value=3></li>
+                <li><label for="rating_4">&#9733;</label><input type="radio" name="rating" id="rating_4" class="lable-style" value=4></li>
+                <li><label for="rating_5">&#9733;</label><input type="radio" name="rating" id="rating_5" class="lable-style" value=5></li>
+            </ul>
+        </div>
+        <div class="col-md-12">
+            <textarea rows="4" cols="80" name="review" class="textarea-style"   required></textarea>
+        </div>
+        <div class="col-md-12">
+            <button type="submit" name="SEND" class="btn btn-default submit-btn-style ">Submit</button>
+        </div>
+        </form>
+    </div>
+</div>
