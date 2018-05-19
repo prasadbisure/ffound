@@ -12,13 +12,13 @@ img {
 /* Left column */
 .leftcolumn {   
     float: left;
-    width: 67%;
+    width: 68%;
 }
 
 /* Right column */
 .rightcolumn {
     float: left;
-    width: 28%;
+    width: 30%;
     padding-left: 20px;
 }
 
@@ -35,7 +35,7 @@ img {
      background-color: white;
      padding: 20px;
      margin-top: 20px;
-        font: 18px Maven Pro;
+        font: 18px;
     color: #6f6f6f;
 }
 .card h2 {
@@ -68,7 +68,6 @@ img {
           margin: 10px 0px 0px 0px;
     float: right;
     height: 40px;
-    font-family: Raleway-Regular;
     padding: 10px 30px 10px 30px;
     border: 1px solid #e6e6e6;
     background-color: transparent;
@@ -106,7 +105,7 @@ img {
     border: 1px solid #e4e4e4;
 }
        .widget h3{
-      font: 12px Open Sans;
+      font: 12px;
     font-style: normal;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -152,6 +151,26 @@ img {
     .site-social-networks li {
     display: inline-block;
     padding: 0;
+}
+    .card span:before {
+    content: "";
+    position: absolute;
+    top: 37%;
+    right: 68%;
+    border-bottom: 1px solid;
+    border-color: #eee;
+    width: 90px;
+    margin: 0 14px;
+}
+    .card span:after {
+    content: "";
+    position: absolute;
+    top: 37%;
+    left: 68%;
+    border-bottom: 1px solid;
+    border-color: #eee;
+    width: 90px;
+    margin: 0 14px;
 }
 /*custome*/    
     
