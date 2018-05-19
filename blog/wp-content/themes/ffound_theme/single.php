@@ -208,6 +208,9 @@ img {
     color: #888888;
     font-weight: 500;
 }
+    .about_us p{
+        text-align: center;
+    }
     @media screen and (max-width: 800px) {
   .fakeimg {
     text-align: center;
@@ -238,7 +241,7 @@ img {
 
 				</div>
 				<div class="rightcolumn">
-					<div class="card widget">
+					<div class="card widget about_us">
 						<h3><span>About Me</span></h3>
 						<div class="fakeimg" style="height:200px;">
 <!--							<img src="../assets/images/dress/d1.jpg">-->
