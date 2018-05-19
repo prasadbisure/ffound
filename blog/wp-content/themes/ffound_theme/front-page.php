@@ -65,7 +65,7 @@ get_header(); ?>
     height: 350px;
     margin-top: 40px;
    /*box-shadow: 1px 1px 2px #e6e6e6;*/
-    cursor: default;
+    cursor: pointer;
     /*background: #fff url(../images/bgimg.jpg) no-repeat center center*/
             float: left;
     width: 48%;
@@ -231,53 +231,41 @@ get_header(); ?>
 		</div>						
 	</form>
 </div>
+<?php
+global $post;
+$args = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => '' );
+$the_query = new WP_Query( $args );?>
+
 <div class="container vendorinforow">
      <div class="row"> 
-  <div class="column">
-      <div class="view view-eighth"> 
-     <img src="../assets/images/dress/d1.jpg" style="width:100%" >
-          <div class="book_mask">  
-              <h2><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span> -Kritika Kapoor</span></h2> 
-             </div> 
-       <div class="mask">  
-            <h2><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span> -Kritika Kapoor</span></h2>
-             </div> 
-          
-             </div> 
-         <div class="view view-eighth">   
-    <img src="../assets/images/dress/d2.jpg" style="width:100%">
-             <div class="book_mask">  
-            <h2><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>Kritika Kapoor</span></h2>
-             </div> 
-            <div class="mask">  
-           <h2><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span> -Kritika Kapoor</span></h2> 
-             </div> 
-             </div> 
-<!--</div>
-  <div class="column ">-->
-      <div class="view view-eighth"> 
-    <img src="../assets/images/dress/d3.jpg" style="width:100%">
-          <div class="book_mask">  
-            <h2><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>Kritika Kapoor</span></h2>
-             </div> 
-          <div class="mask">  
-           <h2><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span> -Kritika Kapoor</span></h2>  
-             </div> 
-             </div> 
-      <div class="view view-eighth"> 
-    <img src="../assets/images/dress/d4.jpg" style="width:100%">
-          <div class="book_mask">  
-            <h2><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>Kritika Kapoor</span></h2>
-             </div> 
-           <div class="mask">  
-           <h2><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span> -Kritika Kapoor</span></h2> 
-             </div> 
-             </div> 
- </div>  
-  
- 
-</div>
-    
+        <div class="column">
+            <?php
+            if ( $the_query->have_posts() ) {
+                while ( $the_query->have_posts() ) {
+                $the_query->the_post();
+                    ?>
+                <a href="<?php echo the_permalink();?>">
+                    <div class="view view-eighth">
+                    <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );?>" style="width:100%" >
+
+                        <div class="book_mask">
+                            <h2><span><?php echo the_title();?></span><span>-<?php echo get_the_author();?></span></h2>
+                        </div>
+                        <div class="mask">
+                            <h2><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span> -Kritika Kapoor</span></h2>
+                        </div>
+
+                    </div>
+                </a>
+                    <?php
+                }
+            wp_reset_postdata();
+            } else {
+            }
+            ?>
+
+        </div>
+      </div>
 </div>
 
 
