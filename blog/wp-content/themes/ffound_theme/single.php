@@ -197,6 +197,9 @@ img {
     width: 90px;
     margin: 0 14px;
 }
+    span.side-item-meta:before, span.side-item-meta:after {
+    content: none;
+}
     .side-item-text h4 {
     font-size: 14px;
     text-decoration: none;
@@ -326,10 +329,10 @@ img {
 //			endwhile; // End of the loop.
 //			?>
 <!---->
-<!--		</main><!-- #main -->-->
-<!--	</div><!-- #primary -->-->
+<!--		</main><!-- #main -->
+<!--	</div><!-- #primary -->
 <!--	--><?php //get_sidebar(); ?>
-<!--</div><!-- .wrap -->-->
+<!--</div><!-- .wrap -->
 
 
 
