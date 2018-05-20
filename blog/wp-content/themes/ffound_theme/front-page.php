@@ -11,7 +11,9 @@
  * @since 1.0
  * @version 1.0
  */
-get_header(); ?>
+get_header();
+global $paged;
+?>
 <style>
 * {
     box-sizing: border-box;
@@ -222,28 +224,23 @@ get_header(); ?>
     }
 </style>
 <div class="col-lg-12  vendor-search-bar">
-	<form class="search-box" role="search" method="post" action="/vendorListing">				
+	<form class="search-box" role="search" method="get" action="<?php echo site_url();?>">
 	     <div class="input-group add-on" style=" width: 76%;">
-			<input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+			<input type="text" class="form-control" placeholder="Search" name="s" id="srch-term">
 				<div class="input-group-btn">
 					<button class="btn btn-default custom-theme-border zero-radius custom-zindex" type="submit" style="border: 1px solid;height: 39px;"><i class="glyphicon glyphicon-search"></i></button>
 				</div>
-		</div>						
+		</div>
 	</form>
 </div>
-<?php
-global $post;
-$args = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => '' );
-$the_query = new WP_Query( $args );?>
 
-<div class="container vendorinforow">
+    <div class="container vendorinforow">
      <div class="row"> 
         <div class="column">
             <?php
-            if ( $the_query->have_posts() ) {
-                while ( $the_query->have_posts() ) {
-                $the_query->the_post();
-                    ?>
+            query_posts('posts_per_page=4&cat=1&paged='.get_query_var( 'page', 1 ));
+            if (have_posts()) : while (have_posts()) : the_post();
+            ?>
                 <a href="<?php echo the_permalink();?>">
                     <div class="view view-eighth">
                     <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );?>" style="width:100%" >
@@ -257,35 +254,18 @@ $the_query = new WP_Query( $args );?>
 
                     </div>
                 </a>
-                    <?php
-                }
-            wp_reset_postdata();
-            } else {
-            }
-            ?>
+            <?php endwhile;?>
+                <?php echo my_pagination();?>
+
+            <?php else : ?>
+                <h2>No Posts Found</h2>
+            <?php endif; ?>
+            <?php wp_reset_query(); ?>
+
 
         </div>
       </div>
 </div>
 
 
-
-
-
-<?php
-global $post;
-$args = array( 'posts_per_page' => 4, 'offset'=> 0, 'category' => '' );
-$the_query = new WP_Query( $args );
-if ( $the_query->have_posts() ) {
-    while ( $the_query->have_posts() ) {
-        $the_query->the_post();
-
-//        ?><!--<a style="color: #000;" href="--><?php //echo the_permalink();?><!--">--><?php //echo get_the_title();?><!--</a><br>--><?php
-    }
-
-    /* Restore original Post Data */
-    wp_reset_postdata();
-} else {
-}
-?>
 <?php get_footer();
