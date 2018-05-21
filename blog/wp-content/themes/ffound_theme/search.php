@@ -221,7 +221,15 @@ img {
 }
    
 }
-    
+       @media screen and (max-width: 620px) {
+  .fakeimg.main_img {
+    display: none;
+}
+           .main_block p {
+    margin-left: 0%!important;
+}
+   
+}
     .fakeimg.main_img {
     float: left;
         width: 15%;
