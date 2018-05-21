@@ -43,6 +43,9 @@ img {
     margin-bottom: 16px!important;
     padding-bottom: 11px!important;
 }
+    .fakeimg.main_img {
+    height: 400px;
+}
     .recent_post .fakeimg {
         
     border-bottom: 1px solid #eee;
@@ -127,6 +130,8 @@ img {
     margin-bottom: 50px;
     padding: 30px 32px;
     border: 1px solid #e4e4e4;
+            margin-left: 10px;
+    margin-right: 10px;
 }
        .widget h3{
       font: 12px;
@@ -217,6 +222,12 @@ img {
 }
    
 }
+        @media screen and (max-width: 438px) {
+  .fakeimg.main_img {
+    height: 320px;
+}
+   
+}
 /*custome*/    
     
 
@@ -231,7 +242,7 @@ img {
 					<div class="card">
 						<h2><?php echo the_title();?></h2>
 						<h5 style="text-align:center;">By <?php echo get_the_author();?> - <?php echo get_the_date();?></h5>
-						<div class="fakeimg" style="height:400px;">
+						<div class="fakeimg main_img">
 							<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );?>">
 						</div>
 						<?php echo the_content();?>

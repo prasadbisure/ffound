@@ -210,6 +210,76 @@ global $paged;
     .vendorinforow {
     margin-bottom: 55px;
 }
+    /*pagination*/
+    ul.page-numbers {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+            width: 20%;
+}
+    span.page-numbers.current {
+    z-index: 3;
+    color: #333;
+    cursor: default;
+    background-color: transparent;
+    border: none;
+}
+     span.page-numbers {
+        position: relative;
+    float: left;
+    padding: 0px 8px;
+    margin-left: 11px;
+    line-height: 1.42857143;
+    color: #333333;
+    text-decoration: none;
+    background-color: #fff;
+    font-family: Novecentowide-Normal;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #d4b130;
+}
+    a.page-numbers {
+       position: relative;
+    float: left;
+    padding: 0px 8px;
+    margin-left: 11px;
+    line-height: 1.42857143;
+    color: #333333;
+    text-decoration: none;
+    background-color: #fff;
+    font-family: Novecentowide-Normal;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #d4b130;
+}
+    .page-numbers>li:last-child>a {
+    border: none;
+    background-color: transparent;
+}
+     .page-numbers>li:first-child>a {
+    border: none;
+    background-color: transparent;
+}
+    
+      @media screen and (max-width: 1000px) {
+    ul.page-numbers {
+            width: 30%;
+}
+    }
+    @media screen and (max-width: 600px) {
+    ul.page-numbers {
+            width: 42%;
+}
+    }
+    @media screen and (max-width: 568px) {
+    ul.page-numbers {
+            width: 100%;
+}
+    }
+    /*End pagination*/
+    
+    
     @media (min-width: 767px) and (max-width: 768px){
 .container {
     width: 721px;
@@ -255,8 +325,9 @@ global $paged;
                     </div>
                 </a>
             <?php endwhile;?>
+            <div class="col-md-12 text-center pagination-top-margin">
                 <?php echo my_pagination();?>
-
+            </div>
             <?php else : ?>
                 <h2>No Posts Found</h2>
             <?php endif; ?>

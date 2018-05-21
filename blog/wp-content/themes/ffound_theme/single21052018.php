@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying search results pages
+ * The template for displaying all single posts
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package WordPress
  * @subpackage Twenty_Seventeen
@@ -10,8 +10,8 @@
  * @version 1.0
  */
 
-get_header(); ?>
-
+get_header();
+?>
 <style>
 
 	
@@ -56,16 +56,12 @@ img {
 .card {
      background-color: white;
      padding: 20px;
-     margin-top: 0px;
+     margin-top: 20px;
         font: 18px;
     color: #6f6f6f;
-        overflow: hidden;
-}
-    .card.main_block {
-    border-bottom: 1px solid #dcdcdc;
 }
 .card h2,.card h3 {
-    text-align: left;
+    text-align: center;
     color: #5f5f5f;
     font-weight: 600;
 }
@@ -221,62 +217,48 @@ img {
 }
    
 }
-    
-    .fakeimg.main_img {
-    float: left;
-        width: 15%;
-}
-    .main_block p {
-    margin-left: 17%;
-            margin-top: 1%;
-            font-size: 18px;
-}
 /*custome*/    
     
 
 
 </style>
-
-<div class="col-lg-12  vendor-search-bar">
-	<form class="search-box" role="search" method="get" action="<?php echo site_url();?>">
-	     <div class="input-group add-on" style=" width: 76%;">
-			<input type="text" class="form-control" placeholder="Search" name="s" id="srch-term">
-				<div class="input-group-btn">
-					<button class="btn btn-default custom-theme-border zero-radius custom-zindex" type="submit" style="border: 1px solid;height: 39px;"><i class="glyphicon glyphicon-search"></i></button>
-				</div>
-		</div>
-	</form>
-</div>
-
-
 <?php
 	while ( have_posts() ) : the_post();
 	?>
 		<div class="container">
 			<div class="row">
 				<div class="leftcolumn">
-					<div class="card main_block">
+					<div class="card">
 						<h2><?php echo the_title();?></h2>
-						<h5 style="margin-bottom:3%;">By <?php echo get_the_author();?> - <?php echo get_the_date();?></h5>
-						<div class="fakeimg main_img">
+						<h5 style="text-align:center;">By <?php echo get_the_author();?> - <?php echo get_the_date();?></h5>
+						<div class="fakeimg" style="height:400px;">
 							<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );?>">
 						</div>
 						<?php echo the_content();?>
-                        <a class="button-style" href="#">READ MORE</a>
-					</div>
-                    <div class="card main_block">
-						<h2><?php echo the_title();?></h2>
-						<h5 style="margin-bottom:3%;">By <?php echo get_the_author();?> - <?php echo get_the_date();?></h5>
-						<div class="fakeimg main_img">
-							<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );?>">
-						</div>
-						<?php echo the_content();?>
-                        <a class="button-style" href="#">READ MORE</a>
+						<!--						<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>-->
+<!--						<a class="button-style" href="http://localhost/ffound/index.php/aboutus">Read More</a>-->
 					</div>
 
 				</div>
 				<div class="rightcolumn">
-					
+					<div class="card widget about_us">
+						<h3><span>About Me</span></h3>
+						<div class="fakeimg" style="height:200px;">
+<!--							<img src="../assets/images/dress/d1.jpg">-->
+							<?php
+							if (function_exists ( 'mt_profile_img' ) ) {
+								$author_id=$post->post_author;
+								mt_profile_img( $author_id, array(
+										'size' => 'medium',
+										'attr' => array( 'alt' => 'Alternative Text' ),
+										'echo' => true )
+								);
+							}
+							?>
+						</div>
+
+						<p><?php echo the_author_meta( 'user_description', $post->post_author ); ?></p>
+					</div>
 					<div class="card widget recent_post">
 						<h3><span>Recent Post</span></h3>
 
@@ -300,6 +282,18 @@ img {
 						?>
 
 					</div>
+<!--					<div class="card widget">-->
+<!--						<h3><span>Follow Me</span></h3>-->
+<!--						<div class="widget-content">-->
+<!--							<ul class="site-social-networks secondary-2-primary style-default show-title">-->
+<!--								<li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>-->
+<!--								<li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>-->
+<!--								<li><a href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>-->
+<!--								<li><a href="http://instagram.com"><i class="fa fa-instagram"></i></a></li>-->
+<!--							</ul>-->
+<!--							<div class="clear"></div>-->
+<!--						</div>-->
+<!--					</div>-->
 
 				</div>
 			</div>
@@ -310,5 +304,39 @@ img {
 	endwhile;
 ?>
 
-
 <?php get_footer();
+?>
+
+
+
+<!--<div class="wrap">-->
+<!--	<div id="primary" class="content-area">-->
+<!--		<main id="main" class="site-main" role="main">-->
+<!---->
+<!--			--><?php
+//			/* Start the Loop */
+//			while ( have_posts() ) : the_post();
+//
+//				get_template_part( 'template-parts/post/content', get_post_format() );
+//
+//				// If comments are open or we have at least one comment, load up the comment template.
+//				if ( comments_open() || get_comments_number() ) :
+//					comments_template();
+//				endif;
+//
+//				the_post_navigation( array(
+//					'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'twentyseventeen' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
+//					'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'twentyseventeen' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'twentyseventeen' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
+//				) );
+//
+//			endwhile; // End of the loop.
+//			?>
+<!---->
+<!--		</main><!-- #main -->
+<!--	</div><!-- #primary -->
+<!--	--><?php //get_sidebar(); ?>
+<!--</div><!-- .wrap -->
+
+
+
+
