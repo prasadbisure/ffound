@@ -79,16 +79,16 @@
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.24.0/jquery.min.js"></script> -->
 <!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script src="../assets/js/modernizr.js"></script>
-<script src="../assets/js/main.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/assets/js/modernizr.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/assets/js/main.js"></script>
 
-<script src="../assets/js/common.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/assets/js/common.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
-<script src="../assets/js/xzoom.min.js"></script>
-<script src="../assets/js/masonary.pkgd.min.js"></script>
-<script src="../assets/js/imagesloaded.js"></script>
-<script src="../assets/js/classie.js"></script>
-<script src="../assets/js/AnimOnScroll.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/assets/js/xzoom.min.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/assets/js/masonary.pkgd.min.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/assets/js/imagesloaded.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/assets/js/classie.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/assets/js/AnimOnScroll.js"></script>
 <script>
 	if($('#grid').length > 0){
 		new AnimOnScroll( document.getElementById( 'grid' ), {

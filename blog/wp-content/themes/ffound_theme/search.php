@@ -257,39 +257,33 @@ img {
 </div>
 
 
-<?php
-	while ( have_posts() ) : the_post();
-	?>
+
 		<div class="container">
 			<div class="row">
 				<div class="leftcolumn">
-					<div class="card main_block">
+				<?php if ( have_posts() ) :?>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<div class="card main_block">
 						<h2><?php echo the_title();?></h2>
 						<h5 style="margin-bottom:3%;">By <?php echo get_the_author();?> - <?php echo get_the_date();?></h5>
 						<div class="fakeimg main_img">
 							<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );?>">
 						</div>
 						<?php echo the_content();?>
-                        <a class="button-style" href="#">READ MORE</a>
+                        <a class="button-style" href="<?php echo the_permalink();?>">READ MORE</a>
 					</div>
-                    <div class="card main_block">
-						<h2><?php echo the_title();?></h2>
-						<h5 style="margin-bottom:3%;">By <?php echo get_the_author();?> - <?php echo get_the_date();?></h5>
-						<div class="fakeimg main_img">
-							<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );?>">
-						</div>
-						<?php echo the_content();?>
-                        <a class="button-style" href="#">READ MORE</a>
-					</div>
-
+					<?php endwhile;?>
+					<?php else : ?>
+					<h2>No Post Found!</h2>
 				</div>
+				<?php endif;  ?>
 				<div class="rightcolumn">
 					
 					<div class="card widget recent_post">
 						<h3><span>Recent Post</span></h3>
 
 						<?php
-						$args = ['numberposts'=>5,'post_type' => 'post','exclude'=> get_the_ID()];
+						$args = ['numberposts'=>4,'post_type' => 'post','exclude'=> get_the_ID()];
 						$recent_posts = wp_get_recent_posts( $args );
 						foreach ($recent_posts as $post){
 							?><div class="fakeimg">
@@ -311,12 +305,8 @@ img {
 
 				</div>
 			</div>
-
-
 		</div>
-	<?php
-	endwhile;
-?>
+
 
 
 <?php get_footer();

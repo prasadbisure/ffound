@@ -18,15 +18,15 @@
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
-	<link rel="stylesheet" type="text/css" href="../assets/css/xzoom.css">
-	<link rel="stylesheet" type="text/css" href="../assets/css/AllPages.css">
-	<link rel="stylesheet" type="text/css" href="../assets/css/modalreset.css">
-	<link rel="stylesheet" type="text/css" href="../assets/css/datatables.min.css">
-	<script src="../assets/js/libs.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/xzoom.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/AllPages.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/modalreset.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/datatables.min.css">
+	<script src="<?php echo get_template_directory_uri();?>/assets/js/libs.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"/>
-	<script src="../assets/js/xzoom.min.js"></script>
+	<script src="<?php echo get_template_directory_uri();?>/assets/js/xzoom.min.js"></script>
 
-	<link rel="icon" href="../assets/images/favicon.png">
+	<link rel="icon" href="<?php echo get_template_directory_uri();?>/assets/images/favicon.png">
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 </head>
 <body>
