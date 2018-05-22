@@ -222,9 +222,21 @@ img {
 }
    
 }
+      @media screen and (max-width: 550px) {
+  .widget {
+    border: none;
+}
+   
+}
         @media screen and (max-width: 438px) {
   .fakeimg.main_img {
     height: 320px;
+}
+   
+}
+          @media screen and (max-width: 400px) {
+  .fakeimg.main_img {
+    height: 265px;
 }
    
 }
@@ -254,7 +266,7 @@ img {
 				<div class="rightcolumn">
 					<div class="card widget about_us">
 						<h3><span>About Me</span></h3>
-						<div class="fakeimg" style="height:200px;">
+						<div class="fakeimg" style="height:auto;">
 <!--							<img src="../assets/images/dress/d1.jpg">-->
 							<?php
 							if (function_exists ( 'mt_profile_img' ) ) {

@@ -54,6 +54,7 @@ global $paged;
     .view {
    
     width: 100%!important;
+         margin-left: 0%!important;
 }
     
 }
@@ -213,11 +214,10 @@ global $paged;
     /*pagination*/
     ul.page-numbers {
     display: inline-block;
-    padding-left: 0;
     margin: 20px 0;
     border-radius: 4px;
-            width: 20%;
-}
+            width: 25%;
+        text-align: center;}
     span.page-numbers.current {
     z-index: 3;
     color: #333;
@@ -260,6 +260,9 @@ global $paged;
      .page-numbers>li:first-child>a {
     border: none;
     background-color: transparent;
+}
+    .pagination-top-margin {
+    overflow: hidden;
 }
     
       @media screen and (max-width: 1000px) {
