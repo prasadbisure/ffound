@@ -129,7 +129,7 @@ img {
     margin-right: 0;
     float: none;
     margin-bottom: 50px;
-    padding: 30px 32px;
+        padding: 30px 32px 30px 32px;
     border: 1px solid #e4e4e4;
 }
        .widget h3{
@@ -239,6 +239,15 @@ img {
             margin-top: 1%;
             font-size: 18px;
 }
+    
+         @media screen and (max-width: 550px) {
+  .widget {
+    border: none;
+        margin-bottom: 0px;
+          padding: 10px 32px 10px 32px;
+}
+   
+}
 /*custome*/    
     
 
@@ -263,7 +272,7 @@ img {
 				<div class="leftcolumn">
 				<?php if ( have_posts() ) :?>
 					<?php while ( have_posts() ) : the_post(); ?>
-						<div class="card main_block">
+				    <div class="card main_block">
 						<h2><?php echo the_title();?></h2>
 						<h5 style="margin-bottom:3%;">By <?php echo get_the_author();?> - <?php echo get_the_date();?></h5>
 						<div class="fakeimg main_img">
@@ -275,8 +284,9 @@ img {
 					<?php endwhile;?>
 					<?php else : ?>
 					<h2>No Post Found!</h2>
+                    <?php endif;  ?>
 				</div>
-				<?php endif;  ?>
+				
 				<div class="rightcolumn">
 					
 					<div class="card widget recent_post">
@@ -296,10 +306,7 @@ img {
 										<span class="side-item-meta"><?php echo get_the_date();?></span>
 									</div>
 								</div>
-							</div><?php
-						}
-
-						?>
+							</div><?php		}		?>
 
 					</div>
 
