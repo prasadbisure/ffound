@@ -216,6 +216,17 @@ img {
     .about_us p{
         text-align: center;
     }
+    .about_us .fakeimg img
+    {
+        height: auto;
+    }
+    
+     @media (min-width: 767px) and (max-width: 768px) {
+      .container {
+  /*  width: 698px;*/
+              width:720px;
+} 
+    }
     @media screen and (max-width: 800px) {
   .fakeimg {
     text-align: center;
@@ -239,6 +250,22 @@ img {
     height: 265px;
 }
    
+}
+             @media (min-width: 800px) and (max-width: 1024px) {
+  .rightcolumn {
+    width: 37%;
+}
+   .leftcolumn {
+    width: 60%;
+}
+}
+             @media (min-width: 800px) and (max-width: 1000px) {
+     .card span:before {
+    content: none;
+}
+    .card span:after {
+    content: none;
+}
 }
 /*custome*/    
     

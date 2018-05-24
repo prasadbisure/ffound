@@ -183,7 +183,6 @@
 </div>
 <div class="container vendorinforow">
      <div class="row">
-     <div class="col-md-12">
 
          <?php
          // var_dump($vendor); die;
@@ -191,7 +190,7 @@
          ?>
 <!--            data for colunm1-->
              <?php if(!empty($col1_data)){ ?>
-             <div class="column col-md-4">
+             <div class="column">
                 <?php foreach ($col1_data as $data){ ?>
                     <div class="view view-eighth">
                         <img src="<?php echo base_url().$data->images?>" style="width:100%">
@@ -207,7 +206,7 @@
             <?php } ?>
 <!--data for column 2-->
              <?php if(!empty($col2_data)){ ?>
-                 <div class="column col-md-4">
+                 <div class="column">
                      <?php foreach ($col2_data as $data){ ?>
                          <div class="view view-eighth">
                              <img src="<?php echo base_url().$data->images?>" style="width:100%">
@@ -223,7 +222,7 @@
              <?php } ?>
 <!--data for column 3-->
              <?php if(!empty($col3_data)){ ?>
-                 <div class="column col-md-4">
+                 <div class="column">
                      <?php foreach ($col3_data as $data){ ?>
                          <div class="view view-eighth">
                              <img src="<?php echo base_url().$data->images?>" style="width:100%">
@@ -242,7 +241,130 @@
          }
          ?>
 
-</div>
+
+<!--  <div class="column ">-->
+<!--      <div class="view view-eighth"> -->
+<!--    <img src="../../assets/images/dress/underwater.jpg" style="width:100%">-->
+<!--          <div class="book_mask">  -->
+<!--           <h2><span>RS.5000</span></h2> -->
+<!--             </div> -->
+<!--          <div class="mask">  -->
+<!--           <a href="#" class="info">Book</a>  -->
+<!--             </div> -->
+<!--             </div> -->
+<!--      <div class="view view-eighth"> -->
+<!--    <img src="../../assets/images/dress/ocean.jpg" style="width:100%">-->
+<!--          <div class="book_mask">  -->
+<!--           <h2><span>RS.5000</span></h2> -->
+<!--             </div> -->
+<!--           <div class="mask">  -->
+<!--           <a href="#" class="info">Book</a>  -->
+<!--             </div> -->
+<!--             </div> -->
+<!--      <div class="view view-eighth"> -->
+<!--    <img src="../../assets/images/dress/wedding.jpg" style="width:100%">-->
+<!--          <div class="book_mask">  -->
+<!--           <h2><span>RS.5000</span></h2> -->
+<!--             </div> -->
+<!--          <div class="mask">  -->
+<!--           <a href="#" class="info">Book</a>  -->
+<!--             </div> -->
+<!--             </div> -->
+<!--      <div class="view view-eighth"> -->
+<!--    <img src="../../assets/images/dress/mountainskies.jpg" style="width:100%">-->
+<!--          <div class="book_mask">  -->
+<!--           <h2><span>RS.5000</span></h2> -->
+<!--             </div> -->
+<!--           <div class="mask">  -->
+<!--           <a href="#" class="info">Book</a>  -->
+<!--             </div> -->
+<!--             </div> -->
+<!--      <div class="view view-eighth"> -->
+<!--    <img src="../../assets/images/dress/rocks.jpg" style="width:100%">-->
+<!--          <div class="book_mask">  -->
+<!--           <h2><span>RS.5000</span></h2> -->
+<!--             </div> -->
+<!--           <div class="mask">  -->
+<!--           <a href="#" class="info">Book</a>  -->
+<!--             </div> -->
+<!--             </div>  -->
+<!--      <div class="view view-eighth"> -->
+<!--    <img src="../../assets/images/dress/underwater.jpg" style="width:100%">-->
+<!--          <div class="book_mask">  -->
+<!--           <h2><span>RS.5000</span></h2> -->
+<!--             </div> -->
+<!--          <div class="mask">  -->
+<!--           <a href="#" class="info">Book</a>  -->
+<!--             </div> -->
+<!--             </div>  -->
+<!--  </div>  -->
+<!--  <div class="column ">-->
+<!--   <div class="view view-eighth"> -->
+<!--    <img src="../../assets/images/dress/wedding.jpg" style="width:100%">-->
+<!--       <div class="book_mask">  -->
+<!--           <h2><span>RS.5000</span></h2> -->
+<!--             </div> -->
+<!--        <div class="mask">  -->
+<!--           <a href="#" class="info">Book</a>  -->
+<!--             </div> -->
+<!--             </div>-->
+<!--      <div class="view view-eighth"> -->
+<!--    <img src="../../assets/images/dress/rocks.jpg" style="width:100%">-->
+<!--          <div class="book_mask">  -->
+<!--           <h2><span>RS.5000</span></h2> -->
+<!--             </div> -->
+<!--           <div class="mask">  -->
+<!--           <a href="#" class="info">Book</a>  -->
+<!--             </div> -->
+<!--             </div>-->
+<!--       <div class="view view-eighth"> -->
+<!--    <img src="../../assets/images/dress/falls2.jpg" style="width:100%">-->
+<!--           <div class="book_mask">  -->
+<!--           <h2><span>RS.5000</span></h2> -->
+<!--             </div> -->
+<!--            <div class="mask">  -->
+<!--           <a href="#" class="info">Book</a>  -->
+<!--             </div> -->
+<!--             </div>-->
+<!--     <div class="view view-eighth"> -->
+<!--    <img src="../../assets/images/dress/paris.jpg" style="width:100%">-->
+<!--         <div class="book_mask">  -->
+<!--           <h2><span>RS.5000</span></h2> -->
+<!--             </div> -->
+<!--          <div class="mask">  -->
+<!--           <a href="#" class="info">Book</a>  -->
+<!--             </div> -->
+<!--             </div>-->
+<!--        <div class="view view-eighth">    -->
+<!--    <img src="../../assets/images/dress/nature.jpg" style="width:100%">-->
+<!--            <div class="book_mask">  -->
+<!--           <h2><span>RS.5000</span></h2> -->
+<!--             </div> -->
+<!--             <div class="mask">  -->
+<!--           <a href="#" class="info">Book</a>  -->
+<!--             </div> -->
+<!--             </div>-->
+<!--  <div class="view view-eighth"> -->
+<!--    <img src="../../assets/images/dress/mist.jpg" style="width:100%">-->
+<!--      <div class="book_mask">  -->
+<!--           <h2><span>RS.5000</span></h2> -->
+<!--             </div> -->
+<!--   <div class="mask">  -->
+<!--           <a href="#" class="info">Book</a>  -->
+<!--             </div> -->
+<!--             </div>-->
+<!--              -->
+<!--      <div class="view view-eighth"> -->
+<!--    <img src="../../assets/images/dress/paris.jpg" style="width:100%">-->
+<!--          <div class="book_mask">  -->
+<!--           <h2><span>RS.5000</span></h2> -->
+<!--             </div> -->
+<!-- <div class="mask">  -->
+<!--           <a href="#" class="info">Book</a>  -->
+<!--             </div> -->
+<!--             </div>-->
+<!--  </div>-->
+ 
 </div>
     
 </div>

@@ -11,11 +11,11 @@ jQuery(function($){
 });
 </script>
 <style>
-    @media (min-width: 768px){
+  /*  @media (min-width: 768px){
 .container {
     width: 720px;
 }
-    }
+    }*/
 </style>
 
 <div class="container">

@@ -93,6 +93,7 @@
   /*  width: 698px;*/
               width:720px;
 } 
+        
            .column {
     padding: 0 14px;
 }
