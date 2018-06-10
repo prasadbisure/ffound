@@ -165,11 +165,19 @@
     padding-right: 0px;
     left: 90%;
     }
-    /*@media (min-width: 768px){
+    @media (min-width: 767px) and (max-width: 768px) {
 .container {
     width: 720px;
 } 
-    }*/
+        .column {
+    float: left;
+}
+    }
+    @media (min-width: 667px) and (max-width: 740px) {
+        .column {
+    float: left;
+}
+    }
 </style>
 <div class="col-lg-12  vendor-search-bar">
 	<form class="search-box" role="search" method="post" action="/vendorListing">				
