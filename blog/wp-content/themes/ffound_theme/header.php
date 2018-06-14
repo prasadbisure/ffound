@@ -39,21 +39,21 @@
 			</div>
 			<div id="gnavi-list" class="nav-list">
 				<ul>
-					<li><a href="/"><span>HOME</span></a></li>
-					<li><a href="<?php echo site_url(); ?>vendorslisting/designer"><span>DESIGNER</span></a></li>
-					<li><a href="<?php echo site_url(); ?>vendorslisting/boutique"><span>BOUTIQUE</span></a></li>
+					<li><a href="<?php echo str_replace('blog','',site_url()); ?>"><span>HOME</span></a></li>
+					<li><a href="<?php echo str_replace('blog','',site_url()); ?>vendorslisting/designer"><span>DESIGNER</span></a></li>
+					<li><a href="<?php echo str_replace('blog','',site_url()); ?>vendorslisting/boutique"><span>BOUTIQUE</span></a></li>
 <!--					<li><a href="http://www.fashionfound.in/commingsoon"><span>MAKEUP & HAIR</span></a></li>-->
 					<li><a href="<?php echo site_url();?>"><span>BLOG</span></a></li>
-					<li><a href="<?php echo site_url(); ?>aboutus"><span>ABOUT FF</span></a></li>
+					<li><a href="<?php echo str_replace('blog','',site_url()); ?>aboutus"><span>ABOUT FF</span></a></li>
 					<li class="main-nav">
 
-							<a href="<?php echo site_url(); ?>login-register">
+							<a href="<?php echo str_replace('blog','',site_url()); ?>login-register">
 								<span>SIGN UP & LOG IN</span>
 							</a>
 
 					</li>
-					<li><a href="<?php echo site_url(); ?>contactus"><span>CONTACT US</span></a></li>
-					<li><a href="<?php echo site_url();?>packages"><span>BUSINESS WITH FF</span></a></li>
+					<li><a href="<?php echo str_replace('blog','',site_url()); ?>contactus"><span>CONTACT US</span></a></li>
+					<li><a href="<?php echo str_replace('blog','',site_url()); ?>packages"><span>BUSINESS WITH FF</span></a></li>
 
 				</ul>
 			</div>

@@ -421,11 +421,6 @@ class Site extends BaseController
                 echo $flag;
                 return;
             }
-             if($this->input->post('password') != $this->input->post('confirm_password')){
-                 $flag = 6;
-                 echo $flag;
-                 return;
-             }
             
             $userInfo = array('email'=>$email, 'subscription_type'=>$subscription_id, 'password'=>getHashedPassword($password), 'roleId'=>$roleId, 'name'=> $name,'mobile'=>$mobile,'brandName'=>$brandName, 'createdBy'=>123, 'createdDtm'=>date('Y-m-d H:i:s'));
             
@@ -434,10 +429,6 @@ class Site extends BaseController
              $result = $this->user_model->addNewUser($userInfo);
              $flag = 0;
              $availFreeSubscription = false;
-             $detail["subject"] = "Email verification";
-             $detail["email"]  = $email;
-             $link = base_url().'confirmemail/'.md5($email);
-
              if($result > 0)
              {            
                 if($roleId == 2 || $roleId == 3){
@@ -476,33 +467,19 @@ class Site extends BaseController
                      set_cookie('subscription_id_p', $subscriptionId,'3600');
                      set_cookie('user_id_p', $result,'3600');
                      set_cookie('plimit', $productLimit, 3600);
-
-                    $message = "Booyaa!<br>Welcome aboard.<br>Thank you for signing up on Fashion Found. Your account has been created.<br>It will be activated within 24 hours once we review your profile, plan chosen and the payment done.<br>Visit be   low link to verify your email address<br><br>
-                            <a href= $link >Verify email</a><br><br>Thank You<br> Fashion Found";
-
-                    set_cookie('email', $email, 3600);
-                    set_cookie('message', $message, 3600);
-
+            
                      $this->load->view('initiattransaction');
                     
                     } else {
 			//Create dummy products for free subscription user.
 			$this->product_model->insertDummyProducts($result, $productLimit);
-                $message = "Booyaa!<br>Welcome aboard.<br>Thank you for signing up on Fashion Found. Your account has been created & your account is eligible for free subscription for 1 month.<br>It will be activated within 24 hours once we review your profile, plan chosen and the payment done.<br>Visit be low link to verify your email address<br><br>
-                        <a href= $link >Verify email</a><br><br>Thank You<br> Fashion Found";
-                $detail['message']=$message;
-                sendNotificationMail($detail);
-                $this->session->set_flashdata('success', 'Registeration done successfully');
 		    }
-                } else{
-                    $message = "Hello!<br><br>You are almost ready to start exploring the fashion world. Simply visit the below link to verify your email address.<br><br>
-                    <a href= $link >Verify email</a><br><br>Thank You<br> Fashion Found";
-                    $detail['message']=$message;
-                    sendNotificationMail($detail);
-                    $this->session->set_flashdata('success', 'Registeration done successfully');
                 }
 
-
+                $detail["subject"] = "Email verification";
+                $detail["email"]  = $email;
+                
+                $link = base_url().'confirmemail/'.md5($email);
                 
                 if($roleId == 2 || $roleId == 3){
                     if($availFreeSubscription == true){
@@ -518,8 +495,8 @@ class Site extends BaseController
                 }
                 
                     
-                //sendNotificationMail($detail);
-                //$this->session->set_flashdata('success', 'Registeration done successfully');
+                sendNotificationMail($detail);
+                $this->session->set_flashdata('success', 'Registeration done successfully');
                  
                 $flag = 1;
                 
@@ -1047,15 +1024,7 @@ class Site extends BaseController
         delete_cookie('subscription_id_p');
         delete_cookie('user_id_p');
         delete_cookie('plimit');
-
-        //send verification email
-        $detail["subject"] = "Email verification";
-        $detail["email"]  = urldecode(get_cookie('email'));
-        $detail["message"]  = urldecode(get_cookie('message'));
-
-        sendNotificationMail($detail);
-        $this->session->set_flashdata('success', 'Registeration done successfully');
-
+ 
         $this->loadOtherviews("site_front/transactionsuccess", $this->data, NULL , NULL);
     }
     
