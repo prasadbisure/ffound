@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-xs-12 text-right">
                 <div class="form-group">
-                    <a class="btn btn-primary" href="<?php echo base_url(); ?>addNew"><i class="fa fa-plus"></i> Add New</a>
+                    <a class="btn btn-primary" href="<?php echo site_url('addNew'); ?>"><i class="fa fa-plus"></i> Add New</a>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
                     <h3 class="box-title">Designer List</h3>
                     <?php } ?>
                     <div class="box-tools">
-                        <form action="<?php echo base_url() ?>userListing" method="POST" id="searchList">
+                        <form action="<?php echo site_url('userListing') ?>" method="POST" id="searchList">
                             <div class="input-group">
                               <input type="text" name="searchText" value="<?php echo $searchText; ?>" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>
                               <div class="input-group-btn">
@@ -69,16 +69,16 @@
                       <td><?php echo $record->mobile ?></td>
                       <td><?php echo $record->sname ?></td>
                       <td><?php echo $record->role ?></td>
-                      <td><a href="<?php echo base_url().'product/'.$record->userId ?>">Products</a>
+                      <td><a href="<?php echo site_url('product').'/'.$record->userId ?>">Products</a>
                       <td>
                           <?php if(!$record->status){ ?>
-                            <span class="btn btn-sm change-user-status" data-status=<?php echo $record->status; ?> data-id=<?php echo $record->userId; ?>><img src="/assets/images/enable.png" ></span>
+                            <span class="btn btn-sm change-user-status" data-status=<?php echo $record->status; ?> data-id=<?php echo $record->userId; ?>><img src="<?php echo base_url();?>/assets/images/enable.png" ></span>
                             <?php }else{ ?>
-                            <span class="btn btn-sm change-user-status" data-status=<?php echo $record->status; ?> data-id=<?php echo $record->userId; ?>><img src="/assets/images/disable.png" ></span>
+                            <span class="btn btn-sm change-user-status" data-status=<?php echo $record->status; ?> data-id=<?php echo $record->userId; ?>><img src="<?php echo base_url();?>/assets/images/disable.png" ></span>
                             <?php } ?>
                       </td>
                       <td class="text-center">
-                          <a class="btn btn-sm btn-info" href="<?php echo base_url().'editOld/'.$record->userId; ?>"><i class="fa fa-pencil"></i></a>
+                          <a class="btn btn-sm btn-info" href="<?php echo site_url('editOld').'/'.$record->userId; ?>"><i class="fa fa-pencil"></i></a>
                           <a class="btn btn-sm btn-danger deleteUser" href="#" data-userid="<?php echo $record->userId; ?>"><i class="fa fa-trash"></i></a>
                       </td>
                     </tr>

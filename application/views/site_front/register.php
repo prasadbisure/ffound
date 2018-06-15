@@ -93,6 +93,14 @@ if(val){
                 </label>
                 <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required autocomplete="off"/>
               </div>
+
+              <div class="field-wrap">
+                  <label>
+                      Confirm Password<span class="req">*</span>
+                  </label>
+                  <input type="password"  name="confirm_password" id="confirm_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required autocomplete="off"/>
+                  <span class="pass-error error"></span>
+              </div>
               
               
               <button type="submit" class="button button-block"/>Get Started</button>

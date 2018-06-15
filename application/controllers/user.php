@@ -291,6 +291,7 @@ class User extends BaseController
                 }
                 
                 redirect('userListing');
+                
             }
         }
     }
