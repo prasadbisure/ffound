@@ -103,7 +103,7 @@ if(val){
               </div>
               
               
-              <button type="submit" class="button button-block" onclick="return Validate()"/>Get Started</button>
+              <button type="submit" class="button button-block"/>Get Started</button>
           </form>
 
         </div>

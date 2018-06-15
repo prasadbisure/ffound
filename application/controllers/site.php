@@ -421,7 +421,7 @@ class Site extends BaseController
                 echo $flag;
                 return;
             }
-             if($this->input->post('password') != $this->input->post('confirm_password')){
+             if($this->input->post('password') !== $this->input->post('confirm_password')){
                  $flag = 6;
                  echo $flag;
                  return;

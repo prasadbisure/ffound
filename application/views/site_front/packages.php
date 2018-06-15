@@ -57,6 +57,13 @@
                       <input type="password" class="form-control" id="pwd" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                     </div>
                   </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="confirmpwd">Confirm Password:</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" id="confirmpwd" name="confirm_password" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                        </div>
+                        <span class="error pass-error"></span>
+                    </div>
                   <div class="form-group">
                     <label class="control-label col-sm-3">Signup as:</label>
                     <div class="col-sm-9" style="padding-top: 8px;"> 
