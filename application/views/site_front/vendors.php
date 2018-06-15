@@ -220,7 +220,7 @@
 <div class="container">
     <div class="row row-margin-zero middlerow1-db col-lg-12">
         <form class="search-box-style" role="search" action="<?php echo site_url('vendorListing'); ?>" method="POST">
-            <div class="col-lg-3 col-md-4 col-sm-5 col-md-offset-2 col-style text-center">
+            <div class="col-lg-4 col-md-5 col-sm-6 col-md-offset-2 col-style text-center">
                 <label class="filter-btn">Filter</label>
                 <select class="select-style" name="filter">
                     <option value="all" <?php echo ($filter == 'all')? 'selected' : ''?>>Category</option>

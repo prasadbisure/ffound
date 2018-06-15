@@ -298,7 +298,7 @@ header{
   -webkit-transform: translateZ(0px);
   -webkit-transform: translate3d(0,0,0);
   -webkit-perspective: 1000;
-
+    -webkit-padding-start: 0px;
 
 }
 
@@ -381,7 +381,9 @@ header{
 #gnavi-list ul li:nth-child(4n) a {
   border-right-width: 0
 }
-
+#gnavi-list ul li:last-child a, #gnavi-list ul li:nth-child(7n) a {
+  border-bottom-style: solid;
+}
 #gnavi-list ul li a span {
   display: table-cell;
   vertical-align: middle;

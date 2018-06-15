@@ -258,7 +258,7 @@ height: 200px;
     font-size: 19px;   
 }
 .select-style{
-    padding: 6px 10px 7px 2px;
+    padding: 6px 70px 7px 7px;
     cursor: pointer;
     background: #fff;
     font-size: 19px;
@@ -268,6 +268,9 @@ height: 200px;
     border-top : 1px solid;
     border-left : none;
     font-family: Raleway-Regular;
+}
+.select-style option{
+    padding: 9px 70px 7px 7px;
 }
 
 .search-box-style{
