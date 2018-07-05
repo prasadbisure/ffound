@@ -245,9 +245,10 @@ class vendor_model extends CI_Model
     function getOrderHistoryById($id, $role){ 
         
         if($role == 4){
-            $this->db->select('*');
+            $this->db->select('tbl_orders.*,tbl_users.brandName');
             $this->db->from('tbl_orders');
-            $this->db->where('userId', $id);
+            $this->db->join('tbl_users','tbl_users.userId = tbl_orders.vendorId','left');
+            $this->db->where('tbl_orders.userId', $id);
         }
             
         if($role == 2 || $role == 3){

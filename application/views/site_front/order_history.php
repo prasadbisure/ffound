@@ -58,7 +58,9 @@
         ?>
         <tr>
             <td><?php echo $order->id; ?></td>
-            <td><?php echo $order->pname; ?></td>
+            <td><a target="_blank" style="color: inherit; -webkit-transition: .5s ease;transition: .5s ease; font-family: Raleway-Regular;" href="<?php echo site_url("ProductDetails/$order->vendorId/$order->productId");?>"><?php echo $order->pname; ?></a>
+                <br>by: <a target="_blank" style="color: inherit; -webkit-transition: .5s ease;transition: .5s ease; font-family: Raleway-Regular;" href="<?php echo site_url("vendorInfo/$order->vendorId");?>"><?php echo $order->brandName; ?></a>
+            </td>
             <td><img src="<?php echo $order->image; ?>" width="100" height="100"></td>
             <td><?php echo $order->size; ?></td>
             <td><?php echo $order->price; ?></td>

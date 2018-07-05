@@ -670,6 +670,7 @@ class Site extends BaseController
             $this->data['heading1']='Order History';
             $this->data['login1']='false';
             $this->data['active_flag'] = 'order-history';
+            $this->data['active_flag'] = 'order-history';
             $this->loadOtherViews("site_front/order_history", $this->data, NULL , NULL);
             
         }else{
@@ -879,11 +880,18 @@ class Site extends BaseController
             // $getBookingDetails = $this->vendor_model->getProductById1($productId);
             $userInfo = $this->vendor_model->getEmailNameById($userId);
             $vendorInfo = $this->vendor_model->getEmailNameById($vendorId);
+            $productInfo = $this->product_model->showProductDetails($productId);
+            $productLink = site_url("ProductDetails/$vendorId/$productId");
             
             //Email for end customer
             $detail["subject"] = "Order confirmation";
             $detail["email"]  = $userInfo->email;
-            $detail["message"] = "Hello!<br>Thank you for booking our products.<br>Following are the details of your bookings:<br><br>Owner Name : $vendorInfo->name<br>Brand Name : $vendorInfo->brandName<br>Address : $vendorInfo->address<br>Phone Number : $vendorInfo->mobile
+            $detail["message"] = "Hello!<br>Thank you for booking our products.<br>Following are the details of your bookings:
+                                <br><br>Owner Name : $vendorInfo->name
+                                <br>Product : <a href='$productLink'>$productInfo->name</a>
+                                <br>Brand Name : $vendorInfo->brandName
+                                <br>Address : $vendorInfo->address
+                                <br>Phone Number : $vendorInfo->mobile
                 <br><br>Stay tuned and get styled with us.<br>Thank You<br><br>Fashion Found.";
             sendNotificationMail($detail);
                 
