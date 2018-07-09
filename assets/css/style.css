@@ -509,10 +509,10 @@ header{
       position: absolute;
       right: 0
   }
-  #gnavi-list ul li {
+ /* #gnavi-list ul li {
       width: 50%;
       height: 33.33%
-  }
+  }*/
   #gnavi-list ul li:nth-child(2n) a {
       border-right-width: 0
   }

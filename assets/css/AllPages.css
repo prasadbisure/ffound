@@ -2964,7 +2964,7 @@ div.dataTables_wrapper div.dataTables_length label {
 
 #xzoom-default{
     width  : 450px ;
-    height : 500px ;
+   /* height : 500px ;*/
 }
 
 .xzoom-container{
@@ -3544,3 +3544,9 @@ footer{
     margin: 0 auto;
 }
 
+/*==Custome====*/
+  @media (min-width: 767px) and (max-width: 768px) {
+.container {
+    width: 720px;
+} 
+/*==Custome====*/

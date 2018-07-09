@@ -282,7 +282,19 @@ global $paged;
     }
     /*End pagination*/
     
-    
+     @media screen and (max-width: 700px) {
+      .view-eighth:hover .mask { 
+	opacity: 0; 
+	top: 0px; 
+	transition-delay: 0s; 
+    animation:none;
+         }
+            .view-eighth:hover .book_mask h2 { 
+   opacity: 1; 
+         transition:none;
+         transition-delay: 0.1s;
+         }
+    }
     @media (min-width: 767px) and (max-width: 768px){
 .container {
     width: 721px;

@@ -33,14 +33,15 @@ if(val){
             <input type="hidden" name="tempproduct" value=<?php echo $productId; ?>>
             <input type="hidden" name="referer" value=<?php echo $referer; ?>>
             
-            <div class="field-wrap">
+            <div class="field-wrap" data-toggle="tooltip" data-placement="left" title="Enater your Email">
             <label>
               Email Address<span class="req">*</span>
             </label>
             <input type="email" name="email" required autocomplete="off"/>
           </div>
           
-          <div class="field-wrap">
+          <div class="field-wrap" data-toggle="tooltip" data-placement="left" title="Enater your Password">
+              
             <label>
               Password<span class="req">*</span>
             </label>
@@ -141,3 +142,8 @@ if(val){
             </div>
         </div>
     </div>
+<script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>

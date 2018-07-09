@@ -24,7 +24,7 @@ jQuery(function($){
         <div class="col-md-6 productcol-style">
         <?php foreach($vendor as $val){  //var_dump($val); die;?>
                 <div class="xzoom-container">
-              <img class="xzoom" id="xzoom-default" src="<?php echo $val->images; ?>" xoriginal="<?php echo $val->images; ?>" style="max-width:450px; max-height:500px;">
+              <img class="xzoom" id="xzoom-default" src="<?php echo $val->images; ?>" xoriginal="<?php echo $val->images; ?>" style="max-width:450px; max-height:600px;">
               <div class="xzoom-thumbs">
                 <a href="<?php echo ($val->images != '') ? $val->images : '/assets/images/default_hanger.png'; ?>"><img class="xzoom-gallery xactive" width="140" height="140" src="<?php echo ($val->images != '') ? $val->images : '/assets/images/default_hanger.png'; ?>" xpreview="<?php echo ($val->images != '') ? $val->images : '/assets/images/default_hanger.png'; ?>"></a>
                 <?php if($val->images2 !== ''){ ?>
