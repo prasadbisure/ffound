@@ -111,7 +111,7 @@
 #generic_price_table .generic_content .generic_head_price .generic_head_content .head span{
    
     font-size: 28px;
-    font-weight: 400;
+    font-weight: 800;
     letter-spacing: 2px;
     margin: 0;
     padding: 0;
