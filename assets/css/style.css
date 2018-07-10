@@ -514,7 +514,7 @@ header{
       height: 33.33%
   }*/
   #gnavi-list ul li:nth-child(2n) a {
-      border-right-width: 0
+      border-right-width: 1
   }
   #gnavi-list ul li:nth-child(3n) a {
       border-right-width: 1px
@@ -1946,4 +1946,8 @@ button.btn.btn-default.custom-theme-border.zero-radius.custom-zindex {
 .grid-item--width2 { width: 400px; }
 
 /*.........custome changes ...............*/
+      ul#grid {
+    margin-bottom: 5px!important;
+}
+
 
