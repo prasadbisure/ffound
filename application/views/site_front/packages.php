@@ -50,10 +50,11 @@
 	border-left: 5px solid #2ECC71;
 }*/
 
-#generic_price_table .generic_content .generic_price_btn a{
+#generic_price_table .generic_content .generic_price_btn a,
+#generic_price_table .generic_content .generic_price_btn button{
 	border: 1px solid #e0c027; 
     color: #2ECC71;
-} 
+}
 
 #generic_price_table .generic_content.active .generic_head_price .generic_head_content .head_bg,
 #generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head_bg{
@@ -67,7 +68,9 @@
 }
 
 #generic_price_table .generic_content:hover .generic_price_btn a,
-#generic_price_table .generic_content.active .generic_price_btn a{
+#generic_price_table .generic_content.active .generic_price_btn a,
+#generic_price_table .generic_content:hover .generic_price_btn button,
+#generic_price_table .generic_content.active .generic_price_btn button{
 	background-color: #e0c027;
 	color: #fff;
 } 
@@ -185,7 +188,8 @@
 	margin: 10px 0 10px;
 }
 
-#generic_price_table .generic_content .generic_price_btn a{
+#generic_price_table .generic_content .generic_price_btn a,
+#generic_price_table .generic_content .generic_price_btn button{
     border-radius: 50px;
 	-moz-border-radius: 50px;
 	-ms-border-radius: 50px;
@@ -498,208 +502,56 @@
 
 <section class="content">
     <div class="container">
-        <div class="table-responsive">
-            <table class="packagestable-style">
-                <tr><?php
-                    if(!empty($list))
-                    {
-                        foreach ($list as $li)
-                        {?>
-                            <td>
-                                <table>
-                                    <col class="col-width">
-                                <tr class='theading'><td class='rstyle'><b><?php echo $li->name; ?></b></td></tr>
-                                <tr class='trow1-style'><td class="">INR</td></tr>
-                                <tr class='trow2-style'><td><?php echo $li->price ?></td></tr>
-                                <tr><td><hr class='tablehr-style'></td></tr>
-                                <tr>
-                                    <td class='trow3-style'>
-                                        <b>
-                                            <?php echo $li->productLimit; ?>
-                                        </b>
-                                    </td>
-                                </tr>
-                                <tr><td class='nstyle'>PRODUCTS</td></tr>
-				<?php if($li->productLimit == 0){ ?>
-				<tr><td class="olisting-style"><b>(Only Listing)</b></td></tr>
-				<?php }else{ ?>
-				<tr><td><br></td></tr>
-				<?php } ?>
-                                <tr><td class='rstyle'>
-                                <nav class=main-nav>
-                                <?php if($upgrade == 'upgrade'){ ?>
-                                    <button class='cd-signup tablebuy-style upgrade-btn' value="<?php  echo $li->id; ?>">UPGRADE</button>
-                                <?php }else{ ?>
-                                    <button class='cd-signup tablebuy-style buy-btn' value="<?php  echo $li->id; ?>">BUY</button>
-                                <?php } ?>
-                                </nav>
-                                </td></tr>
-                                </table>
-                            </td>
-                    <?php }
-                    }
-                    ?>
-                </tr>
-            </table>
+       <div id="generic_price_table">
+            <section>
+                <div class="container">
+                    <!--BLOCK ROW START-->
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <?php if(!empty($list)){ ?>
+                            <?php foreach ($list as $li){?>
+                                <div class="col-md-2">
+                                    <div class="generic_content active clearfix">
+                                        <div class="generic_head_price clearfix">
+                                            <div class="generic_head_content clearfix">
+                                                <div class="head_bg"></div>
+                                                <div class="head">
+                                                    <span><?php echo $li->name; ?></span>
+                                                </div>
+                                            </div>
+                                            <div class="generic_price_tag clearfix">
+                                        <span class="price">
+                                            <span class="sign">RS.</span>
+                                            <span class="currency"><?php echo $li->price; ?></span>
+                                            <!--<span class="cent">.99</span>
+                                            <span class="month">/MON</span>-->
+                                        </span>
+                                            </div>
+                                        </div>
+                                        <div class="generic_feature_list">
+                                            <ul>
+                                                <li><span><?php echo $li->productLimit; ?></span></li>
+                                                <li> Products</li>
+                                            </ul>
+                                        </div>
+                                        <div class="generic_price_btn clearfix">
+                                            <p><?php echo ($li->productLimit == 0)?"(Only Listing)" : ""; ?></p>
+                                            <?php if($upgrade == 'upgrade'){ ?>
+                                                <button class='cd-signup tablebuy-style upgrade-btn' value="<?php  echo $li->id; ?>">UPGRADE</button>
+                                            <?php }else{ ?>
+                                                <button class='cd-signup tablebuy-style buy-btn' value="<?php  echo $li->id; ?>">BUY</button>
+                                            <?php } ?>
+
+                                        </div>
+                                    </div>
+                                </div>
+                        <?php }
+                            } ?>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+            </section>
         </div>
-        
-       <div id="generic_price_table">   
-<section>
-        <div class="container">
-            
-            <!--BLOCK ROW START-->
-            <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-2">
-                    <div class="generic_content active clearfix">
-                       <div class="generic_head_price clearfix">
-                            <div class="generic_head_content clearfix">
-                                <div class="head_bg"></div>
-                                <div class="head">
-                                    <span>Bronze</span>
-                                </div>
-                            </div>
-                            <div class="generic_price_tag clearfix">	
-                                <span class="price">
-                                    <span class="sign">RS.</span>
-                                    <span class="currency">500</span>
-                                    <!--<span class="cent">.99</span>
-                                    <span class="month">/MON</span>-->
-                                </span>
-                            </div>
-                         </div>                            
-                         <div class="generic_feature_list">
-                        	<ul>
-                            	<li><span>0</span></li>
-                                <li> Products</li>
-                            </ul>
-                        </div>
-                        <div class="generic_price_btn clearfix">
-                        	<a class="" href="">BUY</a>
-                        </div>
-                    </div>
-                 </div>
-                <div class="col-md-2">
-                    <div class="generic_content active clearfix">
-                       <div class="generic_head_price clearfix">
-                            <div class="generic_head_content clearfix">
-                                <div class="head_bg"></div>
-                                <div class="head">
-                                    <span>Silver</span>
-                                </div>
-                            </div>
-                            <div class="generic_price_tag clearfix">	
-                                <span class="price">
-                                    <span class="sign">RS.</span>
-                                    <span class="currency">1000</span>
-                                    <!--<span class="cent">.99</span>
-                                    <span class="month">/MON</span>-->
-                                </span>
-                            </div>
-                         </div>                            
-                         <div class="generic_feature_list">
-                        	<ul>
-                            	<li><span>20</span></li>
-                                <li> Products</li>
-                            </ul>
-                        </div>
-                        <div class="generic_price_btn clearfix">
-                        	<a class="" href="">BUY</a>
-                        </div>
-                    </div>
-                 </div>
-                <div class="col-md-2">
-                    <div class="generic_content active clearfix">
-                       <div class="generic_head_price clearfix">
-                            <div class="generic_head_content clearfix">
-                                <div class="head_bg"></div>
-                                <div class="head">
-                                    <span>Gold</span>
-                                </div>
-                            </div>
-                            <div class="generic_price_tag clearfix">	
-                                <span class="price">
-                                    <span class="sign">RS.</span>
-                                    <span class="currency">1300</span>
-                                    <!--<span class="cent">.99</span>
-                                    <span class="month">/MON</span>-->
-                                </span>
-                            </div>
-                         </div>                            
-                         <div class="generic_feature_list">
-                        	<ul>
-                            	<li><span>30</span></li>
-                                <li> Products</li>
-                            </ul>
-                        </div>
-                        <div class="generic_price_btn clearfix">
-                        	<a class="" href="">BUY</a>
-                        </div>
-                    </div>
-                 </div>
-                <div class="col-md-2">
-                    <div class="generic_content active clearfix">
-                       <div class="generic_head_price clearfix">
-                            <div class="generic_head_content clearfix">
-                                <div class="head_bg"></div>
-                                <div class="head">
-                                    <span>Platinum</span>
-                                </div>
-                            </div>
-                            <div class="generic_price_tag clearfix">	
-                                <span class="price">
-                                    <span class="sign">RS.</span>
-                                    <span class="currency">1700</span>
-                                    <!--<span class="cent">.99</span>
-                                    <span class="month">/MON</span>-->
-                                </span>
-                            </div>
-                         </div>                            
-                         <div class="generic_feature_list">
-                        	<ul>
-                            	<li><span>45</span></li>
-                                <li> Products</li>
-                            </ul>
-                        </div>
-                        <div class="generic_price_btn clearfix">
-                        	<a class="" href="">BUY</a>
-                        </div>
-                    </div>
-                 </div>
-                <div class="col-md-2">
-                    <div class="generic_content active clearfix">
-                       <div class="generic_head_price clearfix">
-                            <div class="generic_head_content clearfix">
-                                <div class="head_bg"></div>
-                                <div class="head">
-                                    <span>Diamond</span>
-                                </div>
-                            </div>
-                            <div class="generic_price_tag clearfix">	
-                                <span class="price">
-                                    <span class="sign">RS.</span>
-                                    <span class="currency">2000</span>
-                                    <!--<span class="cent">.99</span>
-                                    <span class="month">/MON</span>-->
-                                </span>
-                            </div>
-                         </div>                            
-                         <div class="generic_feature_list">
-                        	<ul>
-                            	<li><span>60</span></li>
-                                <li> Products</li>
-                            </ul>
-                        </div>
-                        <div class="generic_price_btn clearfix">
-                        	<a class="" href="">BUY</a>
-                        </div>
-                    </div>
-                 </div>
-                <div class="col-md-1"></div>
-            </div>	
-        </div>
-    </section>  
-</div>
     </div>   
 <?php echo $page_content; ?>  
 
