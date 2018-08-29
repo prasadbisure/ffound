@@ -54,9 +54,9 @@
                       <td><img src=<?php echo ($record->thumbnail != '') ? $record->thumbnail : '/assets/images/default_hanger.png'; ?> alt="Product Picture" width=80 height=80></td>
                       <td class="text-center">
                             <?php if(!$record->status){ ?>
-                            <span class="btn btn-sm change-status" data-status=<?php echo $record->status; ?> data-id=<?php echo $record->id; ?>><img src="/assets/images/enable.png" ></span>
-                            <?php }else{ ?>
                             <span class="btn btn-sm change-status" data-status=<?php echo $record->status; ?> data-id=<?php echo $record->id; ?>><img src="/assets/images/disable.png" ></span>
+                            <?php }else{ ?>
+                            <span class="btn btn-sm change-status" data-status=<?php echo $record->status; ?> data-id=<?php echo $record->id; ?>><img src="/assets/images/enable.png" ></span>
                             <?php } ?>
                             <a class="btn btn-sm show-product-details" href="<?php echo base_url().'showproductdetails/'.$record->id; ?>" data-id="<?php echo $record->id; ?>"><i class="fa fa-pencil"></i></a>
                       </td>

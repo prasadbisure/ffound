@@ -58,7 +58,7 @@ class Site extends BaseController
         $this->loadFrontViews("site_front/landing", $this->data, NULL , NULL);
     }
     
-    public function getVendorListing($type, $pageNo){
+    public function getVendorListing($type, $pageNo=null){
         
         // echo $pageNo;
         if(strcmp($type,"designer") !== 0 && strcmp($type,"boutique") !== 0){
@@ -299,7 +299,8 @@ class Site extends BaseController
         $this->data['pageTitle'] = 'FashionFound : Products';
         $this->data['heading']='vendorInfo';        
         $this->data['heading1']='';
-        $this->data['heading2']='We make sure to keep our store updated with the latest trends and keep our customers happy';
+        //$this->data['heading2']='We make sure to keep our store updated with the latest trends and keep our customers happy';
+        $this->data['heading2']='Product Specialization: '.$this->data['vendor'][0]->specialization;
         $this->data['login1']='';
 
          $col_flag1 = true; $col_flag2 = $col_flag3 = false;
@@ -670,7 +671,6 @@ class Site extends BaseController
             $this->data['heading1']='Order History';
             $this->data['login1']='false';
             $this->data['active_flag'] = 'order-history';
-            $this->data['active_flag'] = 'order-history';
             $this->loadOtherViews("site_front/order_history", $this->data, NULL , NULL);
             
         }else{
@@ -779,7 +779,7 @@ class Site extends BaseController
 
     public function vendorListing(){
         
-        $searchText = $this->input->post('srch-term');
+        $searchText = trim($this->input->post('srch-term'));
         $category   = $this->input->post('filter');
         $userType   = 'all';
         
@@ -812,7 +812,10 @@ class Site extends BaseController
             $productArray['name'] = $vendor->name;
             $productArray['brandName'] = $vendor->brandName;
             $productArray['logo']      = $vendor->logo;
+            $productArray['profile_pic']      = $vendor->profile_pic;
+            $productArray['profile_pic_status']      = $vendor->profile_pic_status;
             $vendorArray[$vendor->userId] = $productArray;
+
         }
         
         $this->data['designerList'] = $vendorArray;
@@ -821,8 +824,11 @@ class Site extends BaseController
         $this->data['heading1']='Search Result';
         $this->data['heading2']='';
         $this->data['login1']='';
+
+//        echo "<pre>";
+//        print_r($this->data);
+//        exit;
         $this->loadProductViews("site_front/vendors", $this->data, NULL , NULL);
-          
 
     }
     

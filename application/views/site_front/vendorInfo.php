@@ -257,15 +257,15 @@
 
 <div class="row row-margin-zero itemrow-middle-style">
     <div class="container datails-style">
+<!--        <div class="col-md-12">-->
+<!--            <h4 class="item-h-style">Product specilization-</h4>-->
+<!--        </div>-->
+<!--        <div class="col-md-12">-->
+<!--            <h4 class="item2-h-style"><b>--><?php //echo $vendor[0]->specialization; ;?><!--</b></h4>-->
+<!--            <hr class="itemmiddle-hr">-->
+<!--        </div>-->
         <div class="col-md-12">
-            <h4 class="item-h-style">Product specilization-</h4>
-        </div>
-        <div class="col-md-12">
-            <h4 class="item2-h-style"><b><?php echo $vendor[0]->specialization; ;?></b></h4>
-            <hr class="itemmiddle-hr">
-        </div>
-        <div class="col-md-12">
-            <p class="item3-h-style">Detailed Bio-</p>
+            <h4 class="item3-h-style">Detailed Bio-</h4>
         </div>
         <div class="col-md-12">
             <p class="item-psg">

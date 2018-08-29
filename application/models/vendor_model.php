@@ -113,7 +113,7 @@ class vendor_model extends CI_Model
     function vendorListing($searchText = '', $type = 'all')
     {
        // var_dump($type); die;
-        $this->db->select('BaseTbl.userId, BaseTbl.email, BaseTbl.name, BaseTbl.brandName, BaseTbl.logo, BaseTbl.specialization, BaseTbl.bio, BaseTbl.mobile, Role.role, Subscription.name as sname, Subscription.productLimit');
+        $this->db->select('BaseTbl.userId, BaseTbl.email, BaseTbl.name, BaseTbl.brandName, BaseTbl.logo, BaseTbl.specialization, BaseTbl.profile_pic, BaseTbl.profile_pic_status, BaseTbl.bio, BaseTbl.mobile, Role.role, Subscription.name as sname, Subscription.productLimit');
         $this->db->from('tbl_users as BaseTbl');
         $this->db->join('tbl_roles as Role', 'Role.roleId = BaseTbl.roleId','left');
         $this->db->join('tbl_products as Products', 'Products.userId = BaseTbl.userId','left');

@@ -83,9 +83,9 @@
 
                     </div>
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="Permanent Address">Address</label>
+                        <label class="col-md-4 control-label" for="Permanent Address">Address<span class="mandatory-field">*</span></label>
                         <div class="col-md-6">
-                            <textarea id="Permanent Address" name="address" placeholder="Address" class="form-control profile-form input-md "  rows="3" cols="30" maxlength=150><?php echo $val[0]->address;?></textarea>
+                            <textarea id="Permanent Address" name="address" placeholder="Address" class="form-control profile-form input-md "  rows="3" cols="30" maxlength=150 required><?php echo $val[0]->address;?></textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -119,9 +119,9 @@
                     <!--</div>-->
                     
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="Permanent Address">Business Description</label>
+                        <label class="col-md-4 control-label" for="Permanent Address">Business Description<span class="mandatory-field">*</span></label>
                         <div class="col-md-6">
-                            <textarea id="Business Description" name="bio" placeholder="Business Description" class="form-control profile-form input-md "  rows="3" cols="30" maxlength=150><?php echo $val[0]->bio;?></textarea>
+                            <textarea id="Business Description" name="bio" placeholder="Business Description" class="form-control profile-form input-md "  rows="3" cols="30" required ><?php echo $val[0]->bio;?></textarea>
                         </div>
                     </div>
                     <?php } ?>

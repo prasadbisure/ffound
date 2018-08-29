@@ -1,3 +1,14 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<style>
+    span.select2-selection--multiple{
+        background: none !important;
+        border: 1px solid #d4b000 !important;
+        border-radius: 0px !important;
+        color: #d4b000 !important;
+        font-size: 18px !important;
+        font-family: Raleway-Regular;
+    }
+</style>
 <script>
  function checkPrice(input) {
      input.setCustomValidity('');
@@ -100,37 +111,37 @@
                                             <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4">
                                                 <label for="exampleInputPassword1">Size</label>
                                                 <select class="form-control custom-select-modal" placeholder="Size"
-                                                        name="size">
+                                                        name="size[]" multiple="multiple">
                                                     <option
-                                                        value="free size" <?php echo ($val->product_size == "free size") ? "selected" : '' ?>>
+                                                        value="free size" <?php echo (in_array('free size',$val->product_size)) ? "selected" : '' ?>>
                                                         Free Size
                                                     </option>
                                                     <option
-                                                        value="XXL" <?php echo ($val->product_size == "XXL") ? "selected" : ''; ?>>
+                                                        value="XXL" <?php echo (in_array('XXL',explode(',',$val->product_size))) ? "selected" : ''; ?>>
                                                         XXL
                                                     </option>
                                                     <option
-                                                        value="XL" <?php echo ($val->product_size == "XL") ? "selected" : ''; ?>>
+                                                        value="XL" <?php echo (in_array('XL',explode(',',$val->product_size))) ? "selected" : ''; ?>>
                                                         XL
                                                     </option>
                                                     <option
-                                                        value="L" <?php echo ($val->product_size == "L") ? "selected" : ''; ?>>
+                                                        value="L" <?php echo (in_array('L',explode(',',$val->product_size))) ? "selected" : ''; ?>>
                                                         L
                                                     </option>
                                                     <option
-                                                        value="M" <?php echo ($val->product_size == "M") ? "selected" : ''; ?>>
+                                                        value="M" <?php echo (in_array('M',explode(',',$val->product_size))) ? "selected" : ''; ?>>
                                                         M
                                                     </option>
                                                     <option
-                                                        value="S" <?php echo ($val->product_size == "S") ? "selected" : ''; ?>>
+                                                        value="S" <?php echo (in_array('S',explode(',',$val->product_size))) ? "selected" : ''; ?>>
                                                         S
                                                     </option>
                                                     <option
-                                                        value="XS" <?php echo ($val->product_size == "XS") ? "selected" : ''; ?>>
+                                                        value="XS" <?php echo (in_array('XS',explode(',',$val->product_size))) ? "selected" : ''; ?>>
                                                         XS
                                                     </option>
                                                     <option
-                                                        value="XXS" <?php echo ($val->product_size == "XXS") ? "selected" : ''; ?>>
+                                                        value="XXS" <?php echo (in_array('XXS',explode(',',$val->product_size))) ? "selected" : ''; ?>>
                                                         XXS
                                                     </option>
                                                 </select>
@@ -204,3 +215,9 @@
              
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.custom-select-modal').select2();
+    });
+</script>

@@ -260,7 +260,7 @@ class Product extends BaseController
     {
         $p_name=$this->input->post('name');
         $desc  =$this->input->post('description');
-        $size  =$this->input->post('size');
+        $size  =implode(',',$this->input->post('size'));
         $color  =$this->input->post('color');
         $fabric  =$this->input->post('fabric');
         $style  =$this->input->post('style');
@@ -314,7 +314,7 @@ class Product extends BaseController
             }
         }
             
-        $productInfo =array('name'=>$p_name,'description'=>$desc,'size'=>$size,'color'=>$color,'fabric'=>$fabric,'style'=>$style,'onelinertxt'=>$onel, 'price' => $price, 'updatedBy'=>$userId, 'updatedDtm'=>date('Y-m-d H:i:s'),'id'=>$productId, 'status' => 1);
+        $productInfo =array('name'=>$p_name,'description'=>$desc,'size'=>$size,'color'=>$color,'fabric'=>$fabric,'style'=>$style,'onelinertxt'=>$onel, 'price' => $price, 'updatedBy'=>$userId, 'updatedDtm'=>date('Y-m-d H:i:s'),'id'=>$productId, 'status' => 0);
         
         
         $updateInfo = array_merge($productInfo, $imagesUploadArray);
