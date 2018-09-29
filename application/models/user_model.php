@@ -167,7 +167,14 @@ class User_model extends CI_Model
 
         return TRUE;
     }
-    
+
+    function editprofilelogo($userInfo, $userId)
+    {
+        $this->db->where('userId', $userId);
+        $this->db->update('tbl_users', $userInfo);
+
+        return TRUE;
+    }
     
     
     /**

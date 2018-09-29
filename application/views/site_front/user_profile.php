@@ -130,11 +130,11 @@
             <?php if($role != 4){ ?>
             <div class="col-md-2 text-center user-profile-margin">
                 <p style="font-family: Raleway-semiBold;text-decoration: underline;text-align: center;">Your Logo</p>
-                <img src=<?php echo (!empty($val[0]->logo)) ? $val[0]->logo : "http://websamplenow.com/30/userprofile/images/avatar.jpg"; ?> class="img-responsive img-thumbnail ">
+                <img class="logo-img" src=<?php echo (!empty($val[0]->logo)) ? $val[0]->logo : "http://websamplenow.com/30/userprofile/images/avatar.jpg"; ?> class="img-responsive img-thumbnail ">
                 <label for="file-upload" class="custom-file-upload">
                                     Select Logo
                 </label>
-                <input id="file-upload" style = "display:none;" name="logo" class="input-file profile-form" type="file">
+                <input id="file-upload" style = "display:none;" name="logo" class="input-file profile-form logo_upload" type="file">
                 </div>
             </div>
             <?php } ?>
@@ -148,3 +148,4 @@
         </form>
     </div>
 </div>
+<script src="<?php echo base_url(); ?>assets/js/profile.js" type="text/javascript"></script>

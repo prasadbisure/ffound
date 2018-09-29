@@ -659,7 +659,8 @@ class Site extends BaseController
             }
             $this->data['pageTitle'] = 'FashionFound : Admin';
             $this->data['heading']='vendorInfo';
-            $this->data['heading2'] = "We make sure to keep our store update with the latest trends and keep our customers happy";
+//            $this->data['heading2'] = "We make sure to keep our store update with the latest trends and keep our customers happy";
+            $this->data['heading2']='Product Specialization: '.$this->data['val'][0]->specialization;
             $this->data['login1']='false';
             $this->data['active_flag'] = 'home';
             $this->data['topup_modal'] = $this->load->view('includes/topup_modal', $this->data, NULL, TRUE);
@@ -970,6 +971,29 @@ class Site extends BaseController
             }else{
                 redirect('/profile');
             }
+        }
+    }
+
+    function profileLogoUpdate(){
+
+        $config['upload_path']          = './upload/';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $userId = $this->session->userdata('userId');
+
+        $this->load->library('upload', $config);
+        if ($this->upload->do_upload('logo'))
+        {
+            $imageDetailArray = $this->upload->data();
+            $image_name =  $imageDetailArray['file_name'];
+           // $thubnail_name = $this->do_resize($image_name);
+            $i_array = array('logo' => '/upload/'.$image_name);
+        }
+
+        $result = $this->user_model->updateInfo($userId, $i_array);
+
+        if($result > 0)
+        {
+           echo base_url().$i_array['logo'];
         }
     }
     
