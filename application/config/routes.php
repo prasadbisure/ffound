@@ -169,5 +169,7 @@ $route['site/topuppurchase'] = "site/topUpPurchase";
 $route['site/upgradesubscription'] = "site/upgradeSubscription";
 $route['commingsoon'] = "site/commingSoon";
 $route['terms']='site/termsAndConditions';
+$route['privacy']='site/privacyPolicy';
+$route['disclaimer']='site/disclaimer';
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

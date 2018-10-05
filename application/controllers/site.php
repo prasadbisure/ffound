@@ -478,7 +478,12 @@ class Site extends BaseController
                      set_cookie('user_id_p', $result,'3600');
                      set_cookie('plimit', $productLimit, 3600);
 
-                    $message = "Booyaa!<br>Welcome aboard.<br>Thank you for signing up on Fashion Found. Your account has been created.<br>It will be activated within 24 hours once we review your profile, plan chosen and the payment done.<br>Visit be   low link to verify your email address<br><br>
+                    $message = "Booyaa!<br>
+                                Welcome aboard.<br>
+                                Thank you for signing up with Fashion Found. 
+                                Your account has been created. Currently your profile has been activated your Products would go LIVE in 24 hours 
+                                once we review them with the plan chosen and the payment done.<br>
+                                Visit be low link to verify your email address<br><br>
                             <a href= $link >Verify email</a><br><br>Thank You<br> Fashion Found";
 
                     set_cookie('email', $email, 3600);
@@ -496,7 +501,9 @@ class Site extends BaseController
                 $this->session->set_flashdata('success', 'Registeration done successfully');
 		    }
                 } else{
-                    $message = "Hello!<br><br>You are almost ready to start exploring the fashion world. Simply visit the below link to verify your email address.<br><br>
+                    $message = "Hello!<br><br>
+                                You are almost ready to start exploring the fashion world. 
+                                Simply visit the below link to verify your email address.<br><br>
                     <a href= $link >Verify email</a><br><br>Thank You<br> Fashion Found";
                     $detail['message']=$message;
                     sendNotificationMail($detail);
@@ -507,14 +514,25 @@ class Site extends BaseController
                 
                 if($roleId == 2 || $roleId == 3){
                     if($availFreeSubscription == true){
-			 $detail["message"] = $message = "Booyaa!<br>Welcome aboard.<br>Thank you for signing up on Fashion Found. Your account has been created & your account is eligible for free subscription for 1 month.<br>It will be activated within 24 hours once we review your profile, plan chosen and the payment done.<br>Visit be low link to verify your email address<br><br>
+			 $detail["message"] = $message = "Booyaa!<br>
+                                              Welcome aboard.<br>
+                                              Thank you for signing up on Fashion Found. Your account has been created & your account is eligible for free subscription for 1 month.<br>
+                                              It will be activated within 24 hours once we review your profile, plan chosen and the payment done.<br>
+                                              Visit be low link to verify your email address<br><br>
                         <a href= $link >Verify email</a><br><br>Thank You<br> Fashion Found";
 		    }else{
-                    	$detail["message"] = $message = "Booyaa!<br>Welcome aboard.<br>Thank you for signing up on Fashion Found. Your account has been created.<br>It will be activated within 24 hours once we review your profile, plan chosen and the payment done.<br>Visit be   low link to verify your email address<br><br>
+                    	$detail["message"] = $message = "Booyaa!<br>
+                                                        Welcome aboard.<br>
+                                                         Thank you for signing up with Fashion Found. 
+                                                        Your account has been created. Currently your profile has been activated your Products would go LIVE in 24 hours 
+                                                        once we review them with the plan chosen and the payment done.<br>
+                                                        Visit be low link to verify your email address<br><br>
                         <a href= $link >Verify email</a><br><br>Thank You<br> Fashion Found";
 		    }
                 }else{
-                    $detail["message"] = $message = "Hello!<br><br>You are almost ready to start exploring the fashion world. Simply visit the below link to verify your email address.<br><br>
+                    $detail["message"] = $message = "Hello!<br><br>
+                                                    You are almost ready to start exploring the fashion world.
+                                                    Simply visit the below link to verify your email address.<br><br>
                     <a href= $link >Verify email</a><br><br>Thank You<br> Fashion Found";    
                 }
                 
@@ -899,24 +917,36 @@ class Site extends BaseController
                                 <br>Brand Name : $vendorInfo->brandName
                                 <br>Address : $vendorInfo->address
                                 <br>Phone Number : $vendorInfo->mobile
+                                <br>Vendor email : $vendorInfo->email
+                                <br>Customer email : $userInfo->email
+                                <br>User Phone Number : $userInfo->mobile
+                                
+                                
                 <br><br>Stay tuned and get styled with us.<br>Thank You<br><br>Fashion Found.";
             sendNotificationMail($detail);
                 
             //Email for vendor(designer/boutique)
-            $detail["subject"] = "New Order";
+//            $detail1["subject"] = "New Order";
+//            $detail1["email"]  = $vendorInfo->email;
+//            $detail1["message"] = "Hello!<br>People are loving you, here what you have got today.<br>Following are the details of your order:<br><br>Customer Name : $userInfo->name<br>Phone Number : $userInfo->mobile<br>Prodcut ID link:
+//                <br><br>Thank Your<br>Fashion Found.";
+//
+//            sendNotificationMail($detail1);
+
+            $detail["subject"] = "You got new order enquiry!";
             $detail["email"]  = $vendorInfo->email;
             $detail["message"] = "Hello!<br>People are loving you, here what you have got today.<br>Following are the details of your order:<br><br>Customer Name : $userInfo->name<br>Phone Number : $userInfo->mobile<br>Prodcut ID link:
                 <br><br>Thank Your<br>Fashion Found.";
-                
+
             sendNotificationMail($detail);
-            
+
             //Email for vendor(designer/boutique)
-            $detail["subject"] = "New Order for vendor $vendorInfo->name";
-            $detail["email"]  = ADMIN_MAIL;
-            $detail["message"] = "Dear Admin,<br><br> Vendor $vendorInfo->name have received new order on Fashion Found.<br><br>
+            $detail2["subject"] = "New Order for vendor $vendorInfo->name";
+            $detail2["email"]  = ADMIN_MAIL;
+            $detail2["message"] = "Dear Admin,<br><br> Vendor $vendorInfo->name have received new order on Fashion Found.<br><br>
                 <br><br>Thanks<br><br>Team Fashion Found";
                 
-            sendNotificationMail($detail);
+            sendNotificationMail($detail2);
             
         }
         
@@ -1246,6 +1276,32 @@ class Site extends BaseController
         $pageInfo = $this->site_model->getPageInfo(2);
         $this->data['page_content'] = $pageInfo[0]->content;
 
-        $this->loadOtherViews("site_front/aboutus", $this->data, NULL , NULL);
-      }    
+        $this->loadOtherViews("site_front/termsAndConditions", $this->data, NULL , NULL);
+      }
+
+    public function privacyPolicy(){
+        $this->data['pageTitle'] = 'FashionFound : Privacy & Policy';
+        $this->data['heading']='';
+        $this->data['heading1']='PRIVACY & POLICY';
+        $this->data['heading2']='';
+        $this->data['login1']='';
+
+        $pageInfo = $this->site_model->getPageInfo(2);
+        $this->data['page_content'] = $pageInfo[0]->content;
+
+        $this->loadOtherViews("site_front/privacyAndPolicy", $this->data, NULL , NULL);
+    }
+
+    public function disclaimer(){
+        $this->data['pageTitle'] = 'FashionFound : Disclaimer';
+        $this->data['heading']='';
+        $this->data['heading1']='DISCLAIMER';
+        $this->data['heading2']='';
+        $this->data['login1']='';
+
+        $pageInfo = $this->site_model->getPageInfo(2);
+        $this->data['page_content'] = $pageInfo[0]->content;
+
+        $this->loadOtherViews("site_front/disclaimer", $this->data, NULL , NULL);
+    }
 }
