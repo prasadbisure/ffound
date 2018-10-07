@@ -1950,4 +1950,22 @@ button.btn.btn-default.custom-theme-border.zero-radius.custom-zindex {
     margin-bottom: 5px!important;
 }
 
-
+.bottom-footer {
+    padding: 14px 0;
+    
+    background: #1b1b1b;
+}
+.bottom-footer-lcontent{
+        line-height: 1;
+    text-align: left;
+}
+.bottom-footer-rcontent{
+        line-height: 1;
+    text-align: right;
+}
+.bottom-footer-lcontent a, .bottom-footer-rcontent a{
+    color: #ffd920;
+}
+.bottom-footer-lcontent p, .bottom-footer-rcontent p{
+    margin: 5px 0 10px;
+}

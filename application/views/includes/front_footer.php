@@ -38,6 +38,16 @@
 	    </div>
         </div>
       </div>
+        <div class="row row-margin-zero bottom-footer">
+            <div class="col-md-12 col-xs-12">
+                <div class="col-md-6 col-xs-6">
+                    <p class="bottom-footer-lcontent">Disclaimer | Terms & Conditions | <a href="http://localhost/ffound/ffound/index.php/privacy" target="_blank">Privacy Policy</a> </p>
+                </div>
+                <div class="col-md-6 col-xs-6">
+                    <p class="bottom-footer-rcontent">&copy;2018: <a href="https://www.fashionfound.in/">fashionfound.in</a> | all rights reserved | pixels crafted with love by Wow Crest</p>
+                </div>
+            </div>
+        </div>
     </div>
     
     <div class="modal fade" id="conact-us-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
