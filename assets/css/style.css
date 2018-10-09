@@ -1953,7 +1953,7 @@ button.btn.btn-default.custom-theme-border.zero-radius.custom-zindex {
 .bottom-footer {
     padding: 14px 0;
     
-    background: #1b1b1b;
+   /* background: #1b1b1b;*/
 }
 .bottom-footer-lcontent{
         line-height: 1;
@@ -1966,6 +1966,7 @@ button.btn.btn-default.custom-theme-border.zero-radius.custom-zindex {
 .bottom-footer-lcontent a, .bottom-footer-rcontent a{
     color: #ffd920;
 }
-.bottom-footer-lcontent p, .bottom-footer-rcontent p{
-    margin: 5px 0 10px;
+.bottom-footer-lcontent, .bottom-footer-rcontent{
+        margin: 0 0 0px;    
+    
 }

@@ -3551,3 +3551,24 @@ footer{
 } 
 
 /*==Custome====*/
+
+.bottom-footer {
+    padding: 14px 0;
+    
+   /* background: #1b1b1b;*/
+}
+.bottom-footer-lcontent{
+        line-height: 1;
+    text-align: left!important;
+}
+.bottom-footer-rcontent{
+        line-height: 1;
+    text-align: right!important;
+}
+.bottom-footer-lcontent a, .bottom-footer-rcontent a{
+    color: #ffd920!important;
+}
+.bottom-footer-lcontent, .bottom-footer-rcontent{
+        margin: 0 0 0px;    
+    
+}
