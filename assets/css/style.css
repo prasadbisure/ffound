@@ -1951,22 +1951,30 @@ button.btn.btn-default.custom-theme-border.zero-radius.custom-zindex {
 }
 
 .bottom-footer {
-    padding: 14px 0;
+    padding: 14px 0!important;
     
    /* background: #1b1b1b;*/
 }
 .bottom-footer-lcontent{
         line-height: 1;
-    text-align: left;
+    text-align: left!important;
+	font-size: 12px;
+	color: #d4b000;
 }
 .bottom-footer-rcontent{
         line-height: 1;
-    text-align: right;
+    text-align: right!important;
+	    color: #000;
+	font-size: 12px;
+       
 }
-.bottom-footer-lcontent a, .bottom-footer-rcontent a{
-    color: #ffd920;
+.bottom-footer-lcontent a{
+    color: #ffd920!important;
+}
+.bottom-footer-rcontent a{
+    color: #ffffff!important;
 }
 .bottom-footer-lcontent, .bottom-footer-rcontent{
         margin: 0 0 0px;    
-    
+     font-family: 'Raleway-Medium';
 }
